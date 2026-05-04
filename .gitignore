@@ -1,23 +1,20 @@
-# 禁止上传
-*.env
+.DS_Store
 .env
 .env.*
-api_keys.json
+*.env
+*api_keys*
+*secret*
+*token*
+*password*
+*passphrase*
+*private_key*
+*wallet*
+*mnemonic*
 *.sqlite
 *.db
 *.log
-*.zip
-
-# macOS
-.DS_Store
-*.pem
-*.key
-
-# 交易数据
-tradesv3*.sqlite*
-*.wal
-*.shm
-
-# 私钥/助记词
-*. mnemonic
-*wallet*
+node_modules/
+__pycache__/
+*.pyc
+99_DO_NOT_UPLOAD_SECRETS/*
+!99_DO_NOT_UPLOAD_SECRETS/README.md
