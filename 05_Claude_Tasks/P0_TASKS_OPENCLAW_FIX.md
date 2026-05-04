@@ -2,11 +2,11 @@
 
 > 来源：GPT 全面审计 + 诊断报告
 > 日期：2026-05-04
-> 状态：待执行
+> 状态：P0-1已完成 ✓
 
 ---
 
-## P0-1 🔴 OpenClaw embedded agent / cron 走 /v1/responses 导致 404
+## P0-1 ✅ 已完成 ✓ OpenClaw embedded agent / cron 走 /v1/responses 导致 404
 
 ### 根因
 - provider 配置为 `minimax2-7`，但 OpenClaw 内置 `normalizeTransport` hook 只认 `minimax`
