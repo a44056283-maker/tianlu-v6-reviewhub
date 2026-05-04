@@ -1,0 +1,165 @@
+# PATCH.diff
+# M2 S/R 紧急缓存修复补丁草案
+# 状态：DRAFT — 禁止直接应用到实盘
+# 生成时间：2026/05/04 23:55
+# 应用前必须：py_compile → 重启 console_server（不动机器人）
+
+diff --git a/console_server.py b/console_server.py
+--- a/console_server.py
++++ b/console_server.py
+@@ -133,6 +133,38 @@ def _prewarm_rt_prices():
+         print(f"[RT Price] Pre-warm skipped: {e}")
+
+ # ── Stage B 新增: 实时价格定期刷新定时器 ────────────────────────
++_RT_PRICE_REFRESH_INTERVAL = int(os.environ.get("TIANLU_RT_PRICE_REFRESH_MIN", "30")) * 60
++_rt_price_refresh_timer = None
++
++def _schedule_rt_price_refresh():
++    """每30分钟刷新一次实时价格缓存（解决启动后7小时不更新的问题）"""
++    global _rt_price_refresh_timer
++    try:
++        sys.path.insert(0, "/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core")
++        from m2_sr_enhanced import _prewarm_realtime_prices
++        _prewarm_realtime_prices()
++        import logging as _rt_log
++        _rt_log.getLogger("console_server").info(
++            f"[RT-Price-Refresh] 实时价格缓存刷新完成 (间隔: {_RT_PRICE_REFRESH_INTERVAL//60}分钟)")
++    except Exception as e:
++        import logging as _rt_log
++        _rt_log.getLogger("console_server").warning(f"[RT-Price-Refresh] 刷新失败: {e}")
++    _rt_price_refresh_timer = _rt_th.Timer(_RT_PRICE_REFRESH_INTERVAL, _schedule_rt_price_refresh)
++    _rt_price_refresh_timer.daemon = True
++    _rt_price_refresh_timer.start()
++
++def _cancel_rt_price_refresh():
++    global _rt_price_refresh_timer
++    if _rt_price_refresh_timer:
++        _rt_price_refresh_timer.cancel()
++        _rt_price_refresh_timer = None
+
++# 在 _async_start_all() 之后追加（line ~145后）:
++if not (os.environ.get("TIANLU_SKIP_STARTUP_PREWARM") == "1" or not _startup_autoscans_enabled()):
++    import threading as _rt_th
++    _rt_th.Timer(300, _schedule_rt_price_refresh).start()
++    print("[Startup] 实时价格定期刷新定时器已启动（每30分钟）")
+
+@@ -25764,6 +25796,16 @@ def api_bt2_sr_levels_default():
+             pairs = list(M2_WHITELIST_PAIRS)
+         result_pairs = {}
+
++        # ── Stage B: force_live 并行优化（15秒超时）──────────────
++        if force_live:
++            sys.path.insert(0, str(_Path(__file__).parent / "bt_tools" / "backtest_core"))
++            try:
++                from m2_sr_enhanced import prewarm_realtime_prices_parallel
++                prewarm_realtime_prices_parallel(pairs)  # 后台并行刷新
++            except Exception as e:
++                import logging
++                logging.getLogger("console_server").warning(f"[force_live] 并行刷新失败: {e}")
+
+         for pair in pairs:
+             d = compute_and_cache_triple(pair) if force_live else get_latest_triple(pair)
+
+diff --git a/static/tabs/m2_sr.html b/static/tabs/m2_sr.html
+--- a/static/tabs/m2_sr.html
++++ b/static/tabs/m2_sr.html
+@@ -176,6 +176,9 @@
+       <span style="font-size:11px;color:var(--muted)" id="status-text">就绪</span>
+       <span style="font-size:11px;color:var(--gold)" id="scan-ts">--</span>
++      <!-- Stage B 新增: 数据年龄和来源指示器 -->
++      <span id="m2-cache-indicator" style="font-size:10px;color:var(--dimmer);margin-left:4px"
++            title="数据新鲜度"></span>
+     </div>
+   </div>
+
+@@ -1319,6 +1322,30 @@ async function _loadBlock1_SR(forceLive=false) {
+     let srR = await _fetchJsonFast(srUrl, forceLive ? 20000 : 6000);
+
++    // ── Stage B: 检测 triple 缓存过期自动 force_live ─────────────
++    let cacheStale = false;
++    if (!forceLive && srR.pairs) {
++      const firstPair = Object.values(srR.pairs)[0];
++      const ts = firstPair?.timestamp;
++      if (ts) {
++        try {
++          let ageMs;
++          const d = new Date(ts);
++          if (!isNaN(d.getTime())) ageMs = Date.now() - d.getTime();
++          else if (typeof ts === 'number' && ts > 1e12) ageMs = Date.now() - ts;
++          if (ageMs !== undefined && ageMs / 3600000 >= 2) {
++            log('⚠️ Triple缓存超过2小时，自动触发强制刷新', 'warn');
++            cacheStale = true;
++          }
++        } catch(e) {}
++      }
++      if ((srR._cache?.age_sec || 0) >= 90) cacheStale = true;
++    }
++    if (cacheStale && !forceLive) {
++      const liveR = await _fetchJsonFast('/api/bt2/sr_levels?force_live=1', 25000).catch(() => ({}));
++      if (liveR && liveR.ok && liveR.pairs && Object.keys(liveR.pairs).length > 0) {
++        srR = liveR;
++        log('✅ 强制刷新成功，S/R数据已更新', 'ok');
++      }
++    }
++
+     let rawPairs = srR.pairs || {};
+     let fallbackUsed = false;
+
+@@ -1379,6 +1406,13 @@ async function _loadBlock2_AI() {
+       _m2Data[pair].current_price = td.current_price;
+       _m2Data[pair].current_price_gate = td.current_price_gate;
+       _m2Data[pair].current_price_okx = td.current_price_okx;
++
++      // ── Stage B: 实时价格覆盖后重算 S/R 距离 ─────────────────
++      _recomputeSRDistances(pair, _m2Data[pair]);
+     });
+
++// ── Stage B 新增: S/R 距离重算函数 ───────────────────────────
++function _recomputeSRDistances(pair, data) {
++  if (!data || !data.levels || !data.current_price) return;
++  const price = Number(data.current_price);
++  if (!price || price <= 0) return;
++  const levels = data.levels;
++  let nearest_support = null, nearest_resistance = null;
++  let min_support_dist = Infinity, min_resist_dist = Infinity;
++  for (const lvl of levels) {
++    const p = Number(lvl.price);
++    if (!p || p <= 0) continue;
++    const dist = (price - p) / p * 100;
++    if (dist > 0 && dist < min_support_dist) { min_support_dist = dist; nearest_support = p; }
++    if (dist < 0 && Math.abs(dist) < min_resist_dist) { min_resist_dist = Math.abs(dist); nearest_resistance = p; }
++  }
++  data.nearest_support = nearest_support;
++  data.nearest_resistance = nearest_resistance;
++  data.dist_to_support_pct = min_support_dist < Infinity ? min_support_dist : null;
++  data.dist_to_resistance_pct = min_resist_dist < Infinity ? min_resist_dist : null;
++}
+
++// ── Stage B 新增: 缓存年龄指示器更新 ────────────────────────
++function _updateCacheIndicator() {
++  const el = document.getElementById('m2-cache-indicator');
++  if (!el) return;
++  const pairs = window._m2Data || {};
++  const pairKeys = Object.keys(pairs);
++  if (!pairKeys.length) return;
++  const firstPair = pairs[pairKeys[0]];
++  const ts = firstPair?.timestamp;
++  if (!ts) return;
++  let ageMs;
++  try { const d = new Date(ts); if (!isNaN(d.getTime())) ageMs = Date.now() - d.getTime(); }
++  catch(e) {}
++  if (ageMs === undefined) return;
++  const ageMin = ageMs / 60000, ageH = ageMin / 60;
++  const src = firstPair?.data_source || '';
++  const srcLabel = src.includes('triple') ? '三所' : src.includes('single') ? '单所' : src.includes('fallback') ? '回退' : src ? src.slice(0,8) : '未知';
++  const label = ageMin < 2 ? `🟢 ${Math.round(ageMin)}分钟前 | ${srcLabel}` :
++                ageMin < 15 ? `🟡 ${Math.round(ageMin)}分钟前 | ${srcLabel}` :
++                ageH < 2    ? `🟠 ${Math.round(ageMin)}分钟前 | ${srcLabel}` :
++                              `🔴 ${ageH.toFixed(1)}小时前 | ${srcLabel}`;
++  el.textContent = label;
++  el.style.color = ageMin < 2 ? 'var(--green)' : ageMin < 15 ? 'var(--yellow)' : 'var(--red)';
++  el.title = `数据源: ${src}`;
++}
++
++// 在 _updateStatus() 函数末尾添加:
++// _updateCacheIndicator();
