@@ -1,0 +1,209 @@
+# PATCH.diff
+# Stage B 补丁草案 — temporary_pair_freeze / dca_pause_rules 读取逻辑
+# 状态：草案（DRAFT）— 禁止直接应用到实盘
+# 生成时间：2026/05/04 21:45
+# 注意：此补丁为草案，需通过 GPT 审核后才可应用到 ~/freqtrade_console/bt_tools/v65_autopilot.py
+
+diff --git a/bt_tools/v65_autopilot.py b/bt_tools/v65_autopilot.py
+--- a/bt_tools/v65_autopilot.py
++++ b/bt_tools/v65_autopilot.py
+@@ -882,6 +882,93 @@ def check_entry_rules(pair: str, direction: str, score: float,
+     # ── 止盈冷却检查结束 ─────────────────────────────────────────
++    # ── Stage B: temporary_pair_freeze 读取检查 ─────────────────
++    # 读取 overlay config 中的 pair 冻结状态，只阻断自动驾驶入场
++    # 不影响人工操作、不平仓、不影响已有仓位
++    _freeze_cfg = _get_overlay_config()
++    frozen, freeze_reason = is_pair_temporarily_frozen(pair, _freeze_cfg)
++    if frozen:
++        can_entry = False
++        reasons.append(f"🚫 入场拦截【临时冻结】{freeze_reason}")
++        details["l1_rejected"] = True
++    # ── temporary_pair_freeze 检查结束 ──────────────────────────
+     # ── 天眼AI自学习：动态L1量比阈值 ─────────────────────────────
+
+@@ -1828,6 +1915,143 @@ def _calc_dca_trigger_by_leverage(leverage: int) -> list:
+     return [l1_trigger, l2_trigger]
+
+
++# ── Stage B: temporary_pair_freeze / dca_pause_rules 读取逻辑 ───────────────
++
++_overlay_config_cache: dict | None = None
++_overlay_config_ts: float = 0.0
++_OVERLAY_CONFIG_CACHE_TTL: float = 60.0  # 缓存60秒，避免频繁读文件
++
++def _get_overlay_config() -> dict:
++    """
++    读取当前 bot 对应的 overlay config。
++    缓存在 _overlay_config_cache 中，TTL 60秒。
++    """
++    import time, json as _json, os as _os
++    global _overlay_config_cache, _overlay_config_ts
++
++    now = time.time()
++    if _overlay_config_cache is not None and (now - _overlay_config_ts) < _OVERLAY_CONFIG_CACHE_TTL:
++        return _overlay_config_cache
++
++    mode = _this_mode_exchange()
++    paths = _APIKEY_CONFIG_PATHS.get(mode, _APIKEY_CONFIG_PATHS.get("gate_9090", []))
++    for raw_path in paths:
++        path = _os.path.expanduser(raw_path)
++        if _os.path.exists(path):
++            try:
++                with open(path) as f:
++                    cfg = _json.load(f)
++                _overlay_config_cache = cfg
++                _overlay_config_ts = now
++                return cfg
++            except Exception:
++                pass
++    return {}
++
++
++def is_pair_temporarily_frozen(pair: str, cfg: dict | None = None,
++                                 now_ts: float | None = None) -> tuple[bool, str]:
++    """
++    检查交易对是否被临时冻结（Stage B 新增）。
++
++    读取 overlay config 中的 temporary_pair_freeze 字段。
++    仅阻断自动驾驶入场，不影响人工操作、不平仓、不影响已有仓位。
++
++    参数:
++        pair:    交易对，如 "DOGE/USDT:USDT"
++        cfg:     overlay config 字典（从 config_XXXX_overlay.json 读取）
++        now_ts:  当前时间戳（秒），用于测试
++
++    返回:
++        (is_frozen: bool, reason: str)
++    """
++    import time
++    now_ts = now_ts if now_ts is not None else time.time()
++
++    if not cfg:
++        return False, ""
++
++    freeze_rules = cfg.get("temporary_pair_freeze")
++    if not freeze_rules:
++        return False, ""
++
++    # 尝试多个 key 格式
++    pair_variants = [
++        pair,
++        pair.replace(":USDT", ""),
++        pair.replace("/USDT:USDT", ""),
++        pair.replace("/USDT", ""),
++    ]
++
++    for variant in pair_variants:
++        rule = freeze_rules.get(variant)
++        if not isinstance(rule, dict):
++            continue
++        if not rule.get("enabled", False):
++            continue
++        until_ts = rule.get("until_ts")
++        if until_ts is not None:
++            try:
++                if now_ts >= float(until_ts):
++                    continue  # 已过期
++            except (TypeError, ValueError):
++                pass
++        if rule.get("block_auto_entry", False):
++            reason = str(rule.get("reason", "temporary_pair_freeze"))
++            _log(f"[Freeze] {pair} 被临时冻结: {reason}")
++            return True, reason
++
++    return False, ""
++
++
++def is_dca_paused(pair: str, direction: str, cfg: dict | None = None,
++                   now_ts: float | None = None) -> tuple[bool, str]:
++    """
++    检查指定交易对方向是否暂停 DCA 新增仓位（Stage B 新增）。
++
++    读取 overlay config 中的 dca_pause_rules 字段。
++    只阻断 DCA 新增仓位，不影响已有持仓、不影响止损/止盈风控。
++
++    参数:
++        pair:      交易对，如 "SOL/USDT:USDT"
++        direction: 持仓方向 "LONG" / "SHORT"
++        cfg:       overlay config 字典
++        now_ts:    当前时间戳（秒），用于测试
++
++    返回:
++        (is_paused: bool, reason: str)
++    """
++    import time
++    now_ts = now_ts if now_ts is not None else time.time()
++
++    if not cfg:
++        return False, ""
++
++    rules = cfg.get("dca_pause_rules")
++    if not rules:
++        return False, ""
++
++    pair_base = pair.replace(":USDT", "")
++    pair_std  = pair.replace("/USDT:USDT", "")
++
++    keys_to_try = [
++        f"{pair}:{direction}",
++        f"{pair_base}:{direction}",
++        f"{pair_std}:{direction}",
++        pair,
++        pair_std,
++        pair_base,
++    ]
++
++    for key in keys_to_try:
++        rule = rules.get(key)
++        if not isinstance(rule, dict):
++            continue
++        if not rule.get("enabled", False):
++            continue
++        until_ts = rule.get("until_ts")
++        if until_ts is not None:
++            try:
++                if now_ts >= float(until_ts):
++                    continue  # 已过期
++            except (TypeError, ValueError):
++                pass
++        if rule.get("block_new_dca", False):
++            reason = str(rule.get("reason", "dca_pause_rules"))
++            _log(f"[DCA-Pause] {pair} {direction} DCA 已暂停: {reason}")
++            return True, reason
++
++    return False, ""
++# ── Stage B 读取逻辑结束 ───────────────────────────────────────────
+
+@@ -4126,6 +4362,18 @@ def force_entry_autopilot(...):
+                         leverage=int(ex_dict.get("leverage", 10))
+                     )
++
++                    # ── Stage B: DCA pause 检查（备用路径）──────────────
++                    _dca_cfg2 = _get_overlay_config()
++                    dca_p2, pause_r2 = is_dca_paused(pair, direction, _dca_cfg2)
++                    if dca_p2:
++                        _log(f"  🚫 {pair} DCA 暂停中: {pause_r2}，已有仓位转DCA被阻止")
++                        return {"success": False, "reason": f"DCA暂停: {pause_r2}"}
++                    # ── DCA pause 检查结束 ────────────────────────────
++
+                     if trig:
+
+@@ -6253,6 +4501,17 @@ def _run_trigger_audit_or_dca(...):
+                         leverage=int(lev)
+                     )
++
++                    # ── Stage B: DCA pause 检查（主路径）──────────────
++                    _dca_cfg = _get_overlay_config()
++                    dca_paused, pause_reason = is_dca_paused(pair, direction, _dca_cfg)
++                    if dca_paused:
++                        _log(f"  🚫 {pair} DCA 暂停中: {pause_reason}，跳过本轮DCA")
++                        cycle_result["skipped"] += 1
++                        cycle_result["details"].append({
++                            "pair": pair, "success": False,
++                            "reason": f"DCA暂停: {pause_reason}"
++                        })
++                        continue
++                    # ── DCA pause 检查结束 ────────────────────────────
++
+                     if not dca_triggered:
+                         _log(f"  🚫 {pair} DCA条件未触发: {dca_reason} (ROE: {roe:.1f}%)")
