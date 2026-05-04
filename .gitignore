@@ -1,0 +1,23 @@
+# 禁止上传
+*.env
+.env
+.env.*
+api_keys.json
+*.sqlite
+*.db
+*.log
+*.zip
+
+# macOS
+.DS_Store
+*.pem
+*.key
+
+# 交易数据
+tradesv3*.sqlite*
+*.wal
+*.shm
+
+# 私钥/助记词
+*. mnemonic
+*wallet*
