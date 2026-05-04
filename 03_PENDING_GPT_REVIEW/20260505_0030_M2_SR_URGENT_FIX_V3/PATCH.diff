@@ -1,0 +1,270 @@
+# PATCH.diff V3
+# M2 S/R 紧急缓存修复补丁 V3（V2 修正版）
+# 状态：DRAFT — 禁止直接应用到实盘
+# 生成时间：2026/05/05 00:30
+# 应用前必须：py_compile → 重启 console_server（不动机器人）
+#
+# V2 修正 → V3 再修正：
+#   1. timestamp 秒级数字被 new Date() 当毫秒 → 显式判断 ts < 1e12 再 ×1000
+#   2. window._m2Data 不存在（let 变量不在 window 上）→ typeof _m2Data !== 'undefined'
+#   3. 300秒初始 Timer 无 daemon → t.daemon = True
+#   4. (来自 V2) _rt_th 冗余导入 → 移除
+#   5. (来自 V2) Timer 重复启动 → _rt_refresh_scheduled 守卫
+#   6. (来自 V2) prewarm_realtime_prices_parallel 不存在 → 新建函数
+#   7. (来自 V2) _Path 未定义 → 移除
+
+--- /Users/luxiangnan/freqtrade_console/console_server.py	2026-05-04 16:34:38
++++ /var/folders/sr/xkm62mc9623dryw_gg12rgsr0000gn/T/tmp.hkKVVSjacq/console_server.py	2026-05-05 00:23:55
+@@ -145,6 +145,80 @@
+     _async_start_all()
+     print("[Startup] Background pre-warm started: scanner + realtime prices")
+ 
++    # ── V2: 实时价格定期刷新定时器（解决启动后数小时不更新问题）────────
++    _rt_refresh_scheduled = False
++    _RT_PRICE_REFRESH_INTERVAL = int(os.environ.get("TIANLU_RT_PRICE_REFRESH_MIN", "30")) * 60
++    _rt_price_refresh_timer = None
++
++    def _schedule_rt_price_refresh():
++        """每 N 分钟刷新一次实时价格缓存（daemon Thread，不影响主逻辑）"""
++        global _rt_price_refresh_timer
++        try:
++            _prewarm_realtime_prices()
++            import logging as _rt_log
++            _rt_log.getLogger("console_server").info(
++                f"[RT-Price-Refresh] 实时价格缓存刷新完成 (间隔: {_RT_PRICE_REFRESH_INTERVAL//60}分钟)")
++        except Exception as e:
++            import logging as _rt_log
++            _rt_log.getLogger("console_server").warning(f"[RT-Price-Refresh] 刷新失败: {e}")
++        _rt_price_refresh_timer = threading.Timer(_RT_PRICE_REFRESH_INTERVAL, _schedule_rt_price_refresh)
++        _rt_price_refresh_timer.daemon = True
++        _rt_price_refresh_timer.start()
++
++    def _cancel_rt_price_refresh():
++        global _rt_price_refresh_timer
++        if _rt_price_refresh_timer:
++            _rt_price_refresh_timer.cancel()
++            _rt_price_refresh_timer = None
++
++    # V3 修复: 初始 Timer 也设置 daemon=True，防止退出时阻塞
++    if _startup_autoscans_enabled() and os.environ.get("TIANLU_SKIP_STARTUP_PREWARM") != "1":
++        if not _rt_refresh_scheduled:
++            _rt_refresh_scheduled = True
++            t = threading.Timer(300, _schedule_rt_price_refresh)
++            t.daemon = True   # V3 修复: 防止退出时阻塞
++            t.start()
++            print("[Startup] 实时价格定期刷新定时器已启动（每30分钟）")
++
++# ── V2+V3: 并行版实时价格预热 ──────────────────────────────────────────
++def _prewarm_realtime_prices_parallel(pairs: list | None = None):
++    """
++    并行预热实时价格（ThreadPoolExecutor，15秒超时）
++    force_live API 调用时使用，避免串行超时
++    """
++    from concurrent.futures import ThreadPoolExecutor, as_completed
++    if pairs is None:
++        pairs = list(M2_WHITELIST_PAIRS)
++
++    def _fetch_pair(pair: str) -> tuple:
++        try:
++            prices = {
++                "gate": fetch_current_price_gate(pair),
++                "okx": fetch_current_price_okx(pair),
++                "bnb": fetch_current_price_binance(pair),
++            }
++            valid = [v for v in prices.values() if v and v > 0]
++            prices["average"] = sum(valid) / len(valid) if valid else 0
++            return pair, prices
++        except Exception:
++            return pair, None
++
++    try:
++        with ThreadPoolExecutor(max_workers=5) as ex:
++            futures = {ex.submit(_fetch_pair, p): p for p in pairs}
++            for fut in as_completed(futures, timeout=15):
++                pair, prices = fut.result()
++                if prices:
++                    now = time.time()
++                    _realtime_price_cache[pair] = (now, prices["gate"], prices["okx"], prices["bnb"], prices["average"])
++                    _save_realtime_price_to_disk(pair, prices)
++    except Exception as e:
++        import logging
++        logging.getLogger("console_server").warning(f"[RT-Price-Parallel] 并行预热异常: {e}")
++
++
++
++
+ # 注册 M3 PositionTracker Blueprint
+ from bt_tools.modules.M3_PositionTracker.api import position_tracker_bp
+ app.register_blueprint(position_tracker_bp, url_prefix='/api/l123/m3')
+@@ -25760,6 +25834,17 @@
+         else:
+             pairs = list(M2_WHITELIST_PAIRS)
+         result_pairs = {}
++
++        # ── V2: force_live 并行优化（15秒超时）──────────────────────
++        if force_live:
++            try:
++                _prewarm_realtime_prices_parallel(pairs)
++            except NameError:
++                _prewarm_realtime_prices()
++            except Exception as e:
++                import logging
++                logging.getLogger("console_server").warning(f"[force_live] 并行刷新失败: {e}")
++
+         for pair in pairs:
+             d = compute_and_cache_triple(pair) if force_live else get_latest_triple(pair)
+             if not d and not force_live:
+
+diff --git a/static/tabs/m2_sr.html b/static/tabs/m2_sr.html
+--- /Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html	2026-05-02 22:06:45
++++ /var/folders/sr/xkm62mc9623dryw_gg12rgsr0000gn/T/tmp.hkKVVSjacq/m2_sr.html	2026-05-05 00:25:03
+@@ -176,6 +176,8 @@
+       <span class="status-dot yellow pulse" id="status-dot"></span>
+       <span style="font-size:11px;color:var(--muted)" id="status-text">就绪</span>
+       <span style="font-size:11px;color:var(--gold)" id="scan-ts">--</span>
++      <!-- V2+V3: 数据年龄和来源指示器 -->
++      <span id="m2-cache-indicator" style="font-size:10px;color:var(--dimmer);margin-left:4px" title="数据新鲜度"></span>
+       <button class="btn btn-gold btn-sm" onclick="loadM2All(true)">🔄 强制刷新</button>
+     </div>
+   </div>
+@@ -1316,6 +1318,46 @@
+       log('⚠️ M2主接口返回错误，切换AI数据流兜底: ' + srR.error, 'warn');
+       srR = {};
+     }
++
++    // ── V3: Triple 缓存过期检测（统一处理 ISO/秒/毫秒 timestamp）───────
++    // 关键: new Date(number) 把数字解释为毫秒
++    // Unix秒(10位数 < 1e10) → ×1000; 毫秒(13位数 > 1e12) → 直接用
++    let cacheStale = false;
++    if (!forceLive && srR.pairs) {
++      const firstPair = Object.values(srR.pairs)[0];
++      const ts = firstPair?.timestamp;
++      if (ts !== undefined && ts !== null) {
++        try {
++          let ageMs;
++          if (typeof ts === 'string' && ts.trim()) {
++            const d = new Date(ts);
++            if (!isNaN(d.getTime())) {
++              ageMs = Date.now() - d.getTime();
++            } else {
++              const numeric = parseInt(ts, 10);
++              if (!isNaN(numeric) && numeric > 0) {
++                ageMs = numeric < 1e12 ? Date.now() - numeric * 1000 : Date.now() - numeric;
++              }
++            }
++          } else if (typeof ts === 'number' && ts > 0) {
++            ageMs = ts < 1e12 ? Date.now() - ts * 1000 : Date.now() - ts;
++          }
++          if (ageMs !== undefined && ageMs >= 0 && ageMs / 3600000 >= 2) {
++            log('⚠️ Triple缓存超过2小时，自动触发强制刷新', 'warn');
++            cacheStale = true;
++          }
++        } catch(e) {}
++      }
++      if ((srR._cache?.age_sec || 0) >= 90) cacheStale = true;
++    }
++    if (cacheStale && !forceLive) {
++      const liveR = await _fetchJsonFast('/api/bt2/sr_levels?force_live=1', 25000).catch(() => ({}));
++      if (liveR && liveR.ok && liveR.pairs && Object.keys(liveR.pairs).length > 0) {
++        srR = liveR;
++        log('✅ 强制刷新成功，S/R数据已更新', 'ok');
++      }
++    }
++
+     let rawPairs = srR.pairs || {};
+     let fallbackUsed = false;
+     if (!forceLive && _m2PayloadMissingLevelDetails(rawPairs)) {
+@@ -1387,6 +1429,9 @@
+         _m2Data[pair].leverage = td.leverage;
+         _m2Data[pair].entry_ok = td.entry_ok;
+         _m2Data[pair].scene_short = td.scene_short;
++
++      // ── V2+V3: 实时价格覆盖后重算 S/R 距离 ───────────────────
++      _recomputeSRDistances(pair, _m2Data[pair]);
+       }
+       _tianyanMap[id] = td;
+     });
+@@ -1479,6 +1524,9 @@
+   document.getElementById('scan-ts').textContent = new Date().toTimeString().slice(0,8);
+   document.getElementById('ff-last-update').textContent = new Date().toLocaleTimeString('zh-CN');
+ 
++  // V2+V3: 更新缓存年龄指示器
++  _updateCacheIndicator();
++
+   // 天眼/出山Tab异步更新
+   setTimeout(() => {
+     _showSkeletonTianyanCards();
+@@ -1503,6 +1551,73 @@
+   _showSkeletonBots();
+   setTimeout(() => loadM2All(), 100);
+ })();
++
++// ── V2+V3: S/R 距离重算函数 ──────────────────────────────────────────
++function _recomputeSRDistances(pair, data) {
++  if (!data || !data.levels || !data.current_price) return;
++  const price = Number(data.current_price);
++  if (!price || price <= 0) return;
++  const levels = data.levels;
++  let nearest_support = null, nearest_resistance = null;
++  let min_support_dist = Infinity, min_resist_dist = Infinity;
++  for (const lvl of levels) {
++    const p = Number(lvl.price);
++    if (!p || p <= 0) continue;
++    const dist = (price - p) / p * 100;
++    if (dist > 0 && dist < min_support_dist) { min_support_dist = dist; nearest_support = p; }
++    if (dist < 0 && Math.abs(dist) < min_resist_dist) { min_resist_dist = Math.abs(dist); nearest_resistance = p; }
++  }
++  data.nearest_support = nearest_support;
++  data.nearest_resistance = nearest_resistance;
++  data.dist_to_support_pct = min_support_dist < Infinity ? min_support_dist : null;
++  data.dist_to_resistance_pct = min_resist_dist < Infinity ? min_resist_dist : null;
++}
++
++// ── V2+V3: 缓存年龄指示器更新（V3: 修正 timestamp 解析 + _m2Data 作用域）───
++function _updateCacheIndicator() {
++  const el = document.getElementById('m2-cache-indicator');
++  if (!el) return;
++  // V3 修复: let 声明的变量不在 window 上，直接引用 script 全局变量
++  const pairs = typeof _m2Data !== 'undefined' ? _m2Data : {};
++  const pairKeys = Object.keys(pairs);
++  if (!pairKeys.length) return;
++  const firstPair = pairs[pairKeys[0]];
++  const ts = firstPair?.timestamp;
++  if (!ts) return;
++  let ageMs;
++  try {
++    if (typeof ts === 'string' && ts.trim()) {
++      const d = new Date(ts);
++      if (!isNaN(d.getTime())) {
++        ageMs = Date.now() - d.getTime();
++      } else {
++        const numeric = parseInt(ts, 10);
++        if (!isNaN(numeric) && numeric > 0) {
++          ageMs = numeric < 1e12 ? Date.now() - numeric * 1000 : Date.now() - numeric;
++        }
++      }
++    } else if (typeof ts === 'number' && ts > 0) {
++      ageMs = ts < 1e12 ? Date.now() - ts * 1000 : Date.now() - ts;
++    }
++  } catch(e) {}
++  if (ageMs === undefined || ageMs < 0) return;
++  const ageMin = ageMs / 60000, ageH = ageMin / 60;
++  const src = firstPair?.data_source || '';
++  const srcLabel = src.includes('triple') ? '三所' :
++                   src.includes('single') ? '单所' :
++                   src.includes('fallback') ? '回退' :
++                   src ? src.slice(0,8) : '未知';
++  const label = ageMin < 2   ? `🟢 ${Math.round(ageMin)}分钟前 | ${srcLabel}` :
++                 ageMin < 15 ? `🟡 ${Math.round(ageMin)}分钟前 | ${srcLabel}` :
++                 ageH < 2    ? `🟠 ${Math.round(ageMin)}分钟前 | ${srcLabel}` :
++                               `🔴 ${ageH.toFixed(1)}小时前 | ${srcLabel}`;
++  el.textContent = label;
++  el.style.color = ageMin < 2   ? 'var(--green)'  :
++                   ageMin < 15 ? 'var(--yellow)' :
++                   'var(--red)';
++  el.title = `数据源: ${src}`;
++}
++
+ </script>
+ </body>
+ </html>
