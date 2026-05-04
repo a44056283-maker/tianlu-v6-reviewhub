@@ -30,20 +30,22 @@ https://github.com/a44056283-maker/tianlu-v6-reviewhub/tree/main/05_MacB_PROJECT
 要审核的内容是：[简述要 GPT 看什么/解决什么问题]
 ```
 
-## 完整例子
+## GPT 审核结果获取
 
-GPT 给了建议后：
+GPT 审核后会让你去 `04_GPT_REVIEW_RESPONSES/` 查看建议：
 ```bash
 cd ~/Desktop/tianlu-v6-reviewhub
 git pull origin main
-# 查看 05_MacB_PROJECT_FILES/ 下的 GPT 回复
+# 查看 04_GPT_REVIEW_RESPONSES/ 下的 GPT 回复
 ```
 
 ## 文件夹用途
+
 | 文件夹 | 用途 |
 |--------|------|
 | `05_MacB_PROJECT_FILES/TASK名/` | 放你要 GPT 审核的项目文件 |
 | `03_PENDING_GPT_REVIEW/` | Mac A 的审核任务（不用管） |
+| `04_GPT_REVIEW_RESPONSES/` | GPT 审核建议放这里，git pull 后可查看 |
 
 ## 禁止
 - 不要推 API keys / 密码 / tokens
