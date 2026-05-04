@@ -1,0 +1,73 @@
+# Tianlu V6.5 M2 S/R 数据流修复补丁索引
+# 生成时间：2026-05-04 16:45
+# ==========================================================================
+
+## 补丁范围
+
+本次补丁包含两类改动：
+1. M2 S/R 数据流修复（今天完成）
+2. 定时执行进度系统（今天完成）
+
+---
+
+## A. console_server.py 改动
+
+### A1. P1 BUG 修复（console_server.py:6414-6416）
+用内联 lambda 绕过 _price_round 函数作用域缺失
+
+### A2. P4 三所交叉优先级修复（console_server.py:25704-25737）
+Triple 数据（get_latest_triple）优先于 M1/M4 fast path
+source 标签从 ai_data_flow_cache_fast_path → m2_triple_primary
+
+### A3. P5 interval 单位修复（console_server.py:6353）
+interval 从 15（分钟误当秒）改为 900（秒 = 15分钟）
+pairs 增加 BNB/USDT
+
+### A4. Mac B 超时缩短（console_server.py:4796, 4877）
+ping_timeout 从 10s → 3s（仅 8081-8084 端口）
+
+---
+
+## B. bt_tools/backtest_core/m2_sr_enhanced.py 改动
+
+### B1. 新增 L1.5 温缓存配置（m2_sr_enhanced.py:56-65）
+- _L1_WARM_CACHE_DIR = /tmp/tianlu_cache/sr_levels_warm
+- _L1_WARM_TTL = 7天（604800秒）
+- _L1_WARM_MAX_SIZE_MB = 500MB
+
+### B2. 新增温缓存管理函数（m2_sr_enhanced.py:68-93）
+- _warm_cache_fname()
+- _enforce_warm_cache_limit()
+- _promote_to_warm_cache()
+
+### B3. 改造 get_latest_triple() 读取路径
+L1 → L1.5 → L2
+
+### B4. 改造 compute_and_cache_triple() 写入路径
+L1 + L1.5（+ L2 需环境变量）
+
+---
+
+## C. 新增文件
+
+| 文件 | 状态 |
+|------|------|
+| scripts/m2_sr_health_check.sh | 已部署 |
+| scripts/m2_sr_archive.sh | 已编写 |
+| 06_MAINTENANCE/tianlu_progress_tick.sh | 已部署 |
+| 06_MAINTENANCE/com.tianlu.progress-tick.plist.draft | 草案未安装 |
+| 06_MAINTENANCE/com.tianlu.m2sr-health-check.plist | 已加载 |
+| 06_MAINTENANCE/com.tianlu.m2sr-archive.plist | 已编写 |
+
+---
+
+## D. 已知 BLOCKING 项
+
+| 字段 | 状态 | 说明 |
+|------|------|------|
+| temporary_pair_freeze | 🔴 零读取路径 | 必须在 v65_autopilot.py 添加 |
+| dca_pause_rules | 🔴 零读取路径 | 必须在 v65_autopilot.py 添加 |
+
+---
+
+*补丁索引 | 2026-05-04*
