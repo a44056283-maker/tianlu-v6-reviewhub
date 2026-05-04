@@ -1,0 +1,1188 @@
+===== data pipeline files =====
+/Users/luxiangnan/freqtrade_console/api_m1.py
+/Users/luxiangnan/freqtrade_console/backup/m2_sr_standalone.html
+/Users/luxiangnan/freqtrade_console/bt_tools/_backtest_evaluate_routes.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/collect_data.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/backtest_config.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/fund_flow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/fund_flow_live_scanner.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/giant_candle.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/inject_params.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/load_params.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/m2_sr_enhanced.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/market_index.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/multi_tf_sr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/recommendation_engine/analyze_and_recommend.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_042dbb1c.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_05660ea5.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_0d75694d.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_20efda48.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_24f21573.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_2ff118d8.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_30324f4c.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_35973c28.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_3a1fbffc.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_538a62bb.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_53cbd3b5.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_62157e68.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_84472022.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_96083a0d.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_9aec0ffb.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a3ce6562.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a79c86fc.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a8199946.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_ac0e922d.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_baaefab2.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_d14e06d7.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_ebf41a60.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_candidate_20260501_033402.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_runtime_20260501_033309.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/v65_current_30d_compare_20260430.json
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/run_backtest.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/validate_against_real.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/api_backtest.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/data_manager.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/result_analyzer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/rule_backtester.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/runner.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/strategy_wrapper.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_l1_noise_filter.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_v65_actual.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_v65_final.py
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_v65_sr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_ihatexml.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_inputstream.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_tokenizer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_trie/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_trie/_base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_trie/py.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/_utils.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/constants.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/alphabeticalattributes.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/inject_meta_charset.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/lint.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/optionaltags.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/sanitizer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/filters/whitespace.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/html5parser.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/serializer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treeadapters/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treeadapters/genshi.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treeadapters/sax.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treebuilders/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treebuilders/base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treebuilders/dom.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treebuilders/etree.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treebuilders/etree_lxml.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treewalkers/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treewalkers/base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treewalkers/dom.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treewalkers/etree.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treewalkers/etree_lxml.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/_vendor/html5lib/treewalkers/genshi.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bleach/html5lib_shim.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/bs4/builder/_html5lib.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/ccxt/static_dependencies/dydx_v4_client/dydxprotocol/clob/liquidations_config_pb2.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/ccxt/static_dependencies/dydx_v4_client/dydxprotocol/clob/liquidations_pb2.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/debugpy/_vendored/pydevd/pydev_pysrc.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/fastapi/middleware/httpsredirect.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/functorch/_src/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/functorch/_src/aot_autograd/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/functorch/_src/eager_transforms/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/functorch/_src/make_functional/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/functorch/_src/vmap/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/functorch/experimental/control_flow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/jedi/inference/flow_analysis.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/jupyter_lsp/tests/test_virtual_documents_shadow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/jupyter_lsp/virtual_documents_shadow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/current_flow_betweenness.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/current_flow_betweenness_subset.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/current_flow_closeness.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/flow_matrix.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality_subset.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/centrality/tests/test_current_flow_closeness.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/boykovkolmogorov.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/capacityscaling.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/dinitz_alg.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/edmondskarp.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/gomory_hu.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/maxflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/mincost.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/networksimplex.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/preflowpush.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/shortestaugmentingpath.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/tests/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/tests/test_gomory_hu.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/tests/test_maxflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/tests/test_maxflow_large_graph.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/tests/test_mincost.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/tests/test_networksimplex.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/networkx/algorithms/flow/utils.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/numpy/f2py/_src_pyf.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_pyf_src.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/optuna/integration/mlflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/optuna/integration/tensorflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/pandas/io/sas/sasreader.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/pandas/tests/extension/base/dim2.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/_histogram2d.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/_histogram2dcontour.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_colorbar.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_hoverlabel.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_legendgrouptitle.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_marker.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_stream.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_textfont.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_xbins.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/_ybins.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/colorbar/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/colorbar/_tickfont.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/colorbar/_tickformatstop.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/colorbar/_title.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/colorbar/title/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/colorbar/title/_font.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/hoverlabel/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/hoverlabel/_font.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/legendgrouptitle/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2d/legendgrouptitle/_font.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_colorbar.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_contours.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_hoverlabel.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_legendgrouptitle.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_line.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_marker.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_stream.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_textfont.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_xbins.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/_ybins.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/colorbar/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/colorbar/_tickfont.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/colorbar/_tickformatstop.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/colorbar/_title.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/colorbar/title/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/colorbar/title/_font.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/contours/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/contours/_labelfont.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/hoverlabel/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/hoverlabel/_font.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/legendgrouptitle/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/histogram2dcontour/legendgrouptitle/_font.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/layout/template/data/_histogram2d.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/plotly/graph_objs/layout/template/data/_histogram2dcontour.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/pygments/lexers/srcinfo.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/optimize/_dcsrch.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/optimize/_differentialevolution.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__differential_evolution.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/sparse/bsr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/sparse/csgraph/tests/test_flow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/sparse/csr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_csr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/scipy/special/tests/test_powm1.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/sqlalchemy/orm/clsregistry.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/starlette/middleware/httpsredirect.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/sympy/printing/tensorflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/sympy/printing/tests/test_tensorflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/sympy/vector/coordsysrect.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/sympy/vector/tests/test_coordsysrect.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/bouncyhouse.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/candles.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/consensus/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/consensus/consensus.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/consensus/movingaverage.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/consensus/oscillator.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/consensus/summary.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicator_helpers.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/cycle_indicators.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/indicators.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/momentum.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/overlap_studies.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/price_transform.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/volatility.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/indicators/volume_indicators.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/pivots_points.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/qtpylib.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/trendline.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/util.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/vendor/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/vendor/qtpylib/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/technical/vendor/qtpylib/indicators.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/telegram/_payment/refundedpayment.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_ihatexml.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_inputstream.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_tokenizer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_trie/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_trie/_base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_trie/py.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/_utils.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/constants.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/alphabeticalattributes.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/inject_meta_charset.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/lint.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/optionaltags.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/sanitizer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/filters/whitespace.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/html5parser.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/serializer.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treeadapters/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treeadapters/genshi.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treeadapters/sax.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treebuilders/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treebuilders/base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treebuilders/dom.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treebuilders/etree.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treebuilders/etree_lxml.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treewalkers/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treewalkers/base.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treewalkers/dom.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treewalkers/etree.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treewalkers/etree_lxml.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/_vendor/html5lib/treewalkers/genshi.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/_vendor/bleach/html5lib_shim.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/app.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/compat/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/compat/v1/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/error_codes.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/errors.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/flags.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/io/__init__.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/pywrap_tensorflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tensorboard/compat/tensorflow_stub/tensor_shape.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/torch/ao/ns/fx/n_shadows_utils.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/tornado/platform/caresresolver.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/flow_control.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/uvicorn/supervisors/watchfilesreload.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/lib/python3.13/site-packages/webcolors/_html5.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/.venv/share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/vendors-node_modules_d3-color_src_color_js-node_modules_d3-format_src_defaultLocale_js-node_m-09b215.2643c43f22ad111f4f82.js
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_l1_noise_filter.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_v65.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_v65_actual.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_v65_correct.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_v65_detail.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_v65_final.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/backtest_v65_sr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/data/converter/orderflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/enums/backteststate.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/ft_types/backtest_result_type.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/leverage/liquidation_price.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/optimize/backtest_caching.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/optimize/backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/api_backtest.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/api_dataflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/data_sr.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/ui/installed/assets/LogView-KwP7A5sr.js
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/ui/installed/assets/backtestMetrics-lqNuxkAn.js
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/ui/installed/assets/index-C-BgB_m2.js
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/util/migrations/funding_rate_mig.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/data/test_converter_orderflow.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/freqai/test_freqai_backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/leverage/test_update_liquidation_price.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/optimize/test_backtest_detail.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/optimize/test_backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/optimize/test_backtesting_adjust_position.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/testdata/backtest_results/.last_result.json
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/testdata/backtest_results/backtest-result.json
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/testdata/backtest_results/backtest-result.meta.json
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/testdata/backtest_results/backtest-result_multistrat.json
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/testdata/backtest_results/backtest-result_multistrat.meta.json
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/tests/util/test_funding_rate_migration.py
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data/backtest_results/.last_result.json
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data/backtest_results/backtest-result-2026-03-14_14-38-42.meta.json
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/backtest_demo.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting_demo.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/spread_backtesting_demo.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader_backtesting.py
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/m3_drawdown.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/m3_history.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/m3_overview.html
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/data_interface/sr_engine_wrapper.py
+/Users/luxiangnan/freqtrade_console/cache/l5/fear_greed/global.json
+/Users/luxiangnan/freqtrade_console/cache/l5/liquidations/BNB_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/liquidations/BTC_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/liquidations/DOGE_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/liquidations/ETH_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/liquidations/SOL_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/open_interest/BNB_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/open_interest/BTC_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/open_interest/DOGE_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/open_interest/ETH_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/open_interest/SOL_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/orderbook/BNB_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/orderbook/BTC_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/orderbook/DOGE_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/orderbook/ETH_USDT.json
+/Users/luxiangnan/freqtrade_console/cache/l5/orderbook/SOL_USDT.json
+/Users/luxiangnan/freqtrade_console/evolution_progress.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/flow_gate_backtest.py
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/fund_flow_v2_collector.py
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/latest.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/latest_report.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/m4_m5_shadow_lab.py
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/flow_gate_backtest_20260501_213032.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/flow_gate_backtest_20260501_213211.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/flow_gate_backtest_20260502_165623.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260430_130117.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260430_130210.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260430_130609.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260430_212226.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260430_212250.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260501_091505.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260501_215823.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_090503.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_091505.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_141119.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_165622.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_182503.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_182520.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260502_182527.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260503_090506.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260503_091510.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260503_182940.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260504_090512.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/reports/m4_m5_shadow_report_20260504_091534.json
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/web/index.html
+/Users/luxiangnan/freqtrade_console/scripts/l5_self_optimization_backtest.py
+/Users/luxiangnan/freqtrade_console/scripts/l5_three_day_opportunity_backtest.py
+/Users/luxiangnan/freqtrade_console/scripts/l5_three_day_trade_path_audit.py
+/Users/luxiangnan/freqtrade_console/scripts/scheduled_evolution_6h.py
+/Users/luxiangnan/freqtrade_console/scripts/v65_m4_m5_rule_gap_backtest.py
+/Users/luxiangnan/freqtrade_console/sr_config.json
+/Users/luxiangnan/freqtrade_console/sr_results.json
+/Users/luxiangnan/freqtrade_console/static/backtest.html
+/Users/luxiangnan/freqtrade_console/static/data_flow.html
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest-engine.html
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-fund-flow-v2.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-m4m5-shadow.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_test.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html
+
+===== l5 keyword scan =====
+/Users/luxiangnan/freqtrade_console/scanner.py:295:            "Shadowrocket (MacPacketTunnel)": "MacPacketTunnel",
+/Users/luxiangnan/freqtrade_console/audit_bots_2026-04-16.md:85:### L5 仓位管理（仅profile级统一配置）
+/Users/luxiangnan/freqtrade_console/audit_rules_mismatch_2026-04-16.md:39:### 入场规则 — L5 仓位管理
+/Users/luxiangnan/freqtrade_console/audit_rules_mismatch_2026-04-16.md:106:| `_L5_ENABLED` | True | Checked ✅ |
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot8081_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9091_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9094_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot8084_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9097_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9092_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot8082_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9095_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9090_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9090_全部_1d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot8083_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9093_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/cache/diagnosis/bot9096_全部_30d.json:6:  "premature_entry": {
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:120:        .ledger { background: linear-gradient(145deg, #0f172a, #020617); border: 1px solid var(--blue); padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(59, 130, 246, 0.1); display: flex; justify-content: space-around; align-items: center;}
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:137:        button:hover { background: var(--blue); box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);}
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:139:        .btn-panic:hover { background: var(--red); color: white; box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);}
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:150:        .block:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); border-color: var(--muted);}
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:153:        .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 rgba(100,116,139,0.4); }
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:154:        .pulse.alive { background: var(--green); box-shadow: 0 0 10px var(--green); animation: pulsing 2s infinite; }
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:155:        .pulse.dead { background: var(--red); box-shadow: 0 0 10px var(--red); }
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:156:        @keyframes pulsing { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:199:        .push-btn:hover { box-shadow: 0 0 15px rgba(16,185,129,0.5); }
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:820:                        }else if(rule === 'l5'){
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:821:                            ruleParams = {l5_max_position_pct:config.l5_max_position_pct, l5_max_open_positions:config.l5_max_open_positions, l5_position_scale:config.l5_position_scale, l5_position_per_pair_pct:config.l5_position_per_pair_pct};
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:1684:@app.route("/api/preset_l5", methods=["GET"])
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:1685:def get_preset_l5():
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:1687:    f = os.path.join(RULES_CONFIG_DIR, 'preset_l5.json')
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:1692:@app.route("/api/save_preset_l5", methods=["POST"])
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:1693:def save_preset_l5():
+/Users/luxiangnan/freqtrade_console/console_decentralized.py.bak_20260310_144849:1695:    f = os.path.join(RULES_CONFIG_DIR, 'preset_l5.json')
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:142:        .ledger { background: linear-gradient(145deg, #0f172a, #020617); border: 1px solid var(--blue); padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(59, 130, 246, 0.1); display: flex; justify-content: space-around; align-items: center;}
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:159:        button:hover { background: var(--blue); box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);}
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:161:        .btn-panic:hover { background: var(--red); color: white; box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);}
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:172:        .block:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); border-color: var(--muted);}
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:175:        .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 rgba(100,116,139,0.4); }
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:176:        .pulse.alive { background: var(--green); box-shadow: 0 0 10px var(--green); animation: pulsing 2s infinite; }
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:177:        .pulse.dead { background: var(--red); box-shadow: 0 0 10px var(--red); }
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:178:        @keyframes pulsing { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:221:        .push-btn:hover { box-shadow: 0 0 15px rgba(16,185,129,0.5); }
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:875:                        }else if(rule === 'l5'){
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:876:                            ruleParams = {l5_max_position_pct:config.l5_max_position_pct, l5_max_open_positions:config.l5_max_open_positions, l5_position_scale:config.l5_position_scale, l5_position_per_pair_pct:config.l5_position_per_pair_pct};
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:1852:@app.route("/api/preset_l5", methods=["GET"])
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:1853:def get_preset_l5():
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:1855:    f = os.path.join(RULES_CONFIG_DIR, 'preset_l5.json')
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:1860:@app.route("/api/save_preset_l5", methods=["POST"])
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:1861:def save_preset_l5():
+/Users/luxiangnan/freqtrade_console/backup_console_decentralized_20260310_174606.py:1863:    f = os.path.join(RULES_CONFIG_DIR, 'preset_l5.json')
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:87:### L5 — 仓位/信号强度
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:91:| `🎯 L5信号强度杠杆: none → {x}x` | 信号强度评级 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:92:| `🎯 L5盈利分批触发 {pair}: {reason} (盈利{profit}%)` | 触发分批平仓 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:93:| `🎯 L5动态止盈[{lev}x] {pair}: 盈利{profit}% 触发第{idx}档({exit_pct}%)` | P1/P2/P3档位触发 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:178:| `🎯 L5动态止盈[{lev}x] {pair}: 盈利{profit}% 触发第{idx}档({exit_pct}%)` | 档位触发 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:179:| `📦 L5动态止盈[{lev}x] 部分平仓: 卖出{total_pct}%` | 部分平仓 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:180:| `✅ L5部分平仓成功: 成交{closed} / 剩余{remain}（差异{diff}）` | 平仓成功 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:181:| `⚠️ L5部分平仓仅成交{closed}/{exit_amount}，剩余{remain}，重试{n}/3` | 部分成交重试 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:182:| `⚠️ L5重试耗尽，等下一周期` | 重试耗尽等待 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:183:| `✅ L5全平成功: {pair}` | 全部平仓 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:184:| `⚠️ L5全平失败【{pair}】: {err}，档位不advance，等下一周期重试` | 全平失败 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:187:| `⚠️ L5[{pair}]: 无S/R数据(dynamic_exit_state={state}), 跳过动态止盈` | 无S/R跳过 |
+/Users/luxiangnan/freqtrade_console/实时日志话术完整手册.md:188:| `⚠️ L5[{pair}]: 有S/R数据但sr_price=0, 跳过动态止盈` | S/R价格异常 |
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:2:  "profile_name": "v65_l5_best_tested_20260429",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:3:  "profile_type": "backtest_candidate_only",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:5:  "safety_note": "只用于BT2/L5回测候选验证，不自动写入实盘runtime参数。",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:8:    "l5_replay_samples": 21,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:37:    "l5_required_for_leverage_upgrade": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:39:    "l5_spread_block_pct": 0.08,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:40:    "l5_liquidation_risk_downgrade": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:50:  "rejected_candidates": [
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/config/v65_l5_candidate_20260429.json:71:    "M4/L5缺失或降级时限制置信度和杠杆升级，避免空数据被AI当中性强信号。"
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/__pycache__/load_params.cpython-314.pyc matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/__pycache__/position_diagnosis.cpython-314.pyc matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/__pycache__/run_backtest.cpython-314.pyc matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/__pycache__/fund_flow.cpython-314.pyc matches
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/fund_flow.py:103:    url = f"{SCAN_CONFIG['okx_endpoint']}/market/books-l5"
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/load_params.py:114:        # L5 仓位
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/load_params.py:120:        "l5_enabled": True,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/inject_params.py:68:    # 仓位（L5）
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_ETH_USDT_15m.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_XRP_USDT_15m.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_SOL_USDT_4h.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_ETH_USDT_4h.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_XRP_USDT_4h.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_DOGE_USDT_4h.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_BTC_USDT_15m.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_ETH_USDT_1h.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_BTC_USDT_4h.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_SOL_USDT_15m.parquet matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/data/gateio_DOGE_USDT_15m.parquet matches
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/run_backtest.py:435:        candidate_params = override.get("params", override)
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/run_backtest.py:436:        if not isinstance(candidate_params, dict):
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/run_backtest.py:438:        params = {**params, **candidate_params}
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/run_backtest.py:440:        params_source = f"runtime:{args.exchange}+candidate:{profile}"
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_baaefab2.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_0d75694d.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_0d75694d.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a8199946.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_84472022.json:84:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_53cbd3b5.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_62157e68.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_62157e68.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/v65_current_30d_compare_20260430.json:159:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_538a62bb.json:84:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_96083a0d.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_96083a0d.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_30324f4c.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_30324f4c.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_20efda48.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_20efda48.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_runtime_20260501_033309.json:107:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_candidate_20260501_033402.json:76:    "params_source": "runtime:gate+candidate:v65_l5_best_tested_20260429",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_candidate_20260501_033402.json:107:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_candidate_20260501_033402.json:144:      "l5_required_for_leverage_upgrade": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_candidate_20260501_033402.json:146:      "l5_spread_block_pct": 0.08,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/daily_selfopt/selfopt_ETH_USDT_candidate_20260501_033402.json:147:      "l5_liquidation_risk_downgrade": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_ebf41a60.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_ebf41a60.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_3a1fbffc.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_ac0e922d.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_ac0e922d.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_35973c28.json:84:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a79c86fc.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a3ce6562.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_a3ce6562.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_24f21573.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_9aec0ffb.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_9aec0ffb.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_2ff118d8.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_2ff118d8.json:128:      "v65_exit_authority_note": "AI_MODE on: robot internal L2/L5/consensus exits disabled; non-L1 exits require V6.5 P1/structure/liquidation authorization via 9099.",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_05660ea5.json:87:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_d14e06d7.json:84:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/reports/bt_042dbb1c.json:84:      "l5_enabled": true,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:58:PREMATURE_HOLDING_MIN = 15      # 持仓<15分钟
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:59:PREMATURE_LOSS_THRESHOLD = 0    # 亏损（任意亏损）
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:88:class PrematureEntry:
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:133:    premature_entry: PrematureEntry
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:251:def diagnose_premature_entry(trades: list[TradeRecord]) -> PrematureEntry:
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:256:    premature = [
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:258:        if t.holding_min < PREMATURE_HOLDING_MIN
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:259:        and t.close_profit_ratio < PREMATURE_LOSS_THRESHOLD
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:262:    rate = len(premature) / total * 100
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:267:    if any(t.holding_min < 5 for t in premature):
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:269:    if len(premature) > 5:
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:270:        reasons.append(f"共{len(premature)}笔过早入场，需优化入场逻辑")
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:273:        sum(t.holding_min for t in premature) / len(premature)
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:274:        if premature else 0
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:279:    return PrematureEntry(
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:280:        count=len(premature),
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:361:    premature: PrematureEntry,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:369:    if premature.severity in ("HIGH", "MEDIUM"):
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:375:            priority=premature.severity,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:376:            reason=premature.reason[0] if premature.reason else f"过早入场率{premature.rate}%",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:447:        premature = diagnose_premature_entry(trades)
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:450:        recs = generate_recommendations(premature, wrong_dir, exit_dist)
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:459:            premature_entry=premature,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:553:                     f"过早={r.get('premature_entry',{}).get('count',0)} "
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_core/position_diagnosis.py:586:            pe = result.get("premature_entry", {})
+/Users/luxiangnan/freqtrade_console/bt_tools/天福执行手册.md:76:├── self_evolution.md               ← 自我进化与错误复盘
+/Users/luxiangnan/freqtrade_console/bt_tools/天福执行手册.md:77:├── self_evolution_2026_q1.md      ← Q1季度复盘
+/Users/luxiangnan/freqtrade_console/bt_tools/天福执行手册.md:99:3. `~/.openclaw/workspace-tianlu/memory/self_evolution.md` — 错误复盘
+/Users/luxiangnan/freqtrade_console/bt_tools/天福执行手册.md:661:   → 错误写入 self_evolution.md（如果有）
+/Users/luxiangnan/freqtrade_console/bt_tools/天福执行手册.md:674:| 错误/踩坑 | self_evolution.md | 错误日志格式 |
+/Users/luxiangnan/freqtrade_console/bt_tools/交易机器人回测优化系统搭建报告.md:104:### 4.1 过早入场（Premature Entry）
+/Users/luxiangnan/freqtrade_console/bt_tools/交易机器人回测优化系统搭建报告.md:113:### 4.2 过早出场（Premature Exit）
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:88:# ── V6.5 L5 补仓参数 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:150:# ── 入场规则参数（V6.5 L1-L5）──────────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:503:# V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:516:# L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:517:_L5_ENABLED = True         # L5启用
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:852:#  V6.5 入场规则引擎 L1-L5
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:860:    V6.5 入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:900:    # L5 仓位计算
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1182:        #  L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1183:        if _L5_ENABLED:
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1186:            details["l5_multiplier"] = abs_multiplier
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1187:            details["l5_note"] = "仓位由_calc_position_params统一计算"
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1345:    """保存V6.5扩展参数到独立文件（包含L1-L5全部参数）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1377:            # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1383:            "l5_enabled": g.get("_L5_ENABLED", True),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1387:            # L5 补仓DCA
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:1523:# ── 本周期已执行退出的pair（互斥锁，防止L1/L3/L5/L2同一周期重复触发）──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3351:        # ── V6.5 L5仓位子规则：信号强度→杠杆 ─────
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3367:            details["l5_vol_ratio_limit"] = min(vol_ratio, 3.0)  # 限制最大3%
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3763:    # ── V6.5 杠杆: 使用L5信号强度杠杆（强10x/中7x/弱5x），不看量比 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3766:    # 从资金流信号强度获取L5杠杆（强/中/弱三档）
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3774:    _log(f"  🎯 L5信号强度杠杆: {flow_strength} → {leverage}x")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3824:        # V6.5公式：余额 × 5% × L5杠杆倍数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:3943:        # 非DCA：执行完整入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4253:# ── L5 动态止盈参数（按杠杆倍率分层，2026-03-21） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4540:    # 必须手动刷新价格并重新计算浮盈，确保 L4/L5 止盈判断基于实时数据
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4594:                continue  # 跳过后续L1/L2/L5检测，直接处理下一持仓
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4615:            _log(f"  ⏭️ {pair} 本周期已执行退出，跳过L1/L3/L5/L2检测")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4736:        # ── L5 动态止盈检测（盈利分批止盈） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4772:                                _log(f"  ⚠️ L5[{pair}]: tier_idx={tier_idx}来自旧仓位(无exit记录)，重置为-1")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4777:                        # ── DEBUG LOG：记录L5检测状态 ─────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4778:                        _log(f"  🔍 L5检测[{pair}]: 方向={direction}, 浮盈={profit_pct:.2f}%, "
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4790:                            _log(f"  🔍 L5[{pair}]: 检查档位idx={tier_idx+1}({current_profit_threshold:.1f}%), "
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4797:                                _log(f"🎯 L5动态止盈[{leverage}x] {pair}: 盈利{profit_pct:.1f}% "
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4802:                            _log(f"  🔍 L5[{pair}]: tier_idx={tier_idx}已是最高档(P3), 跳过")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4811:                                _log(f"  📦 L5动态止盈[{leverage}x] 部分平仓: 卖出{total_exit_pct}%")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4814:                                if not _v65_profit_exit_allowed(profit_pct, leverage, "L5动态止盈"):
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4815:                                    _log(f"  🛡️ V6.5发育保护: {pair} 浮盈{profit_pct:.2f}% < P1{_v65_p1_floor_pct(leverage):.2f}%，禁止L5半仓")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4839:                                        _log(f"  ⚠️ L5部分平仓异常【{pair}】(尝试{retry_count+1}/3): {exit_err}")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4860:                                        _log(f"  ✅ L5部分平仓完成: 交易{fresh_amount}已全平")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4874:                                            _log(f"  ✅ L5部分平仓成功: 成交{actually_closed:.4f} / 剩余{fresh_amount}（差异{abs(actually_closed - exit_amount):.4f}）")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4879:                                            _log(f"  ⚠️ L5部分平仓仅成交{actually_closed:.4f}/{exit_amount:.4f}，剩余{fresh_amount}，重试{retry_count+1}/3")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4882:                                                _log(f"  ⚠️ L5重试耗尽，剩余{fresh_amount}等下一周期")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4888:                                        _log(f"  ⚠️ L5部分平仓未成交（剩余{fresh_amount}），重试{retry_count+1}/3")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4891:                                            _log(f"  ⚠️ L5重试耗尽，等下一周期")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4897:                                    _log(f"  📊 L5档位advance: tier_idx={tier_idx}")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4904:                                    _log(f"  ✅ L5全平成功: {pair}")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4906:                                    _log(f"  ⚠️ L5全平失败【{pair}】: {exit_err}，档位不advance，等下一周期重试")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4918:                        _log(f"  ⚠️ L5[{pair}]: 有S/R数据但sr_price=0, 跳过动态止盈")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4920:                    _log(f"  ⚠️ L5[{pair}]: 无S/R数据(dynamic_exit_state={_dynamic_exit_state.get(_get_state_key(pair, trade_id),-1)}, tier_idx={_dynamic_exit_state.get(_get_state_key(pair, trade_id),-1)}), 跳过动态止盈")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:4922:                _log(f"  ⚠️ L5动态止盈检测异常 {pair}: {e}")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5289:    # ── Step 0: 同步兵部手动平仓（C-1: 防止手动exit后重复触发L5/L2）──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5442:    oversold_candidates = []
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5454:            oversold_candidates.append(p)
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5461:    if oversold_candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5462:        auto_qualified.extend(oversold_candidates)
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5463:        _log(f"🔽 启用超卖信号: {len(oversold_candidates)}个")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5466:    cycle_result["oversold_captured"] = len(oversold_candidates)
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5550:    candidates = list(qualified)
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5552:    if not candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5558:    candidates.sort(key=lambda x: abs(x.get("score", 0)), reverse=True)
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5560:    # 注意：不截断candidates，让所有候选都计算S/R数据
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5563:    _log(f"候选交易: {len(candidates)}对（将计算S/R）")
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5566:    for idx, p in enumerate(candidates):
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:5647:        pair_details["flow_strength"] = flow_strength  # 爸L5信号强度杠杆（强/中/弱）
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6370:            # ── L5 Phase1: 保存开仓快照 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6418:    # ═══ Bug1修复: 专门对已有持仓(不在candidates中)检查DCA补仓 ═══
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6419:    # 原因: candidates只含活跃信号对，信号弱的亏损持仓永远不会被评估
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6420:    candidate_pairs = {p["pair"] for p in candidates}
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6423:        if dca_pair in candidate_pairs:
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6548:    # ── 周期结束前最终L4/L5止盈检查 ───────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6549:    # 【BUG修复】在每个周期结束时，必须对所有持仓做最终的L4/L5止盈检查
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6949:    L1-L5完整参数配置
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6968:    # L5 补仓参数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6972:    # L5 参数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6973:    global _L5_ENABLED, _STRONG_LEV, _NORMAL_LEV, _WEAK_LEV, _BASE_STAKE_PCT
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:6974:    # V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7044:    # L5 参数（已禁用评分系统）
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7052:    # L5 仓位管理参数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7053:    if "l5_enabled" in params:
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7054:        _L5_ENABLED = bool(params["l5_enabled"])
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7055:        updated["l5_enabled"] = _L5_ENABLED
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7066:    # V6.5新增: L5 仓位子规则参数更新
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7149:    # L5 补仓参数
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7289:    """获取当前V6.5完整配置（L1-L5）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7309:        # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7310:        "l5_enabled": _L5_ENABLED,
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7315:        # L5 DCA补仓
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7511:#  L5 Phase1: 交易记忆查询端点
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7790:    # V6.5新增: L5 仓位管理子规则
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7791:    "leverage_strong": ("_LEVERAGE_STRONG", int, 5, 20, "🟣 [L5] 强信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7792:    "leverage_medium": ("_LEVERAGE_MEDIUM", int, 3, 15, "🟣 [L5] 中信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7793:    "leverage_weak": ("_LEVERAGE_WEAK", int, 2, 10, "🟣 [L5] 弱信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7831:    # 🎯【V6.5 入场规则参数】(L1-L4已移交规则引擎，仅保留L5)
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7832:    "max_positions":      ("_V61_MAX_POSITIONS",       int,   1,    10,   "🎯 [L5] 最大持仓数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7833:    "max_position_pct":  ("_V61_MAX_POSITION_PCT",   float, 0.1,  1.0,  "🎯 [L5] 最大总持仓(%)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7865:    # 🚀【V6.5 L5 补仓参数】
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7866:    "dca_enabled":         ("_DCA_ENABLED",            bool,  False, True, "💰 [L5] 补仓启用"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7867:    "dca_trigger_pct_l1":  ("_DCA_TRIGGER_PCTS[0]", float, 0.5,  20.0, "💰 [L5] 第1层补仓触发%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7868:    "dca_trigger_pct_l2":  ("_DCA_TRIGGER_PCTS[1]", float, 1.0,  30.0, "💰 [L5] 第2层补仓触发%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7869:    "dca_flow_strong_trigger": ("_DCA_FLOW_STRONG_TRIGGER", bool, False, True, "💰 [L5] 资金流强触发"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7870:    "dca_max_layer":     ("_DCA_MAX_LAYER",         int,   1,    20,   "💰 [L5] 最大补仓层数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7871:    "dca_sr_check":      ("_DCA_SR_CHECK",          bool,  False, True, "💰 [L5] S/R位置检查"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7873:    # 🎯【V6.5 L5 动态止盈参数】
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7874:    "l5_enabled":            ("_L5_ENABLED",               bool,   False, True,  "🎯 [L5] 动态止盈总开关"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7875:    "base_exit_p1_profit":  ("_BASE_EXIT_P1_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P1触发盈利基准%（真实涨幅=P1/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7876:    "base_exit_p2_profit":  ("_BASE_EXIT_P2_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P2触发盈利基准%（真实涨幅=P2/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7877:    "base_exit_p3_profit":  ("_BASE_EXIT_P3_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P3触发盈利基准%（真实涨幅=P3/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7878:    "base_exit_p1_pct":     ("_BASE_EXIT_P1_PCT",        int,    5,     100,   "🎯 [L5] P1平仓比例%（各杠杆固定）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7879:    "base_exit_p2_pct":     ("_BASE_EXIT_P2_PCT",        int,    5,     100,   "🎯 [L5] P2平仓比例%（=基准×10/杠杆）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7880:    "base_exit_p3_pct":     ("_BASE_EXIT_P3_PCT",        int,    50,    100,   "🎯 [L5] P3平仓比例%（=100全出）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7881:    "long_exit_mult":       ("_LONG_EXIT_MULT",           float,  1.000, 1.050,  "🎯 [L5] 多仓尾部浮动系数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7882:    "short_exit_mult":      ("_SHORT_EXIT_MULT",          float,  0.950, 1.000,  "🎯 [L5] 空仓尾部浮动系数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7883:    "dynamic_exit_enabled":  ("_DYNAMIC_EXIT_ENABLED",    bool,   False, True,  "🎯 [L5] 动态距离开关"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:7884:    "dynamic_exit_distance": ("_DYNAMIC_EXIT_DISTANCE",    float,  0.5,   10.0,  "🎯 [L5] 动态触发距离%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:8015:async def post_exit_cooldown(request: Request, pair: str = None, direction: str = None):
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:8209:        "L5 仓位管理": "根据信号强度分配杠杆：强信号10x，中等信号7x，弱信号5x。",
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:8777:.logo { width: 42px; height: 42px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); animation: pulse 2s infinite; }
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:8778:@keyframes pulse { 0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); } 50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.5); } }
+/Users/luxiangnan/freqtrade_console/bt_tools/v65_autopilot.py:8787:.dot.on { background: var(--blue); box-shadow: 0 0 8px var(--blue); animation: blink 1.5s infinite; }
+/Users/luxiangnan/freqtrade_console/bt_tools/P1_daily_dev.sh:3:# 由cron每日09:00触发（通过evolution_broadcast.py）
+/Users/luxiangnan/freqtrade_console/bt_tools/P1_daily_dev.sh:9:f = Path('$HOME/freqtrade_console/evolution_progress.json')
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:42:        self.slippage = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:102:        slippage: float,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:113:        self.slippage = slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:219:                self.slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:261:            total_slippage = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:262:            daily_slippage = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:305:            total_slippage = df["slippage"].sum()
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:306:            daily_slippage = total_slippage / total_days
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:347:            self.output(f"总滑点：\t{total_slippage:,.2f}")
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:353:            self.output(f"日均滑点：\t{daily_slippage:,.2f}")
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:377:            "total_slippage": total_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:378:            "daily_slippage": daily_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:699:        self.slippage = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:716:        slippage: float
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:746:            self.slippage += float(trade.volume) * size * slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:751:        # Net pnl takes account of commission and slippage cost
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:753:        self.net_pnl = self.total_pnl - self.commission - self.slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:763:    slippage: float,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:780:        slippage=slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/spread_trading/backtesting.py:809:        engine.slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleMultiTVSignalsStrategy.py:18:    # the price slippage for taker order, 0.5 means 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleMultiTVSignalsStrategy.py:19:    max_slippage_percent: float = 0.5  # 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleMultiTVSignalsStrategy.py:21:    parameters: list = ["order_volume", "max_slippage_percent"]
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleMultiTVSignalsStrategy.py:94:                price = Decimal(tick.ask_price_1 * (1 + self.max_slippage_percent / 100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleMultiTVSignalsStrategy.py:101:                price = Decimal(tick.bid_price_1 * (1-self.max_slippage_percent/100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleTVStrategy.py:18:    # the price slippage for taker order, 0.5 means 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleTVStrategy.py:19:    max_slippage_percent: float = 0.5  # 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleTVStrategy.py:21:    parameters: list = ["order_volume", "max_slippage_percent"]
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleTVStrategy.py:88:            price = Decimal(tick.ask_price_1 * (1 + self.max_slippage_percent / 100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/tradingview/strategies/SimpleTVStrategy.py:95:            price = Decimal(tick.bid_price_1 * (1-self.max_slippage_percent/100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:46:        self.slippages: Dict[str, float] = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:100:        slippages: Dict[str, float],
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:112:        self.slippages = slippages
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:248:                self.slippages,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:260:                "commission", "slippage", "trading_pnl",
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:296:            total_slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:297:            daily_slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:344:            total_slippage: float = df["slippage"].sum()
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:345:            daily_slippage: float = total_slippage / total_days
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:387:            self.output(f"总滑点：\t{total_slippage:,.2f}")
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:393:            self.output(f"日均滑点：\t{daily_slippage:,.2f}")
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:417:            "total_slippage": total_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:418:            "daily_slippage": daily_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:769:        self.slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:786:        slippage: float
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:816:            self.slippage += trade.volume * size * slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:820:        # Net pnl takes account of commission and slippage cost
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:822:        self.net_pnl = self.total_pnl - self.commission - self.slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:848:        self.slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:865:        slippages: Dict[str, float],
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:876:                slippages[vt_symbol]
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:882:            self.slippage += contract_result.slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:924:    slippages: Dict[str, float],
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:941:        slippages=slippages,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/portfolio_strategy/backtesting.py:970:        engine.slippages,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:118:        self.slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:182:        slippage: float,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:196:        self.slippage = slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:341:                self.slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:384:            total_slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:385:            daily_slippage: float = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:432:            total_slippage = df["slippage"].sum()
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:433:            daily_slippage = total_slippage / total_days
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:474:            self.output(f"total slippage：\t{total_slippage:,.2f}")
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:480:            self.output(f"daily slippage：\t{daily_slippage:,.2f}")
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:504:            "total_slippage": total_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:505:            "daily_slippage": daily_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:572:        daily_net_pnl, total_commission, daily_commission, total_slippage, daily_slippage, total_turnover, daily_turnover
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:602:                self.slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:629:        daily_net_pnl, total_commission, daily_commission, total_slippage, daily_slippage, total_turnover, daily_turnover
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:666:        global ga_slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:681:        ga_slippage = self.slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1152:        self.slippage = 0
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1169:        slippage: float,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1204:                self.slippage += float(trade.volume) * size * slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1209:                self.slippage += float(trade.volume) * size * slippage / (float(trade.price) ** 2)
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1214:        # Net pnl takes account of commission and slippage cost
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1216:        self.net_pnl = self.total_pnl - self.commission - self.slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1227:    slippage: float,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1245:        slippage=slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1277:        ga_slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/app/cta_strategy/backtesting.py:1330:ga_slippage = None
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/trader/ui/ico/connect.ico matches
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/howtrader/chart/item.py:174:        # Draw candle shadow
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/如何定制tradingview下单信号.md:98:    # the price slippage for taker order, 0.5 means 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/如何定制tradingview下单信号.md:99:    max_slippage_percent: float = 0.5  # 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/如何定制tradingview下单信号.md:101:    parameters: list = ["order_volume", "max_slippage_percent"]
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/如何定制tradingview下单信号.md:161:                price = Decimal(tick.ask_price_1 * (1 + self.max_slippage_percent / 100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/如何定制tradingview下单信号.md:167:                price = Decimal(tick.bid_price_1 * (1 - self.max_slippage_percent / 100))
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/imgs/quick_trader_configs.png matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/imgs/howtrader_trader.png matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/imgs/quick_trader_settings.png matches
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/docs/如何对接tradingview等三方交易信号.md:36:- max_slippage_percent, float, 超价的百分比，默认0.5，是0.5%。
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/README.md:539:    slippage=0,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting.py:9:def run_backtesting(strategy_class, setting, vt_symbol, interval, start, end, rate, slippage, size, pricetick, capital):
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting.py:17:        slippage=slippage,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting.py:42:    slippage=0.2,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting.py:57:    slippage=1,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/strategies/my_tv_simple_strategy.py:24:    # the price slippage for taker order, 0.5 means 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/strategies/my_tv_simple_strategy.py:25:    max_slippage_percent: float = 0.5  # 0.5%
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/strategies/my_tv_simple_strategy.py:27:    parameters: list = ["order_volume", "max_slippage_percent"]
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/strategies/my_tv_simple_strategy.py:87:                price = Decimal(tick.ask_price_1 * (1 + self.max_slippage_percent / 100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/strategies/my_tv_simple_strategy.py:93:                price = Decimal(tick.bid_price_1 * (1 - self.max_slippage_percent / 100))
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/backtest_demo.py:14:    slippage=0,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/spread_backtesting_demo.py:29:    slippage=0,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/trade_by_trade.py:13:    slippage=0.5,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/trade_by_trade.py:110:def generate_trade_df(trades, size, rate, slippage, capital):
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/trade_by_trade.py:131:    trade_df["slipping"] = trade_df["volume"] * size * slippage
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/trade_by_trade.py:266:        slippage: float = 0.0,
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/trade_by_trade.py:274:    total_trades = generate_trade_df(trades, size, rate, slippage, capital)
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/trade_by_trade.py:291:exhaust_trade_result(engine.trades, size=1, rate=8 / 10000, slippage=0.5)
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/examples/portfolio_backtesting_demo.py:26:    slippages={
+/Users/luxiangnan/freqtrade_console/bt_tools/howtrader/README-CN.md:570:    slippage=0,
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/__pycache__/exit_analyzer.cpython-314.pyc matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/__pycache__/entry_analyzer.cpython-314.pyc matches
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:63:| 过早入场比例 | {premature_entry_pct}% |
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:76:{premature_entry_patterns}
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:108:{premature_exit_patterns}
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:274:        if not report.premature_patterns:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:277:        for p in report.premature_patterns:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:288:        if not report.premature_patterns:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:291:        for p in report.premature_patterns:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:302:        if report.premature_entry_pct > 30:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:303:            findings.append(f"过早入场比例偏高（{report.premature_entry_pct}%），建议收紧入场条件")
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:322:        if report.premature_exit_pct > 40:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:323:            findings.append(f"过早出场比例偏高（{report.premature_exit_pct}%），建议拉远止盈目标")
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:352:        if report.premature_exit_pct > 30:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:450:            premature_entry_pct=self.entry_report.premature_entry_pct if self.entry_report else 0,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:455:            premature_entry_patterns=self._format_entry_patterns(self.entry_report) if self.entry_report else "_无数据_",
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/report_generator.py:479:            premature_exit_patterns=self._format_exit_patterns(self.exit_report) if self.exit_report else "_无数据_",
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:42:    premature_exit_count: int
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:43:    premature_exit_pct: float
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:49:    premature_patterns: list[dict]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:81:    PREMATURE_HOLDING_MINUTES = 15    # <15分钟判定为过早
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:125:                premature_exit_count=0, premature_exit_pct=0,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:127:                premature_patterns=[], tf_contribution_breakdown={},
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:160:        premature = [e for e in exits if self._is_premature(e)]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:161:        premature_count = len(premature)
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:162:        premature_pct = premature_count / total * 100
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:211:            premature_exit_count=premature_count,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:212:            premature_exit_pct=round(premature_pct, 1),
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:216:            premature_patterns=patterns,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:221:    def _is_premature(self, exit_sig: Any) -> bool:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:224:        holding_premature = exit_sig.holding_minutes < self.PREMATURE_HOLDING_MINUTES
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:226:        l1_premature = exit_sig.reason == _ExitReason.L1_LIQUIDATION
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:229:        return holding_premature or l1_premature or only_short_tf
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:233:        if self._is_premature(exit_sig):
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:234:            return "premature"
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:244:        premature = [e for e in exits if self._is_premature(e)]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:245:        if not premature:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:249:        too_short = [e for e in premature if e.holding_minutes < self.PREMATURE_HOLDING_MINUTES]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:260:        only_30m = [e for e in premature if e.reason == _ExitReason.L2_TF_30M]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:307:        premature_count = sum(1 for e in exits if self._is_premature(e))
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:308:        premature_ratio = premature_count / total
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:311:        e_premature = max(0, (1 - premature_ratio * 3)) * 35
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/exit_analyzer.py:333:        return round(e_premature + e_tier + e_holding + e_l1, 1)
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:39:    premature_entry_count: int
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:40:    premature_entry_pct: float
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:46:    premature_patterns: list[dict]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:69:    PREMATURE_VOL_RATIO_MAX = 2.8    # 量比 > 2.8x 判定为过早
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:70:    PREMATURE_SR_DIST_MAX = 3.0      # 距S/R > 3% 判定为过早
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:71:    PREMATURE_TOUCH_MIN = 1         # touch < 2 判定为过早
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:111:                premature_entry_count=0, premature_entry_pct=0,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:114:                premature_patterns=[], entry_distribution={},
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:127:        premature_count = sum(
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:128:            1 for e in entries if self._is_premature(e)
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:130:        premature_pct = premature_count / total * 100
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:172:            premature_entry_count=premature_count,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:173:            premature_entry_pct=round(premature_pct, 1),
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:179:            premature_patterns=patterns,
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:187:    def _is_premature(self, entry) -> bool:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:191:        vol_premature = entry.volume_ratio < self.PREMATURE_VOL_RATIO_MAX
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:193:        sr_premature = abs(dist) > self.PREMATURE_SR_DIST_MAX if dist != 0 else False
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:195:        touch_premature = entry.touch_count < self.PREMATURE_TOUCH_MIN
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:196:        return vol_premature or sr_premature or touch_premature
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:200:        if self._is_premature(entry):
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:201:            return "premature"
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:210:        premature = [e for e in entries if self._is_premature(e)]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:211:        if not premature:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:216:            "2.5-2.8x": [e for e in premature if 2.5 <= e.volume_ratio < 2.8],
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:217:            "2.0-2.5x": [e for e in premature if 2.0 <= e.volume_ratio < 2.5],
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:218:            "<2.0x": [e for e in premature if e.volume_ratio < 2.0],
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:233:        sr_bad = [e for e in premature if
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:247:        touch_bad = [e for e in premature if e.touch_count <= 1]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:266:        premature = sum(1 for e in entries if self._is_premature(e))
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:269:        premature_ratio = premature / total
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/analyzers/entry_analyzer.py:270:        e_pct = max(0, (1 - premature_ratio * 2)) * 40
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/core/report_generator.py:211:- **是否过早**: {"⚠️ 是" if r.is_premature_exit else "否"}
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/core/report_generator.py:212:- **说明**: {r.premature_reason or "无异常"}
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/projects/strategies/__pycache__/bt_autopilot.cpython-314.pyc matches
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/strategies/bt_autopilot.py:379:            candidates = [l for l in levels if l.sr_type == "support" and l.price < price]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/strategies/bt_autopilot.py:381:            candidates = [l for l in levels if l.sr_type == "resistance" and l.price > price]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/strategies/bt_autopilot.py:382:        if not candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/strategies/bt_autopilot.py:385:        candidates.sort(key=lambda l: (-l.weighted_strength, abs(l.price - price)))
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/strategies/bt_autopilot.py:386:        return candidates[0]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:69:    is_premature_exit: bool = False
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:70:    premature_reason: str = ""
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:163:        self._detect_premature_exit(report, direction, entry_price, current_price)
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:274:            candidates = [l for l in tf_levels if l.sr_type == "resistance" and l.price > current_price]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:276:            candidates = [l for l in tf_levels if l.sr_type == "support" and l.price < current_price]
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:278:        if not candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:282:        best = min(candidates, key=lambda x: abs(x.price - current_price))
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:328:    def _detect_premature_exit(
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:364:                report.is_premature_exit = True
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:365:                report.premature_reason = f"持仓{report.holding_minutes:.0f}分钟即止盈({actual_pnl:.2f}%)，但持有到{max_sr.timeframe}S/R位可获{theoretical_pnl:.2f}%"
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:498:        if report.is_premature_exit:
+/Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/round3_engine.py:538:    print(f"Premature: {report.is_premature_exit}")
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/projects/round3_exit_decision/__pycache__/round3_engine.cpython-314.pyc matches
+/Users/luxiangnan/freqtrade_console/bt_tools/_backtest_evaluate_routes.py:159:                'is_premature_exit': r.is_premature_exit,
+/Users/luxiangnan/freqtrade_console/bt_tools/_backtest_evaluate_routes.py:160:                'premature_reason': r.premature_reason or '',
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/__pycache__/v65_autopilot.cpython-314.pyc matches
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/api_backtest.py:100:                "premature_exit_count": audit_report.premature_exit_count,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/api_backtest.py:149:            "premature_exit_count": report.premature_exit_count,
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/__pycache__/post_trade_analyzer.cpython-314.pyc matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/__pycache__/api_backtest.cpython-314.pyc matches
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:66:    premature_exit: bool     # 出山平早了
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:102:    premature_exit_count: int     # 出山平早次数
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:318:        premature_exit = False
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:350:            premature_exit = True
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:356:                risk_patterns.append("premature_exit")
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:374:        if is_win and not premature_exit and not missed_by_chushan:
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:387:            premature_exit=premature_exit,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:414:                "premature_exit": "过早平仓模式",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:460:        premature = [a for a in audits if a.premature_exit]
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:472:            "premature_exit_count": len(premature),
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:493:                tianyan_miss_count=0, chushan_miss_count=0, premature_exit_count=0,
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:534:            premature_exit_count=len([a for a in audits if a.premature_exit]),
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:576:        if chushan_audit.get("premature_exit_count", 0) > 0:
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:580:                "hint": f"存在{chushan_audit['premature_exit_count']}次过早平仓，建议检查止盈P1触发是否过于敏感",
+/Users/luxiangnan/freqtrade_console/bt_tools/backtest_engine/post_trade_analyzer.py:582:                "pattern": "premature_exit",
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/ft_client/LICENSE:369:    author attributions in that material or in the Appropriate Legal
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/patterns.py:50:        def upper_shadow(c):
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/patterns.py:53:        def lower_shadow(c):
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/patterns.py:70:        ls2 = lower_shadow(c2)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/patterns.py:71:        us2 = upper_shadow(c2)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:91:# ── V6.5 L5 补仓参数 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:152:# ── 入场规则参数（V6.5 L1-L5）──────────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:203:# V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:216:# L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:217:_L5_ENABLED = True         # L5启用
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:574:#  V6.5 入场规则引擎 L1-L5
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:582:    V6.5 入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:596:    # L5 仓位计算
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:877:        #  L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:878:        if _L5_ENABLED:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:881:            details["l5_multiplier"] = abs_multiplier
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:882:            details["l5_note"] = "仓位由_calc_position_params统一计算"
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:977:    """保存V6.5扩展参数到独立文件（包含L1-L5全部参数）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:1009:            # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:1015:            "l5_enabled": g.get("_L5_ENABLED", True),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:1019:            # L5 补仓DCA
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:1134:# ── 本周期已执行退出的pair（互斥锁，防止L1/L3/L5/L2同一周期重复触发）──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3023:        # ── V6.5 L5仓位子规则：信号强度→杠杆 ─────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3039:            details["l5_vol_ratio_limit"] = min(vol_ratio, 3.0)  # 限制最大3%
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3739:    # ── V6.5 杠杆: 使用L5信号强度杠杆（强10x/中7x/弱5x），不看量比 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3742:    # 从资金流信号强度获取L5杠杆（强/中/弱三档）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3750:    _log(f"  🎯 L5信号强度杠杆: {flow_strength} → {leverage}x")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3800:        # V6.5公式：余额 × 5% × L5杠杆倍数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:3930:        # 非DCA：执行完整入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4242:# ── L5 动态止盈参数（按杠杆倍率分层，2026-03-21） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4253:#   Bot不再自主止盈（L1盈利分批 + L5动态止盈跳过）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4640:    # 必须手动刷新价格并重新计算浮盈，确保 L4/L5 止盈判断基于实时数据
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4691:                continue  # 跳过后续L1/L2/L5检测，直接处理下一持仓
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4712:            _log(f"  ⏭️ {pair} 本周期已执行退出，跳过L1/L3/L5/L2检测")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4778:        # ── L5 动态止盈检测（AI全接管时跳过，出场交由ExitAI） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4814:                                _log(f"  ⚠️ L5[{pair}]: tier_idx={tier_idx}来自旧仓位(无exit记录)，重置为-1")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4819:                        # ── DEBUG LOG：记录L5检测状态 ─────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4820:                        _log(f"  🔍 L5检测[{pair}]: 方向={direction}, 浮盈={profit_pct:.2f}%, "
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4832:                            _log(f"  🔍 L5[{pair}]: 检查档位idx={tier_idx+1}({current_profit_threshold:.1f}%), "
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4839:                                _log(f"🎯 L5动态止盈[{leverage}x] {pair}: 盈利{profit_pct:.1f}% "
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4844:                            _log(f"  🔍 L5[{pair}]: tier_idx={tier_idx}已是最高档(P3), 跳过")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4853:                                _log(f"  📦 L5动态止盈[{leverage}x] 部分平仓: 卖出{total_exit_pct}%")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4856:                                if not _v65_profit_exit_allowed(profit_pct, leverage, "L5动态止盈"):
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4857:                                    _log(f"  🛡️ V6.5发育保护: {pair} 浮盈{profit_pct:.2f}% < P1{_v65_p1_floor_pct(leverage):.2f}%，禁止L5半仓")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4881:                                        _log(f"  ⚠️ L5部分平仓异常【{pair}】(尝试{retry_count+1}/3): {exit_err}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4902:                                        _log(f"  ✅ L5部分平仓完成: 交易{fresh_amount}已全平")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4916:                                            _log(f"  ✅ L5部分平仓成功: 成交{actually_closed:.4f} / 剩余{fresh_amount}（差异{abs(actually_closed - exit_amount):.4f}）")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4921:                                            _log(f"  ⚠️ L5部分平仓仅成交{actually_closed:.4f}/{exit_amount:.4f}，剩余{fresh_amount}，重试{retry_count+1}/3")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4924:                                                _log(f"  ⚠️ L5重试耗尽，剩余{fresh_amount}等下一周期")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4930:                                        _log(f"  ⚠️ L5部分平仓未成交（剩余{fresh_amount}），重试{retry_count+1}/3")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4933:                                            _log(f"  ⚠️ L5重试耗尽，等下一周期")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4939:                                    _log(f"  📊 L5档位advance: tier_idx={tier_idx}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4946:                                    _log(f"  ✅ L5全平成功: {pair}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4948:                                    _log(f"  ⚠️ L5全平失败【{pair}】: {exit_err}，档位不advance，等下一周期重试")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4960:                        _log(f"  ⚠️ L5[{pair}]: 有S/R数据但sr_price=0, 跳过动态止盈")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4962:                    _log(f"  ⚠️ L5[{pair}]: 无S/R数据(dynamic_exit_state={_dynamic_exit_state.get(_get_state_key(pair, trade_id),-1)}, tier_idx={_dynamic_exit_state.get(_get_state_key(pair, trade_id),-1)}), 跳过动态止盈")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:4964:                _log(f"  ⚠️ L5动态止盈检测异常 {pair}: {e}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5304:    # ── Step 0: 同步兵部手动平仓（C-1: 防止手动exit后重复触发L5/L2）──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5488:    oversold_candidates = []
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5500:            oversold_candidates.append(p)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5507:    if oversold_candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5508:        auto_qualified.extend(oversold_candidates)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5509:        _log(f"🔽 启用超卖信号: {len(oversold_candidates)}个")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5512:    cycle_result["oversold_captured"] = len(oversold_candidates)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5596:    candidates = list(qualified)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5598:    if not candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5604:    candidates.sort(key=lambda x: abs(x.get("score", 0)), reverse=True)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5606:    # 注意：不截断candidates，让所有候选都计算S/R数据
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5609:    _log(f"候选交易: {len(candidates)}对（将计算S/R）")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5612:    for idx, p in enumerate(candidates):
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:5675:        pair_details["flow_strength"] = flow_strength  # 爸L5信号强度杠杆（强/中/弱）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6399:            # ── L5 Phase1: 保存开仓快照 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6447:    # ═══ Bug1修复: 专门对已有持仓(不在candidates中)检查DCA补仓 ═══
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6448:    # 原因: candidates只含活跃信号对，信号弱的亏损持仓永远不会被评估
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6449:    candidate_pairs = {p["pair"] for p in candidates}
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6452:        if dca_pair in candidate_pairs:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6575:    # ── 周期结束前最终L4/L5止盈检查 ───────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6576:    # 【BUG修复】在每个周期结束时，必须对所有持仓做最终的L4/L5止盈检查
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6954:    L1-L5完整参数配置
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6973:    # L5 补仓参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6977:    # L5 参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6978:    global _L5_ENABLED, _STRONG_LEV, _NORMAL_LEV, _WEAK_LEV, _BASE_STAKE_PCT
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:6979:    # V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7046:    # L5 参数（已禁用评分系统）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7054:    # L5 仓位管理参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7055:    if "l5_enabled" in params:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7056:        _L5_ENABLED = bool(params["l5_enabled"])
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7057:        updated["l5_enabled"] = _L5_ENABLED
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7068:    # V6.5新增: L5 仓位子规则参数更新
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7151:    # L5 补仓参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7248:    """获取当前V6.5完整配置（L1-L5）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7268:        # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7269:        "l5_enabled": _L5_ENABLED,
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7277:        # L5 DCA补仓
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7460:#  L5 Phase1: 交易记忆查询端点
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7759:    # V6.5新增: L5 仓位管理子规则
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7760:    "leverage_strong": ("_LEVERAGE_STRONG", int, 5, 20, "🟣 [L5] 强信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7761:    "leverage_medium": ("_LEVERAGE_MEDIUM", int, 3, 15, "🟣 [L5] 中信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7762:    "leverage_weak": ("_LEVERAGE_WEAK", int, 2, 10, "🟣 [L5] 弱信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7797:    # 🎯【V6.5 入场规则参数】(L1-L4已移交规则引擎，仅保留L5)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7798:    "max_positions":      ("_V61_MAX_POSITIONS",       int,   1,    10,   "🎯 [L5] 最大持仓数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7799:    "max_position_pct":  ("_V61_MAX_POSITION_PCT",   float, 0.1,  1.0,  "🎯 [L5] 最大总持仓(%)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7831:    # 🚀【V6.5 L5 补仓参数】
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7832:    "dca_enabled":         ("_DCA_ENABLED",            bool,  False, True, "💰 [L5] 补仓启用"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7833:    "dca_trigger_drop":  ("_DCA_TRIGGER_DROP",      float, 0.5,  10.0, "💰 [L5] 逆势补仓跌幅%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7834:    "dca_trigger_rise":  ("_DCA_TRIGGER_RISE",      float, 0.5,  10.0, "💰 [L5] 逆势补仓涨幅%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7835:    "dca_flow_strong_trigger": ("_DCA_FLOW_STRONG_TRIGGER", bool, False, True, "💰 [L5] 资金流强触发"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7836:    "dca_max_layer":     ("_DCA_MAX_LAYER",         int,   1,    20,   "💰 [L5] 最大补仓层数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7837:    "dca_sr_check":      ("_DCA_SR_CHECK",          bool,  False, True, "💰 [L5] S/R位置检查"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7839:    # 🎯【V6.5 L5 动态止盈参数】
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7840:    "l5_enabled":            ("_L5_ENABLED",               bool,   False, True,  "🎯 [L5] 动态止盈总开关"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7841:    "base_exit_p1_profit":  ("_BASE_EXIT_P1_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P1触发盈利基准%（真实涨幅=P1/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7842:    "base_exit_p2_profit":  ("_BASE_EXIT_P2_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P2触发盈利基准%（真实涨幅=P2/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7843:    "base_exit_p3_profit":  ("_BASE_EXIT_P3_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P3触发盈利基准%（真实涨幅=P3/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7844:    "base_exit_p1_pct":     ("_BASE_EXIT_P1_PCT",        int,    5,     100,   "🎯 [L5] P1平仓比例%（各杠杆固定）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7845:    "base_exit_p2_pct":     ("_BASE_EXIT_P2_PCT",        int,    5,     100,   "🎯 [L5] P2平仓比例%（=基准×10/杠杆）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7846:    "base_exit_p3_pct":     ("_BASE_EXIT_P3_PCT",        int,    50,    100,   "🎯 [L5] P3平仓比例%（=100全出）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7847:    "long_exit_mult":       ("_LONG_EXIT_MULT",           float,  1.000, 1.050,  "🎯 [L5] 多仓尾部浮动系数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7848:    "short_exit_mult":      ("_SHORT_EXIT_MULT",          float,  0.950, 1.000,  "🎯 [L5] 空仓尾部浮动系数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7849:    "dynamic_exit_enabled":  ("_DYNAMIC_EXIT_ENABLED",    bool,   False, True,  "🎯 [L5] 动态距离开关"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:7850:    "dynamic_exit_distance": ("_DYNAMIC_EXIT_DISTANCE",    float,  0.5,   10.0,  "🎯 [L5] 动态触发距离%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:8098:        "L5 仓位管理": "根据信号强度分配杠杆：强信号10x，中等信号7x，弱信号5x。",
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:8665:.logo { width: 42px; height: 42px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); animation: pulse 2s infinite; }
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:8666:@keyframes pulse { 0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); } 50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.5); } }
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/api_autopilot.py:8675:.dot.on { background: var(--blue); box-shadow: 0 0 8px var(--blue); animation: blink 1.5s infinite; }
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/strategies/HunterEyeScanner.py:563:        details['vol_ratio_l5']     = round(vol / va20, 3) if va20 > 0 else None
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_gate15637798222/tradesv3_gate.sqlite matches
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/tradesv3_okx.sqlite matches
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:91:# ── V6.5 L5 补仓参数 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:152:# ── 入场规则参数（V6.5 L1-L5）──────────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:203:# V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:216:# L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:217:_L5_ENABLED = True         # L5启用
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:574:#  V6.5 入场规则引擎 L1-L5
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:582:    V6.5 入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:596:    # L5 仓位计算
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:877:        #  L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:878:        if _L5_ENABLED:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:881:            details["l5_multiplier"] = abs_multiplier
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:882:            details["l5_note"] = "仓位由_calc_position_params统一计算"
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:977:    """保存V6.5扩展参数到独立文件（包含L1-L5全部参数）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:1009:            # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:1015:            "l5_enabled": g.get("_L5_ENABLED", True),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:1019:            # L5 补仓DCA
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:1134:# ── 本周期已执行退出的pair（互斥锁，防止L1/L3/L5/L2同一周期重复触发）──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3023:        # ── V6.5 L5仓位子规则：信号强度→杠杆 ─────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3039:            details["l5_vol_ratio_limit"] = min(vol_ratio, 3.0)  # 限制最大3%
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3739:    # ── V6.5 杠杆: 使用L5信号强度杠杆（强10x/中7x/弱5x），不看量比 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3742:    # 从资金流信号强度获取L5杠杆（强/中/弱三档）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3750:    _log(f"  🎯 L5信号强度杠杆: {flow_strength} → {leverage}x")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3800:        # V6.5公式：余额 × 5% × L5杠杆倍数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:3930:        # 非DCA：执行完整入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4242:# ── L5 动态止盈参数（按杠杆倍率分层，2026-03-21） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4253:#   Bot不再自主止盈（L1盈利分批 + L5动态止盈跳过）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4640:    # 必须手动刷新价格并重新计算浮盈，确保 L4/L5 止盈判断基于实时数据
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4691:                continue  # 跳过后续L1/L2/L5检测，直接处理下一持仓
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4712:            _log(f"  ⏭️ {pair} 本周期已执行退出，跳过L1/L3/L5/L2检测")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4778:        # ── L5 动态止盈检测（AI全接管时跳过，出场交由ExitAI） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4814:                                _log(f"  ⚠️ L5[{pair}]: tier_idx={tier_idx}来自旧仓位(无exit记录)，重置为-1")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4819:                        # ── DEBUG LOG：记录L5检测状态 ─────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4820:                        _log(f"  🔍 L5检测[{pair}]: 方向={direction}, 浮盈={profit_pct:.2f}%, "
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4832:                            _log(f"  🔍 L5[{pair}]: 检查档位idx={tier_idx+1}({current_profit_threshold:.1f}%), "
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4839:                                _log(f"🎯 L5动态止盈[{leverage}x] {pair}: 盈利{profit_pct:.1f}% "
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4844:                            _log(f"  🔍 L5[{pair}]: tier_idx={tier_idx}已是最高档(P3), 跳过")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4853:                                _log(f"  📦 L5动态止盈[{leverage}x] 部分平仓: 卖出{total_exit_pct}%")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4856:                                if not _v65_profit_exit_allowed(profit_pct, leverage, "L5动态止盈"):
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4857:                                    _log(f"  🛡️ V6.5发育保护: {pair} 浮盈{profit_pct:.2f}% < P1{_v65_p1_floor_pct(leverage):.2f}%，禁止L5半仓")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4881:                                        _log(f"  ⚠️ L5部分平仓异常【{pair}】(尝试{retry_count+1}/3): {exit_err}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4902:                                        _log(f"  ✅ L5部分平仓完成: 交易{fresh_amount}已全平")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4916:                                            _log(f"  ✅ L5部分平仓成功: 成交{actually_closed:.4f} / 剩余{fresh_amount}（差异{abs(actually_closed - exit_amount):.4f}）")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4921:                                            _log(f"  ⚠️ L5部分平仓仅成交{actually_closed:.4f}/{exit_amount:.4f}，剩余{fresh_amount}，重试{retry_count+1}/3")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4924:                                                _log(f"  ⚠️ L5重试耗尽，剩余{fresh_amount}等下一周期")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4930:                                        _log(f"  ⚠️ L5部分平仓未成交（剩余{fresh_amount}），重试{retry_count+1}/3")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4933:                                            _log(f"  ⚠️ L5重试耗尽，等下一周期")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4939:                                    _log(f"  📊 L5档位advance: tier_idx={tier_idx}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4946:                                    _log(f"  ✅ L5全平成功: {pair}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4948:                                    _log(f"  ⚠️ L5全平失败【{pair}】: {exit_err}，档位不advance，等下一周期重试")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4960:                        _log(f"  ⚠️ L5[{pair}]: 有S/R数据但sr_price=0, 跳过动态止盈")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4962:                    _log(f"  ⚠️ L5[{pair}]: 无S/R数据(dynamic_exit_state={_dynamic_exit_state.get(_get_state_key(pair, trade_id),-1)}, tier_idx={_dynamic_exit_state.get(_get_state_key(pair, trade_id),-1)}), 跳过动态止盈")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:4964:                _log(f"  ⚠️ L5动态止盈检测异常 {pair}: {e}")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5304:    # ── Step 0: 同步兵部手动平仓（C-1: 防止手动exit后重复触发L5/L2）──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5488:    oversold_candidates = []
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5500:            oversold_candidates.append(p)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5507:    if oversold_candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5508:        auto_qualified.extend(oversold_candidates)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5509:        _log(f"🔽 启用超卖信号: {len(oversold_candidates)}个")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5512:    cycle_result["oversold_captured"] = len(oversold_candidates)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5596:    candidates = list(qualified)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5598:    if not candidates:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5604:    candidates.sort(key=lambda x: abs(x.get("score", 0)), reverse=True)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5606:    # 注意：不截断candidates，让所有候选都计算S/R数据
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5609:    _log(f"候选交易: {len(candidates)}对（将计算S/R）")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5612:    for idx, p in enumerate(candidates):
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:5675:        pair_details["flow_strength"] = flow_strength  # 爸L5信号强度杠杆（强/中/弱）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6399:            # ── L5 Phase1: 保存开仓快照 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6447:    # ═══ Bug1修复: 专门对已有持仓(不在candidates中)检查DCA补仓 ═══
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6448:    # 原因: candidates只含活跃信号对，信号弱的亏损持仓永远不会被评估
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6449:    candidate_pairs = {p["pair"] for p in candidates}
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6452:        if dca_pair in candidate_pairs:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6575:    # ── 周期结束前最终L4/L5止盈检查 ───────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6576:    # 【BUG修复】在每个周期结束时，必须对所有持仓做最终的L4/L5止盈检查
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6954:    L1-L5完整参数配置
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6973:    # L5 补仓参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6977:    # L5 参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6978:    global _L5_ENABLED, _STRONG_LEV, _NORMAL_LEV, _WEAK_LEV, _BASE_STAKE_PCT
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:6979:    # V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7046:    # L5 参数（已禁用评分系统）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7054:    # L5 仓位管理参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7055:    if "l5_enabled" in params:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7056:        _L5_ENABLED = bool(params["l5_enabled"])
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7057:        updated["l5_enabled"] = _L5_ENABLED
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7068:    # V6.5新增: L5 仓位子规则参数更新
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7151:    # L5 补仓参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7248:    """获取当前V6.5完整配置（L1-L5）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7268:        # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7269:        "l5_enabled": _L5_ENABLED,
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7277:        # L5 DCA补仓
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7460:#  L5 Phase1: 交易记忆查询端点
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7759:    # V6.5新增: L5 仓位管理子规则
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7760:    "leverage_strong": ("_LEVERAGE_STRONG", int, 5, 20, "🟣 [L5] 强信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7761:    "leverage_medium": ("_LEVERAGE_MEDIUM", int, 3, 15, "🟣 [L5] 中信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7762:    "leverage_weak": ("_LEVERAGE_WEAK", int, 2, 10, "🟣 [L5] 弱信号杠杆 (V6.5新增)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7797:    # 🎯【V6.5 入场规则参数】(L1-L4已移交规则引擎，仅保留L5)
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7798:    "max_positions":      ("_V61_MAX_POSITIONS",       int,   1,    10,   "🎯 [L5] 最大持仓数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7799:    "max_position_pct":  ("_V61_MAX_POSITION_PCT",   float, 0.1,  1.0,  "🎯 [L5] 最大总持仓(%)"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7831:    # 🚀【V6.5 L5 补仓参数】
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7832:    "dca_enabled":         ("_DCA_ENABLED",            bool,  False, True, "💰 [L5] 补仓启用"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7833:    "dca_trigger_drop":  ("_DCA_TRIGGER_DROP",      float, 0.5,  10.0, "💰 [L5] 逆势补仓跌幅%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7834:    "dca_trigger_rise":  ("_DCA_TRIGGER_RISE",      float, 0.5,  10.0, "💰 [L5] 逆势补仓涨幅%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7835:    "dca_flow_strong_trigger": ("_DCA_FLOW_STRONG_TRIGGER", bool, False, True, "💰 [L5] 资金流强触发"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7836:    "dca_max_layer":     ("_DCA_MAX_LAYER",         int,   1,    20,   "💰 [L5] 最大补仓层数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7837:    "dca_sr_check":      ("_DCA_SR_CHECK",          bool,  False, True, "💰 [L5] S/R位置检查"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7839:    # 🎯【V6.5 L5 动态止盈参数】
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7840:    "l5_enabled":            ("_L5_ENABLED",               bool,   False, True,  "🎯 [L5] 动态止盈总开关"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7841:    "base_exit_p1_profit":  ("_BASE_EXIT_P1_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P1触发盈利基准%（真实涨幅=P1/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7842:    "base_exit_p2_profit":  ("_BASE_EXIT_P2_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P2触发盈利基准%（真实涨幅=P2/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7843:    "base_exit_p3_profit":  ("_BASE_EXIT_P3_PROFIT",     float,  1.0,   50.0,  "🎯 [L5] P3触发盈利基准%（真实涨幅=P3/10）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7844:    "base_exit_p1_pct":     ("_BASE_EXIT_P1_PCT",        int,    5,     100,   "🎯 [L5] P1平仓比例%（各杠杆固定）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7845:    "base_exit_p2_pct":     ("_BASE_EXIT_P2_PCT",        int,    5,     100,   "🎯 [L5] P2平仓比例%（=基准×10/杠杆）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7846:    "base_exit_p3_pct":     ("_BASE_EXIT_P3_PCT",        int,    50,    100,   "🎯 [L5] P3平仓比例%（=100全出）"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7847:    "long_exit_mult":       ("_LONG_EXIT_MULT",           float,  1.000, 1.050,  "🎯 [L5] 多仓尾部浮动系数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7848:    "short_exit_mult":      ("_SHORT_EXIT_MULT",          float,  0.950, 1.000,  "🎯 [L5] 空仓尾部浮动系数"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7849:    "dynamic_exit_enabled":  ("_DYNAMIC_EXIT_ENABLED",    bool,   False, True,  "🎯 [L5] 动态距离开关"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:7850:    "dynamic_exit_distance": ("_DYNAMIC_EXIT_DISTANCE",    float,  0.5,   10.0,  "🎯 [L5] 动态触发距离%"),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:8098:        "L5 仓位管理": "根据信号强度分配杠杆：强信号10x，中等信号7x，弱信号5x。",
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:8665:.logo { width: 42px; height: 42px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); animation: pulse 2s infinite; }
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:8666:@keyframes pulse { 0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); } 50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.5); } }
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9096/strategies/api_autopilot.py:8675:.dot.on { background: var(--blue); box-shadow: 0 0 8px var(--blue); animation: blink 1.5s infinite; }
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/setup.ps1:168:  # Build a list of candidate executables dynamically from supported versions
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/TIANLU_OLLAMA_SYSTEM_PROMPT.txt:24:L1冰山熔断 → L2余额风控 → L3子弹拆分 → L4方向感知 → L5反欺诈 → L6时间戳 → L7跳级审计 → L8 ATR止损 → L9日级风控
+Binary file /Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/tradesv3_okx.sqlite matches
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:91:# ── V6.5 L5 补仓参数 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:152:# ── 入场规则参数（V6.5 L1-L5）──────────────────────────────────────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:203:# V6.5新增: L5 仓位管理子规则参数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:216:# L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:217:_L5_ENABLED = True         # L5启用
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:574:#  V6.5 入场规则引擎 L1-L5
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:582:    V6.5 入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:596:    # L5 仓位计算
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:877:        #  L5: 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:878:        if _L5_ENABLED:
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:881:            details["l5_multiplier"] = abs_multiplier
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:882:            details["l5_note"] = "仓位由_calc_position_params统一计算"
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:977:    """保存V6.5扩展参数到独立文件（包含L1-L5全部参数）"""
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:1009:            # L5 仓位管理
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:1015:            "l5_enabled": g.get("_L5_ENABLED", True),
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:1019:            # L5 补仓DCA
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:1134:# ── 本周期已执行退出的pair（互斥锁，防止L1/L3/L5/L2同一周期重复触发）──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3023:        # ── V6.5 L5仓位子规则：信号强度→杠杆 ─────
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3039:            details["l5_vol_ratio_limit"] = min(vol_ratio, 3.0)  # 限制最大3%
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3739:    # ── V6.5 杠杆: 使用L5信号强度杠杆（强10x/中7x/弱5x），不看量比 ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3742:    # 从资金流信号强度获取L5杠杆（强/中/弱三档）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3750:    _log(f"  🎯 L5信号强度杠杆: {flow_strength} → {leverage}x")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3800:        # V6.5公式：余额 × 5% × L5杠杆倍数
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:3930:        # 非DCA：执行完整入场规则检查（L1-L5）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:4242:# ── L5 动态止盈参数（按杠杆倍率分层，2026-03-21） ──
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:4253:#   Bot不再自主止盈（L1盈利分批 + L5动态止盈跳过）
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:4640:    # 必须手动刷新价格并重新计算浮盈，确保 L4/L5 止盈判断基于实时数据
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:4691:                continue  # 跳过后续L1/L2/L5检测，直接处理下一持仓
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:4712:            _log(f"  ⏭️ {pair} 本周期已执行退出，跳过L1/L3/L5/L2检测")
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/user_data_okx_9097/strategies/api_autopilot.py:4778:        # ── L5 动态止盈检测（AI全接管时跳过，出场交由ExitAI） ──

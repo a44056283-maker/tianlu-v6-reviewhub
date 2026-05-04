@@ -1,0 +1,994 @@
+# UI 与中控台审计输入
+
+生成时间: 2026-05-04 11:23:01
+输出目录: /Users/luxiangnan/Desktop/Tianlu_V6_5_Workspace/00_INBOX/FULL_AUDIT_INPUT_20260504_112219
+
+===== frontend files =====
+/Users/luxiangnan/freqtrade_console/backup/m2_sr_standalone.html
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/docs/javascripts/config.js
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/docs/overrides/main.html
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/docs/stylesheets/ft.extra.css
+/Users/luxiangnan/freqtrade_console/bt_tools/freqtrade_installed/freqtrade/rpc/api_server/ui/fallback_file.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M1_BotRPCFieldCollector/templates/dashboard.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M2_EntryScoringEngine/templates/dashboard.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/dashboard.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/m3_drawdown.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/m3_history.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/m3_overview.html
+/Users/luxiangnan/freqtrade_console/bt_tools/modules/M3_PositionTracker/templates/unified_dashboard.html
+/Users/luxiangnan/freqtrade_console/config.js
+/Users/luxiangnan/freqtrade_console/l5_evolution_lab/web/index.html
+/Users/luxiangnan/freqtrade_console/static/account_edit.html
+/Users/luxiangnan/freqtrade_console/static/accounts.html
+/Users/luxiangnan/freqtrade_console/static/backtest.html
+/Users/luxiangnan/freqtrade_console/static/css/tianlu_neon_theme.css
+/Users/luxiangnan/freqtrade_console/static/data_flow.html
+/Users/luxiangnan/freqtrade_console/static/monitor.html
+/Users/luxiangnan/freqtrade_console/static/retail_inbound.html
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html
+/Users/luxiangnan/freqtrade_console/static/rules/出山AI_英雄卡.html
+/Users/luxiangnan/freqtrade_console/static/rules/天眼AI_英雄卡.html
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest-engine.html
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest.html
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html
+/Users/luxiangnan/freqtrade_console/static/tabs/chushan-hero-card.html
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html
+/Users/luxiangnan/freqtrade_console/static/tabs/entry.html
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html
+/Users/luxiangnan/freqtrade_console/static/tabs/exit.html
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l123-summary.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-fund-flow-v2.html
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-m4m5-shadow.html
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_test.html
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html
+/Users/luxiangnan/freqtrade_console/static/tabs/real.html
+/Users/luxiangnan/freqtrade_console/static/tabs/risk-control.html
+/Users/luxiangnan/freqtrade_console/static/tabs/summary.html
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html
+/Users/luxiangnan/freqtrade_console/static/tabs/trades.html
+/Users/luxiangnan/freqtrade_console/static/test.html
+/Users/luxiangnan/freqtrade_console/static/upload_inbound.html
+/Users/luxiangnan/freqtrade_console/兵部监控台.html
+
+===== menu keywords =====
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:6:<title>⚡ M3 巨量K线监控</title>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:159:    <h1>⚡ M3 巨量K线监控</h1>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:164:      <button class="btn btn-red btn-sm" onclick="loadM3All()">🔄 刷新</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:170:    <span style="font-size:13px;font-weight:900;color:var(--red)">⚡ M3 巨量</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:182:    <button class="tf-btn" id="tab-detail" onclick="switchTab('detail')">📋 巨量详情</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:183:    <button class="tf-btn" id="tab-tianyan" onclick="switchTab('tianyan')">🛡️ 天眼AI</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:184:    <button class="tf-btn" id="tab-chushan" onclick="switchTab('chushan')">🏔️ 出山AI</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:203:            <div class="ai-status-label" style="color:var(--red)">M3 巨量异动</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:211:            <div class="ai-status-label" style="color:var(--green)">天眼AI · 入场质量</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:219:            <div class="ai-status-label" style="color:var(--orange)">出山AI · 持仓卫士</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:227:      <div class="cards-row" id="m3-hero-cards" style="align-items:start"></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:230:    <!-- 巨量详情 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:237:              <th>24h涨跌</th><th>波动率</th><th>巨量次数</th><th>最后巨量</th>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:247:    <!-- 天眼AI -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:250:        <span style="font-size:11px;font-weight:700;color:var(--green)">🛡️ 天眼AI · 入场审计</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:251:        <span style="font-size:9px;color:var(--muted);margin-left:4px">基于M3巨量信号的入场质量评估</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:256:    <!-- 出山AI -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:259:        <span style="font-size:11px;font-weight:700;color:#f0883e">🏔️ 出山AI · 持仓卫士</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:318:var _m3Data = {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:322:var _m3DataHealth = {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:343:function _emptyM3Pair(pair) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:348:    alert_level: 'none', alert_desc: '暂无巨量K线数据',
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:350:    scenario_text: 'M3 15M无巨量K线触发，当前按常态波动监控',
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:356:function _normalizeM3Pairs(raw) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:362:    var fixed = Object.keys(d).length ? Object.assign(_emptyM3Pair(pair), d) : _emptyM3Pair(pair);
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:390://  _m3_ai_sections — 四板块内容（M1风格）
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:392:function _m3_ai_sections(id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:394:  var d = _m3Data[key] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:419:  // ═══ 1. ⚡ 巨量详情 — 红色（M3核心数据）══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:430:    html += '<div class="round-name">⚡ <b style="color:var(--red)">巨量K线详情</b></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:448:    // 最后巨量K线
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:451:      html += '<span style="font-size:11px;background:rgba(248,81,73,.12);color:var(--red);padding:4px 8px;border-radius:6px;border:1px solid rgba(248,81,73,.2)">⚡ 最后巨量: ' + relTime(lastGiant.time) + '</span>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:459:      html += '<div style="font-size:11px;color:var(--muted);padding:5px 7px;background:rgba(72,79,88,.08);border-radius:6px;margin-bottom:6px">⚡ 最后巨量: 无触发，当前按15M常态波动监控</div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:467:  // ═══ 2. 🛡️ 天眼AI — 绿色（入场审计）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:485:    html += '<div class="round-name">🛡️ <b style="color:var(--green)">天眼AI · 入场审计</b></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:493:      // ── 实时市场分析（M3巨量数据驱动）────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:498:        entryScore = 30; entrySignal = 'danger'; entryTags = ['🚨 巨量异动中', '⛔ 入场风险极高', '建议等待确认'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:502:        entryScore = 65; entrySignal = 'bullish_giant'; entryTags = ['📈 巨量上涨确认', '✅ 顺势关注做多', '严格止损'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:504:        entryScore = 45; entrySignal = 'bearish_giant'; entryTags = ['📉 巨量下跌中', '⚠️ 逆势风险大', '等待止跌信号'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:521:      html += '<div style="font-size:11px;color:var(--green);padding:5px 7px;background:rgba(63,185,80,.08);border-radius:6px;line-height:1.6">💡 🛡️ 天眼M3分析：巨量' + giantCount + '次 | 量比' + (volRatio > 0 ? volRatio.toFixed(1) + 'x' : '--') + ' | 24h涨跌' + (change24h > 0 ? '+' : '') + change24h.toFixed(2) + '% | 波动率' + (volatility > 0 ? volatility.toFixed(2) + '%' : '--') + ' | 评分:' + entryScore + '分</div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:542:  // ═══ 3. 🏔️ 出山AI — 橙色（持仓卫士）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:566:    html += '<div class="round-name">🏔️ <b style="color:#f0883e">出山AI · 持仓卫士</b></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:574:      // ── 实时市场保护分析（M3巨量数据驱动）────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:587:        protectScore = 55; protectSignal = 'high_vol'; protectTags = ['⚡ 巨量波动', '⚠️ 严格止损', '防止假突破'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:604:      html += '<span style="font-size:10px;background:rgba(20,184,166,.1);color:var(--teal);padding:2px 7px;border-radius:4px">巨量 <b>' + giantCount + '次</b></span>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:607:      html += '<div style="font-size:11px;color:#f0883e;padding:5px 7px;background:rgba(240,136,62,.08);border-radius:6px;line-height:1.6">🤖 🏔️ 出山M3评测：巨量' + giantCount + '次 | 量比' + (volRatio > 0 ? volRatio.toFixed(1) + 'x' : '--') + ' | 异动=' + alertLevel + ' | 24h=' + (change24h > 0 ? '+' : '') + change24h.toFixed(2) + '% | 安全评分:' + protectScore + '分</div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:631:  // ═══ 4. 🔍 异动分析 — 蓝色（M3交叉分析）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:666:    html += '<span style="font-size:9px;background:rgba(188,140,255,.1);color:var(--purple);padding:2px 6px;border-radius:4px">巨量K <b>' + giants.length + '</b></span>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:672:      html += '<div style="font-size:10px;color:var(--muted);margin-bottom:3px">最近巨量K线</div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:726:  var el = document.getElementById('m3-hero-cards');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:756:function renderM3HeroCards() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:757:  var el = document.getElementById('m3-hero-cards');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:763:    var d = _m3Data[key] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:781:    var scenarioText = d.scenario_text || (giantCount > 0 ? d.alert_desc : 'M3 15M无巨量K线触发，当前按常态波动监控');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:806:    html += '<div class="metric"><div class="val" style="color:var(--red)">' + (giantCount > 0 ? giantCount : '无触发') + '</div><div class="lbl">巨量次数</div></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:812:	    html += '⚡ ' + _PAIR_NAMES[id] + ' 15m | 24h ' + (change24h > 0 ? '+' : '') + change24h.toFixed(2) + '% | 量比' + (volRatio > 0 ? volRatio.toFixed(1) + 'x' : '无触发') + ' | 巨量' + giantCount + '次 | ' + esc(scenarioText) + lastGiantTime;
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:817:    html += _m3_ai_sections(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:833:    var d = _m3Data[key] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:855:    html += '<div style="font-size:11px;opacity:0.8">' + (change > 0 ? '+' : '') + change.toFixed(2) + '% | 量比' + volRatio.toFixed(1) + 'x | ' + a.d.giant_candle_count + '次巨量</div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:864://  天眼AI卡
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:880:      html += _m3_ai_sections(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:892:    html += '<span class="badge green">天眼AI</span>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:894:    html += _m3_ai_sections(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:901://  出山AI卡
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:917:      html += _m3_ai_sections(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:929:    html += '<span class="badge yellow">出山AI</span>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:931:    html += _m3_ai_sections(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:938://  巨量详情表格
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:952:    var d = _m3Data[key] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:957:      // 兜底：若无per-exchange vol_ratio，取最大巨量K线量比
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1104:// Block 1: M3巨量K线核心数据（最先加载）
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1110:      log('⚡ 巨量API: ' + giantR.error, 'error');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1115:    log('⚡ 巨量核心加载 (' + cacheLabel + ') ' + (performance.now()-t0).toFixed(0) + 'ms', giantR.fetching ? 'warn' : 'ok');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1116:    _m3Data = _normalizeM3Pairs(giantR.pairs || giantR.data || {});
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1117:    _m3DataHealth = giantR.data_health || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1120:    log('❌ 巨量核心加载失败: ' + e.message, 'error');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1125:// Block 2: 天眼+出山AI数据（独立加载）
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1135:      if (_m3Data[pair]) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1136:        _m3Data[pair].tianyan = td;
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1159:    var d = _m3Data[key] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1172:function loadM3All() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1174:  log('⚡ 分布式加载M3数据...');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1185:  // Step 1: Block 1 — 巨量K线核心（同步等待）
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1190:      document.getElementById('sub-info').textContent = '巨量数据加载失败';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1199:    renderM3HeroCards();
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1206:      var cd2 = _m3Data[ckey] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1220:    var fb = _m3DataHealth.fallback_count ? ' | 兜底' + _m3DataHealth.fallback_count : '';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1221:    document.getElementById('sub-info').textContent = '已扫描' + Object.keys(_m3Data).length + '个' + fb + ' | ⏱' + (performance.now()-t0).toFixed(0) + 'ms';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1226:    log('⚡ 完成 (' + (performance.now()-t0).toFixed(0) + 'ms) | ' + Object.keys(_m3Data).length + '个交易对 | ' + _giantEvents.length + '条异动记录 | 天眼:' + Object.keys(_tianyanMap).length + ' 出山:' + Object.keys(_exitAiMap).length, 'ok');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1236:    log('⚡ M3加载失败: ' + e.message, 'error');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1245:  log('⚡ M3 巨量K线监控页面加载完成', 'ok');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1249:  setTimeout(function() { loadM3All(); }, 100);
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:251:      <div class="mc-header blue">📡 入场质量（L1量比 / L2流向 / L4 S/R）</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:259:      <div class="mc-header red">🛡️ 出场档位（L1强平 / L2时线 / L3 S/R）</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:671:      '<div class="pc-sub">L1量比 ' + (ex.l1_vol_rate||0).toFixed(0) + '% · L2流向 ' + (ex.l2_flow_rate||0).toFixed(0) + '% · L4 S/R ' + (ex.l4_sr_rate||0).toFixed(0) + '%</div>' +
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:720:    sp += '<div class="sb-line"><span class="sb-key">L4 S/R</span><span class="sb-val" style="color:' + l4c + '">' + l4.toFixed(0) + '%（触底/触顶≥' + (V.L4_TOUCH_MIN||1) + '次，±' + (V.L4_SR_RANGE||2.0) + '%）</span></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:731:    sp += '<div class="sb-line"><span class="sb-key">L3 S/R</span><span class="sb-val">距S/R±' + (V.L3_SR_DISTANCE||3.0) + '%（已禁用）</span></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:742:    sp += '<div class="sb-title">📡 入场（L1量比≥' + (V.L1_VOL_LONG||2.5) + 'x / L2流向 / L4 S/R±' + (V.L4_SR_RANGE||2.0) + '%）</div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:745:    sp += '<div class="sb-line"><span class="sb-key">L4 S/R</span><span class="sb-val" style="color:' + l4c + '">' + l4.toFixed(0) + '%</span></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:751:    var weak = l1<50?'L1量比':l2<50?'L2流向':'L4 S/R';
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:761:    if (l4<50) sp += '<div class="sb-line"><span class="sb-key">L4 S/R</span><span class="sb-val neg">通过率' + l4.toFixed(0) + '%（偏离±' + (V.L4_SR_RANGE||2.0) + '%则拦截）</span></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:773:    sp += '<div class="sb-line"><span class="sb-key">L4 S/R</span><span class="sb-val neg">通过率' + l4.toFixed(0) + '%（偏离±' + (V.L4_SR_RANGE||2.0) + '%则拦截）</span></div>';
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:6:<title>⚡ M3 巨量K线检测</title>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:88:    <h1>⚡ M3 巨量K线检测</h1>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:98:    <select id="pair-select" onchange="loadM3()">
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:106:    <select id="exchange-select" onchange="loadM3()">
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:111:    <select id="tf-select" onchange="loadM3()">
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:116:    <button class="btn btn-gold" onclick="loadM3(true)">🔄 刷新</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:117:    <button class="btn" onclick="loadM3(true)">📦 缓存数据</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:122:    <div class="stat"><div class="v green" id="s-giant-bull">-</div><div class="l">巨量阳线</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:123:    <div class="stat"><div class="v red" id="s-giant-bear">-</div><div class="l">巨量阴线</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:180:// M3 巨量K线检测 - 独立页面
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:210:async function loadM3(useCache = true) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:330:  loadM3(true)
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:332:  setInterval(() => loadM3(true), 5 * 60 * 1000)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:6:<title>🦁 天眼AI · 高级智能监控中心</title>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:176:/* ── Hero Card Skeleton (分布式加载) ── */
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:177:.hero-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px;border-top:3px solid var(--gold);display:flex;flex-direction:column;gap:8px;transition:border-color 0.2s}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:178:.hero-card:hover{border-color:var(--gold);box-shadow:0 0 12px rgba(240,180,41,0.15)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:179:.hero-card.eth{border-top-color:var(--purple)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:180:.hero-card.sol{border-top-color:var(--green)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:181:.hero-card.bnb{border-top-color:#f0883e}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:182:.hero-card.doge{border-top-color:var(--yellow)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:183:.hero-card.loading{opacity:0.7}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:186:.hero-card .hc-head{display:flex;justify-content:space-between;align-items:center;gap:4px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:187:.hero-card .hc-title{font-size:13px;font-weight:900}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:188:.hero-card .hc-signal{padding:3px 10px;border-radius:8px;font-size:11px;font-weight:800;white-space:nowrap}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:191:.hero-card .hc-price-box{
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:197:.hero-card .hc-price{font-size:22px;font-weight:900;color:#fff;font-family:monospace;letter-spacing:0.5px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:198:.hero-card .hc-price.up{color:var(--green2)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:199:.hero-card .hc-price.down{color:var(--red2)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:200:.hero-card .hc-price-delta{font-size:12px;font-weight:700;padding:2px 7px;border-radius:6px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:201:.hero-card .hc-price-delta.up{background:rgba(63,185,80,0.15);color:var(--green2)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:202:.hero-card .hc-price-delta.down{background:rgba(248,81,73,0.15);color:var(--red2)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:203:.hero-card .hc-price-delta.neu{background:var(--card2);color:var(--muted)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:204:.hero-card .hc-price-updated{font-size:9px;color:var(--muted);text-align:center}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:207:.hero-card .hc-ai-box{display:flex;flex-direction:column;gap:4px;padding:8px;border-radius:8px;background:var(--bg);border:1px solid var(--border)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:208:.hero-card .hc-ai-box.bull{border-color:rgba(63,185,80,0.4);background:rgba(63,185,80,0.08)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:209:.hero-card .hc-ai-box.bear{border-color:rgba(248,81,73,0.4);background:rgba(248,81,73,0.08)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:210:.hero-card .hc-ai-box.neutral{border-color:var(--border);background:var(--bg)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:211:.hero-card .hc-ai-row{display:flex;align-items:center;gap:8px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:212:.hero-card .hc-dir{font-size:22px;font-weight:900;min-width:28px;text-align:center}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:213:.hero-card .hc-conf-wrap{display:flex;flex-direction:column;flex:1}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:214:.hero-card .hc-conf-bar{flex:1;height:5px;background:var(--card);border-radius:3px;overflow:hidden;margin-top:2px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:215:.hero-card .hc-conf-fill{height:100%;border-radius:3px;transition:width 0.4s}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:216:.hero-card .hc-conf-txt{font-size:11px;font-weight:700}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:217:.hero-card .hc-ai-reason{font-size:10px;color:var(--text);line-height:1.65}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:219:/* M3三格 */
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:220:.hero-card .hc-m3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:221:.hero-card .hc-m3.hc-m5-score{grid-template-columns:repeat(5,minmax(0,1fr))}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:222:.hero-card .hc-m3-cell{text-align:center;border-radius:6px;padding:6px 4px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:223:.hero-card .hc-m3-cell.green{background:rgba(63,185,80,0.12)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:224:.hero-card .hc-m3-cell.red{background:rgba(248,81,73,0.12)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:225:.hero-card .hc-m3-cell.gold{background:rgba(240,180,41,0.12)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:226:.hero-card .hc-m3-cell.cyan{background:rgba(34,211,238,0.12)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:227:.hero-card .hc-m3-num{font-size:18px;font-weight:900;display:block}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:228:.hero-card .hc-m3-cell.green .hc-m3-num{color:var(--green)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:229:.hero-card .hc-m3-cell.red .hc-m3-num{color:var(--red)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:230:.hero-card .hc-m3-cell.gold .hc-m3-num{color:var(--gold)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:231:.hero-card .hc-m3-cell.cyan .hc-m3-num{color:var(--cyan)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:232:.hero-card .hc-m3-lbl{font-size:10px;color:var(--muted);display:block;margin-top:1px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:234:/* M1+M2数据 */
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:235:.hero-card .hc-m12{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:236:.hero-card .hc-m12-cell{display:flex;flex-direction:column;gap:2px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:237:.hero-card .hc-m12-lbl{font-size:10px;color:var(--muted)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:238:.hero-card .hc-m12-val{font-size:13px;font-weight:800}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:239:.hero-card .hc-m12-val.green{color:var(--green)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:240:.hero-card .hc-m12-val.red{color:var(--red)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:241:.hero-card .hc-m12-val.gold{color:var(--gold)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:242:.hero-card .hc-m12-val.cyan{color:var(--cyan)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:245:.hero-card .hc-meta{display:flex;gap:5px;flex-wrap:wrap}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:246:.hero-card .hc-meta-tag{display:inline-flex;align-items:center;gap:3px;font-size:10px;padding:3px 8px;border-radius:5px;font-weight:700}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:247:.hero-card .hc-meta-tag.sq{background:rgba(240,180,41,0.15);color:var(--gold);border:1px solid rgba(240,180,41,0.3)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:248:.hero-card .hc-meta-tag.rv{background:rgba(248,81,73,0.15);color:var(--red);border:1px solid rgba(248,81,73,0.3)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:249:.hero-card .hc-meta-tag.rv-active{background:rgba(248,81,73,0.25);color:var(--red);border:1px solid rgba(248,81,73,0.5);animation:pulse 1.5s infinite}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:250:.hero-card .hc-meta-tag.ok{background:rgba(63,185,80,0.15);color:var(--green);border:1px solid rgba(63,185,80,0.3)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:251:.hero-card .hc-meta-tag.cyan{background:rgba(34,211,238,0.15);color:var(--cyan);border:1px solid rgba(34,211,238,0.3)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:252:.hero-card .hc-meta-tag.none{background:var(--card);color:var(--muted);border:1px solid var(--border)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:255:.hero-card .hc-scenario{font-size:10px;color:var(--muted);line-height:1.6;padding:6px 8px;background:rgba(255,255,255,0.02);border-radius:6px;border:1px dashed var(--border);margin-top:4px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:256:.hero-card .hc-scenario-label{font-size:9px;color:var(--dimmer);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:257:.hero-card .hc-scenario-line{padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:258:.hero-card .hc-scenario-line:last-child{border-bottom:none}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:261:@media(max-width:900px){.hero-card{font-size:12px}}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:262:@media(max-width:600px){.hero-card{font-size:11px}}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:263:@media(max-width:600px){.hero-card .hc-m3.hc-m5-score{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:275:    <h1>🦁 天眼AI · 高级智能监控中心</h1>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:278:      <span id="modelVersion" style="font-size:11px;color:var(--muted);padding:4px 10px;background:var(--card2);border-radius:20px;border:1px solid var(--border)">MiniMax-M2.7-highspeed</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:291:    <button class="tab" onclick="window.open('/tianyan-hero-card','_blank')">🦁 英雄卡</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:292:    <button class="tab" onclick="window.open('/tabs/risk-control.html','_blank')">🛡️ 风险控制</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:308:          <button onclick="refreshAllHeroData()" style="padding:5px 12px;background:var(--gold);border:none;border-radius:6px;color:#000;font-weight:700;cursor:pointer;font-size:11px">🔄 刷新</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:312:      <div id="tianyan-hero-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:315:        <div class="hero-card" id="hc-btc" data-pair="btc">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:337:          <!-- M3三格 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:338:          <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:339:            <div class="hc-m3-cell green"><span class="hc-m3-num" id="m3bull-btc">—</span><span class="hc-m3-lbl">巨阳</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:340:            <div class="hc-m3-cell red"><span class="hc-m3-num" id="m3bear-btc">—</span><span class="hc-m3-lbl">巨阴</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:341:            <div class="hc-m3-cell gold"><span class="hc-m3-num" id="m3high-btc">—</span><span class="hc-m3-lbl">HIGH</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:343:          <!-- M1+M2数据 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:350:              <span class="hc-m12-lbl">M2支撑 · 阻力</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:351:              <span class="hc-m12-val" id="m12-m2-btc">—</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:368:        <div class="hero-card" id="hc-eth" data-pair="eth">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:388:          <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:389:            <div class="hc-m3-cell green"><span class="hc-m3-num" id="m3bull-eth">—</span><span class="hc-m3-lbl">巨阳</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:390:            <div class="hc-m3-cell red"><span class="hc-m3-num" id="m3bear-eth">—</span><span class="hc-m3-lbl">巨阴</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:391:            <div class="hc-m3-cell gold"><span class="hc-m3-num" id="m3high-eth">—</span><span class="hc-m3-lbl">HIGH</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:399:              <span class="hc-m12-lbl">M2支撑 · 阻力</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:400:              <span class="hc-m12-val" id="m12-m2-eth">—</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:415:        <div class="hero-card" id="hc-sol" data-pair="sol">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:435:          <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:436:            <div class="hc-m3-cell green"><span class="hc-m3-num" id="m3bull-sol">—</span><span class="hc-m3-lbl">巨阳</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:437:            <div class="hc-m3-cell red"><span class="hc-m3-num" id="m3bear-sol">—</span><span class="hc-m3-lbl">巨阴</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:438:            <div class="hc-m3-cell gold"><span class="hc-m3-num" id="m3high-sol">—</span><span class="hc-m3-lbl">HIGH</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:446:              <span class="hc-m12-lbl">M2支撑 · 阻力</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:447:              <span class="hc-m12-val" id="m12-m2-sol">—</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:462:        <div class="hero-card" id="hc-bnb" data-pair="bnb">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:482:          <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:483:            <div class="hc-m3-cell green"><span class="hc-m3-num" id="m3bull-bnb">—</span><span class="hc-m3-lbl">巨阳</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:484:            <div class="hc-m3-cell red"><span class="hc-m3-num" id="m3bear-bnb">—</span><span class="hc-m3-lbl">巨阴</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:485:            <div class="hc-m3-cell gold"><span class="hc-m3-num" id="m3high-bnb">—</span><span class="hc-m3-lbl">HIGH</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:493:              <span class="hc-m12-lbl">M2支撑 · 阻力</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:494:              <span class="hc-m12-val" id="m12-m2-bnb">—</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:509:        <div class="hero-card" id="hc-doge" data-pair="doge">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:529:          <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:530:            <div class="hc-m3-cell green"><span class="hc-m3-num" id="m3bull-doge">—</span><span class="hc-m3-lbl">巨阳</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:531:            <div class="hc-m3-cell red"><span class="hc-m3-num" id="m3bear-doge">—</span><span class="hc-m3-lbl">巨阴</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:532:            <div class="hc-m3-cell gold"><span class="hc-m3-num" id="m3high-doge">—</span><span class="hc-m3-lbl">HIGH</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:540:              <span class="hc-m12-lbl">M2支撑 · 阻力</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:541:              <span class="hc-m12-val" id="m12-m2-doge">—</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:558:    <!-- 全市场汇总 + M1/M2/M3统计 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:560:      <div class="stat"><div class="v green" id="ty-s-bull">--</div><div class="l">M3巨量阳</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:561:      <div class="stat"><div class="v red" id="ty-s-bear">--</div><div class="l">M3巨量阴</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:562:      <div class="stat"><div class="v gold" id="ty-s-high">--</div><div class="l">M3 HIGH</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:570:        <span style="font-size:11px;color:var(--muted)">MiniMax-M2.7-highspeed · 价格10s · M1/M2/M3 30-60s</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:605:        <div style="font-size:11px;color:var(--muted)">L1量比≥5.0x · L2资金流方向一致 · L3±1%S/R · L4冷却放行</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:820:          <div class="ci-value" style="color:var(--gold)">MiniMax-M2.7-highspeed</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:909:            <li><strong style="color:var(--red)">A1 · S/R铁律违反（核心，必须）</strong>：做空入场价在阻力上方 / 做多入场价在支撑下方；当前价跌破/突破S/R</li>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:919:            <li>B1 · 中间地带入场：入场价距聚合S/R &gt;3%</li>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:927:          <div class="cb-title">🟣 三重时线 S/R 效准</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:955:            <li>L1量比≥2.5x · L2资金流方向一致 · L3±2%S/R内 · L4冷却放行</li>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:986:const PAIRS_HERO = [
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:987:  {id:'btc', label:'BTC/USDT', color:'gold',   border:'var(--gold)',   m2key:'BTC/USDT', m1id:'btc'},
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:988:  {id:'eth', label:'ETH/USDT', color:'purple', border:'var(--purple)', m2key:'ETH/USDT', m1id:'eth'},
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:989:  {id:'sol', label:'SOL/USDT', color:'green',  border:'var(--green)',  m2key:'SOL/USDT', m1id:'sol'},
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:990:  {id:'bnb', label:'BNB/USDT', color:'orange', border:'#f0883e',       m2key:'BNB/USDT', m1id:'bnb'},
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:991:  {id:'doge',label:'DOGE/USDT',color:'yellow', border:'var(--yellow)', m2key:'DOGE/USDT',m1id:'doge'},
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:995:const _cache = { m3:0, m2:0, m1:0 }
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:996:const _TTL  = { m3:60, m2:60, m1:30 }  // 秒
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:999:PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1021:  setInterval(loadUnifiedHeroFlow, 15000);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1023:  // 4. M1/M2/M3/AI：独立缓存刷新（30-60秒）
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1024:  setInterval(refreshAllHeroData, 30000);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1051:    const r = await fetch('/api/prices/realtime');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1058:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1096:function _fmtHeroPrice(pair, price) {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1111:async function loadUnifiedHeroFlow() {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1118:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1122:      const m2 = item.m2 || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1123:      const m3 = item.m3 || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1124:      const m4 = item.m4 || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1125:      const m5 = item.m5 || item.l5 || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1136:        priceEl.textContent = _fmtHeroPrice(pair, m4.current_price);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1163:        aiReason.innerHTML = `<b style="color:var(--gold)">AI实时评测</b> ${escapeHtml(tyEval.speech || item.ai_speech || item.narrative?.tianyan_entry || 'M1-M5统一数据流已接入，等待天眼AI实时入场评测。')}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1165:      const scoreGrid = document.querySelector('#hc-' + p.id + ' .hc-m3');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1167:        scoreGrid.className = 'hc-m3 hc-m5-score';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1169:          <div class="hc-m3-cell green"><span class="hc-m3-num">${_fmtFlowNum(sub.m1_score, 1, '0.0')}</span><span class="hc-m3-lbl">M1资金</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1170:          <div class="hc-m3-cell cyan"><span class="hc-m3-num">${_fmtFlowNum(sub.m2_score, 1, '0.0')}</span><span class="hc-m3-lbl">M2结构</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1171:          <div class="hc-m3-cell gold"><span class="hc-m3-num">${_fmtFlowNum(sub.m3_score, 1, '0.0')}</span><span class="hc-m3-lbl">M3量能</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1172:          <div class="hc-m3-cell cyan"><span class="hc-m3-num">${_fmtFlowNum(sub.m4_score, 1, '0.0')}</span><span class="hc-m3-lbl">M4技术</span></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1173:          <div class="hc-m3-cell red"><span class="hc-m3-num">${_fmtFlowNum(sub.m5_score, 1, '0.0')}</span><span class="hc-m3-lbl">M5盘口</span></div>`;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1180:      const m2El = document.getElementById('m12-m2-' + p.id);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1181:      if (m2El) {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1182:        const sup = _fmtHeroPrice(pair, m2.nearest_support || 0).replace('$','');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1183:        const res = _fmtHeroPrice(pair, m2.nearest_resistance || 0).replace('$','');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1184:        m2El.textContent = `${sup} / ${res}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1191:          `M2支撑${_fmtHeroPrice(pair, m2.nearest_support || params.m2_support || 0).replace('$','')}/阻力${_fmtHeroPrice(pair, m2.nearest_resistance || params.m2_resistance || 0).replace('$','')}，${params.m2_confidence || '待确认'}。`,
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1192:          `M3最大量比${_fmtFlowNum(m3.max_vol_ratio || m3.volume_ratio, 2)}x，巨量${m3.giant_count || 0}次，巨牛${m3.giant_bull || 0}/巨熊${m3.giant_bear || 0}。`,
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1193:          `M4 RSI15M=${_fmtFlowNum(m4.rsi_15m, 1)}/1H=${_fmtFlowNum(m4.rsi_1h, 1)}，ATR=${_fmtFlowNum(m4.atr_pct, 2)}%，OI=${_fmtFlowNum((m4.oi||{}).total, 2)}亿。`,
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1194:          `M5微结构: ${params.m5_scenario || m5.scenario_id || 'L5-NEUTRAL'}，盘口${_fmtFlowNum(params.m5_imbalance_pct ?? Number(m5.avg_imbalance||0)*100, 1, '0.0')}%，点差${_fmtFlowNum(params.m5_spread_pct ?? m5.avg_spread_pct, 4, '0.0000')}%，爆仓${_fmtFlowNum(params.m5_liquidation_count ?? m5.liquidation_count, 0, '0')}笔(${params.m5_liquidation_validation || m5.liquidation_validation || 'missing'}，多爆${_fmtFlowNum(params.m5_liquidation_long_count ?? m5.liquidation_long_count, 0, '0')}/空爆${_fmtFlowNum(params.m5_liquidation_short_count ?? m5.liquidation_short_count, 0, '0')}，卖压${_fmtFlowNum(params.m5_liquidation_sell_notional ?? m5.liquidation_sell_notional, 0, '0')}/买压${_fmtFlowNum(params.m5_liquidation_buy_notional ?? m5.liquidation_buy_notional, 0, '0')})。`,
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1199:      const bullEl = document.getElementById('m3bull-' + p.id);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1200:      if (bullEl) bullEl.textContent = String(m3.giant_bull ?? 0);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1201:      const bearEl = document.getElementById('m3bear-' + p.id);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1202:      if (bearEl) bearEl.textContent = String(m3.giant_bear ?? 0);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1203:      const highEl = document.getElementById('m3high-' + p.id);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1204:      if (highEl) highEl.textContent = m3.giant_count ? `⚡${m3.giant_count}` : '0';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1206:      if (rvEl) rvEl.textContent = `RSI ${_fmtFlowNum(m4.rsi_15m, 1)} / ATR ${_fmtFlowNum(m4.atr_pct, 2)}%`;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1209:        sqEl.textContent = `${params.m2_confidence || 'M2待确认'} · ${params.m5_scenario || m5.scenario_id || 'L5-NEUTRAL'}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1215:    if (infoEl) infoEl.textContent = 'M1✅ M2✅ M3✅ M4✅ M5✅ · 15M主线';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1230:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1252:    loadM3Data(),   // M3 巨量K线（最先，确保主数据可见）
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1253:    loadM2Data(),   // M2 支撑阻力
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1262:  await loadUnifiedHeroFlow();
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1302:    document.getElementById('modelVersion').textContent = d.model_info?.name || 'MiniMax-M2.7-highspeed';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1329:      const hcRes = await fetch('/api/hero_cards/tianyan_status?compact=1');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1506:  const m4 = d.m4_data || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1507:  const m4Oi = m4.oi || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1509:  // ── M1资金流数据：15M主线/top-level实时流优先 ──────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1515:  const oiFallback = _numVal(m4Oi.change_pct);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1522:  // ── M2支撑阻力数据 ──────────────────────────────────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1523:  const m2 = d.m2_data || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1524:  const m2Sup = m2.nearest_support ? m2.nearest_support.toFixed(4) : '--';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1525:  const m2Res = m2.nearest_resistance ? m2.nearest_resistance.toFixed(4) : '--';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1526:  const m2Method = m2.method || m2.data_source || d.sr_confidence || '--';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1527:  const m2Dual = m2.dual_validated_count || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1528:  const m2Triple = m2.triple_validated_count || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1529:  const m2DualColor = m2Dual >= 2 ? 'var(--green)' : m2Dual === 1 ? 'var(--yellow)' : 'var(--dimmer)';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1531:  // ── M3巨量K线数据 ───────────────────────────────────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1532:  const m3 = d.m3_data || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1533:  const m3HasLiq = m3.has_liquidation;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1534:  const m3Reversal = m3.reversal_hunt;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1535:  const m3Bull = m3.giant_bull || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1536:  const m3Bear = m3.giant_bear || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1537:  const m3MaxVal = _numVal(_pickFirstVal(m3.max_vol_ratio, m3.volume_ratio));
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1538:  const m3MaxVr = m3MaxVal === null ? '计算中' : m3MaxVal.toFixed(1);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1539:  const m3Scenario = m3.scenario_text || '--';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1540:  const m3Alert = m3HasLiq ? '⚠️强平' : m3Reversal ? '🔄反转猎杀' : m3Bull > 0 ? '🐂巨牛' : m3Bear > 0 ? '🐻巨熊' : '➖平静';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1541:  const m3AlertColor = m3HasLiq ? 'var(--red)' : m3Reversal ? 'var(--orange)' : m3Bull > 0 ? 'var(--green)' : m3Bear > 0 ? 'var(--red)' : 'var(--dimmer)';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1567:        <div class="dc-metric"><div class="l">S/R置信</div><div class="v">${d.sr_confidence || '--'}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1576:        <div class="dc-metric"><div class="l">S/R方法</div><div class="v blue">${srMethod}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1581:      <div class="dc-section-title">🌊 M1资金流</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1593:      <div class="dc-section-title">🗻 M2支撑阻力</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1595:        <div class="dc-metric"><div class="l">支撑</div><div class="v green">${m2Sup}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1596:        <div class="dc-metric"><div class="l">阻力</div><div class="v red">${m2Res}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1597:        <div class="dc-metric"><div class="l">方法</div><div class="v blue">${m2Method}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1598:        <div class="dc-metric"><div class="l">双验</div><div class="v" style="color:${m2DualColor}">${m2Dual}所</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1599:        <div class="dc-metric"><div class="l">三验</div><div class="v">${m2Triple}所</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1604:      <div class="dc-section-title">🔥 M3巨量K线</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1606:        <div class="dc-metric"><div class="l">信号</div><div class="v" style="color:${m3AlertColor}">${m3Alert}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1607:        <div class="dc-metric"><div class="l">巨牛</div><div class="v green">${m3Bull}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1608:        <div class="dc-metric"><div class="l">巨熊</div><div class="v red">${m3Bear}</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1609:        <div class="dc-metric"><div class="l">最大量比</div><div class="v">${m3MaxVr}x</div></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1611:      ${m3Scenario !== '--' ? `<div style="font-size:10px;color:var(--muted);margin-top:4px">场景:${m3Scenario}</div>` : ''}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1710:    // ── M1资金流数据：15M主线/top-level实时流优先 ─────────────────────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1720:    // ── M2支撑阻力数据 ───────────────────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1721:    const m2 = d.m2_data || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1722:    const m2Sup = m2.nearest_support || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1723:    const m2Res = m2.nearest_resistance || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1724:    const m2Method = m2.method || '';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1725:    const m2Dual = m2.dual_validated_count || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1726:    const m2Triple = m2.triple_validated_count || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1727:    const m2SupStr = m2Sup > 0 ? m2Sup.toFixed(4) : '--';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1728:    const m2ResStr = m2Res > 0 ? m2Res.toFixed(4) : '--';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1729:    const m2DualColor = m2Dual >= 2 ? 'var(--green)' : m2Dual === 1 ? 'var(--yellow)' : 'var(--muted)';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1730:    const m2VerdictText = d.m2_verdict || (m2Dual >= 2 ? 'S/R双所确认' : m2Dual === 1 ? 'S/R单所确认' : 'S/R待确认');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1732:    // ── M3巨量K线数据 ─────────────────────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1733:    const m3 = d.m3_data || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1734:    const m3Bull = m3.giant_bull || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1735:    const m3Bear = m3.giant_bear || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1736:    const m3High = m3.high_count || 0;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1737:    const m3Reversal = m3.reversal_hunt || m3.has_liquidation || false;
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1738:    const m3Scenario = m3.scenario_text || d.m3_verdict || '';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1739:    const m3Alert = m3Reversal ? '🚨反转猎杀' : m3High >= 3 ? `⚡HIGH${m3High}所` : m3Bull > 0 ? `🐂巨牛${m3Bull}次` : m3Bear > 0 ? `🐻巨熊${m3Bear}次` : '➖平静';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1740:    const m3AlertColor = m3Reversal ? 'var(--gold)' : m3High >= 3 ? 'var(--orange)' : m3Bear > 0 ? 'var(--red)' : m3Bull > 0 ? 'var(--green)' : 'var(--muted)';
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1777:        <!-- M1+M2+M3 三线分析 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1779:          <!-- M1资金流 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1781:            <div style="font-size:10px;font-weight:700;color:var(--green);margin-bottom:4px">🌊 M1资金流</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1789:          <!-- M2支撑阻力 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1791:            <div style="font-size:10px;font-weight:700;color:var(--purple);margin-bottom:4px">🗻 M2支撑阻力</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1793:              <div style="color:var(--green)">支: ${m2SupStr}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1794:              <div style="color:var(--red)">阻: ${m2ResStr}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1795:              <div style="font-size:10px;color:${m2DualColor}">双验${m2Dual}所${m2Dual >= 2 ? '✅' : '⚠️'} | 三验${m2Triple}所</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1796:              <div style="font-size:10px;color:var(--blue);margin-top:2px">判定: ${m2VerdictText}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1799:          <!-- M3巨量K线 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1801:            <div style="font-size:10px;font-weight:700;color:var(--orange);margin-bottom:4px">🔥 M3巨量K线</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1803:              <div style="color:${m3AlertColor};font-weight:700">${m3Alert}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1804:              <div>🐂${m3Bull} | 🐻${m3Bear}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1805:              ${m3Scenario ? `<div style="font-size:10px;color:var(--gold);margin-top:2px;overflow:hidden;text-overflow:ell;white-space:nowrap" title="${escapeHtml(m3Scenario)}">场景:${m3Scenario}</div>` : ''}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1900:        <div style="font-size:11px;color:var(--dimmer);margin-top:6px">当前没有任何干预历史，天眼AI将在检测到高危持仓时自动创建记录</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1969:// ── 全市场M1+M2+M3英雄卡（分布式独立加载）───────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1970:async function loadM3Data() {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1972:  if (now - _cache.m3 < _TTL.m3 * 1000) return  // 缓存有效
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1977:    _cache.m3 = now
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1983:      document.getElementById('tianyan-scan-info').textContent = `M3✅ M2⏳ M1⏳`
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1988:	    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1990:	      const pd = item.m3 || {}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2001:    const elIn   = document.getElementById('ty-s-in');     if (elIn) elIn.textContent = totalIn + '/' + PAIRS_HERO.length
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2003:    // 更新每张英雄卡的M3数据
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2004:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2006:      const pd = item.m3 || {}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2013:      const elBull = document.getElementById('m3bull-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2014:      const elBear = document.getElementById('m3bear-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2015:      const elHigh = document.getElementById('m3high-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2021:      // 信号判定（基于M3综合 + AI信号）
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2127:    console.error('M3加载失败:', e)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2129:    if (infoEl) infoEl.textContent = '❌ M3加载失败: ' + e.message
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2131:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2132:      const elBull = document.getElementById('m3bull-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2133:      const elBear = document.getElementById('m3bear-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2134:      const elHigh = document.getElementById('m3high-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2144:// ── M2 支撑阻力（写入 m12-m2-{pair} 合并单元格）────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2145:async function loadM2Data() {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2147:  if (now - _cache.m2 < _TTL.m2 * 1000) return
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2152:    _cache.m2 = now
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2155:    if (infoEl) infoEl.textContent = `M3✅ M2✅ M1⏳`
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2157:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2158:      const pd = (pairs[p.id] || {}).m2 || {}
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2164:      const el = document.getElementById('m12-m2-' + p.id)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2167:        el.textContent = `${_fmtHeroPrice(p.label, sup).replace('$','')} / ${_fmtHeroPrice(p.label, res).replace('$','')}`
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2176:  } catch(e) { console.error('M2加载失败:', e) }
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2179:// ── M1资金流（写入 m12-m1-{pair}）────────────────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2190:    if (infoEl) infoEl.textContent = `M3✅ M2✅ M1✅`
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2192:    PAIRS_HERO.forEach(p => {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2226:async function refreshAllHeroData() {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2227:  _cache.m3 = 0; _cache.m2 = 0; _cache.m1 = 0
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2228:  await Promise.allSettled([loadM3Data(), loadM2Data(), loadM1Data()])
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2229:  await loadUnifiedHeroFlow()
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2323:    await refreshAllHeroData();
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:6:<title>📍 M2 S/R 三所交叉验证</title>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:75:/* ── Hero Card (M1风格) ─────────────────────── */
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:174:    <h1>📍 M2 S/R 三所交叉验证</h1>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:179:      <button class="btn btn-gold btn-sm" onclick="loadM2All(true)">🔄 强制刷新</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:185:    <span style="font-size:13px;font-weight:900;color:var(--gold)">📍 M2 S/R</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:196:    <button class="tf-btn" id="tab-levels" onclick="switchTab('levels')">📋 S/R详情</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:197:    <button class="tf-btn" id="tab-tianyan" onclick="switchTab('tianyan')">🛡️ 天眼AI</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:198:    <button class="tf-btn" id="tab-chushan" onclick="switchTab('chushan')">🏔️ 出山AI</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:207:      <!-- 实时S/R区域 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:209:        <span style="font-size:11px;font-weight:900;color:var(--gold)">📋 S/R实时详情</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:215:      <div class="cards-row" id="m2-hero-cards" style="align-items:start"></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:222:            <div class="ai-status-label" style="color:var(--gold)">M2 S/R共振</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:230:            <div class="ai-status-label" style="color:var(--green)">天眼AI · 入场质量</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:238:            <div class="ai-status-label" style="color:var(--orange)">出山AI · 持仓卫士</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:246:    <!-- S/R详情 -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:255:        <button class="btn btn-sm" onclick="exportCSVM2()">📥导出</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:274:    <!-- 天眼AI -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:277:        <span style="font-size:11px;font-weight:700;color:var(--green)">🛡️ 天眼AI · 入场审计</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:278:        <span style="font-size:9px;color:var(--muted);margin-left:4px">L1量比 + L4 S/R共振验证</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:283:    <!-- 出山AI -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:286:        <span style="font-size:11px;font-weight:700;color:#f0883e">🏔️ 出山AI · 持仓卫士</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:330:let _m2Data = {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:334:let _m2DataHealth = {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:356:function _m2ScoreFields(d) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:382:  let sceneId = 'S14', sceneShort = '无有效S/R数据', entryOk = false, leverage = '—';
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:390:    sceneId = 'S08'; sceneShort = '远离支撑，无S/R保护'; entryOk = null;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:397:function _enrichM2Pair(d) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:399:  const sf = _m2ScoreFields(fixed);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:410:function _m2Score(d) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:411:  const fixed = _enrichM2Pair(d || {});
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:415:function _emptyM2Pair(pair) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:425:function _normalizeM2Pairs(raw) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:430:    const fixed = Object.keys(d).length ? {..._emptyM2Pair(pair), ...d} : _emptyM2Pair(pair);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:439:    out[pair] = _enrichM2Pair(fixed);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:444:function _m2PairData(id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:447:  const raw = _m2Data[pair] || _m2Data[base] || _m2Data[base.toUpperCase()] || _m2Data[String(pair).replace('/', '_')] || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:448:  return _enrichM2Pair(Object.keys(raw).length ? raw : _emptyM2Pair(pair));
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:451:function _calcM2Dist(price, level) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:458:function _validM2Pct(v) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:463:function _resolveM2Core(d) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:464:  const fixed = _enrichM2Pair(d || {});
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:469:  const distSup = _validM2Pct(fixed.dist_to_support_pct) ?? _calcM2Dist(price, sup);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:470:  const distRes = _validM2Pct(fixed.dist_to_resistance_pct) ?? _calcM2Dist(price, res);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:481:    score: _m2Score(fixed),
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:490:const _M2_SR_TFS = ['15m','30m','1h','4h'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:491:const _M2_SR_EX = [
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:497:function _m2CollectionSummaryText(d) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:499:  const summary = _M2_SR_EX.map(([key, label]) => {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:501:    const ok = _M2_SR_TFS.filter(tf => exStatus[tf] && exStatus[tf].ok).length;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:502:    const missing = _M2_SR_TFS.length - ok;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:503:    return `${label}${ok}/${_M2_SR_TFS.length}${missing ? '(无数据' + missing + ')' : ''}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:508:function _m2CollectionDetailsHTML(d) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:515:  const rows = _M2_SR_EX.map(([key, label, color]) => {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:517:    const chips = _M2_SR_TFS.map(tf => {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:584://  _m2_ai_sections — 四板块内容（M1风格）
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:586:function _m2_ai_sections(id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:587:  const d = _m2PairData(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:588:  const core = _resolveM2Core(d);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:611:  // ═══ 1. 📍 S/R详情 — 金色（M2核心数据）══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:618:      <div class="round-name">📍 <b style="color:var(--gold)">S/R支撑压力详情</b></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:663:  // ═══ 2. 🛡️ 天眼AI — 绿色（入场审计）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:681:      <div class="round-name">🛡️ <b style="color:var(--green)">天眼AI · 入场审计</b></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:690:        // ── 实时S/R分析（M2数据驱动）────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:696:        const score2 = _m2Score(d);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:703:          entryScore = 82; entrySignal = 'sr_confirm_long'; entryTags = ['✅ S/R共振确认', '✅ M1做多信号', '支撑有效入场'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:707:          entryScore = 70; entrySignal = 'm1_long'; entryTags = ['✅ M1做多信号', '📊 S/R支撑有效', '关注入场机会'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:709:          entryScore = 68; entrySignal = 'sr_confirm_short'; entryTags = ['🟡 S/R空头共振', '⚠️ 入场控仓', '严格止损'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:730:          <div style="font-size:11px;color:var(--green);padding:5px 7px;background:rgba(63,185,80,.08);border-radius:6px;line-height:1.6">💡 🛡️ 天眼M2分析：M1信号=${m1S} | 支撑=${fmt(sup2)} | 阻力=${fmt(res2)} | 双验=${dual2} | 三验=${triple2} | 评分=${score2}/20 | 入场质量=${entryScore}分</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:744:  // ═══ 3. 🏔️ 出山AI — 橙色（持仓卫士）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:767:      <div class="round-name">🏔️ <b style="color:#f0883e">出山AI · 持仓卫士</b></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:776:        // ── 实时市场保护分析（M2 S/R数据驱动）────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:783:        const score2 = _m2Score(d);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:823:          <div style="font-size:11px;color:#f0883e;padding:5px 7px;background:rgba(240,136,62,.08);border-radius:6px;line-height:1.6">🤖 🏔️ 出山M2评测：支撑=${fmt(sup2)} | 阻力=${fmt(res2)} | 双验=${dual2} | 三验=${triple2} | 安全评分=${protectScore}分</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:840:  // ═══ 4. 📊 强S/R位列表 — 紫色（M2三所共振）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:844:      <div class="round-name">📊 <b style="color:#bc8cff">强S/R位详情</b></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:929:  const el = document.getElementById('m2-hero-cards');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:960:function renderM2HeroCards() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:961:  const el = document.getElementById('m2-hero-cards');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:964:    const d = _m2PairData(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:965:    const core = _resolveM2Core(d);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:978:    const collectionSummary = _m2CollectionSummaryText(d);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1006:	      <span class="badge gold">${sceneId || '15m S/R'}</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1026:  ${_m2CollectionDetailsHTML(d)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1055:    ${_m2_ai_sections(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1062://  天眼AI卡
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1076:        ${_m2_ai_sections(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1085:        <span class="badge green">天眼AI</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1087:      ${_m2_ai_sections(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1093://  出山AI卡
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1107:        ${_m2_ai_sections(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1116:        <span class="badge yellow">出山AI</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1118:      ${_m2_ai_sections(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1139:    const d = _m2PairData(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1182:function exportCSVM2() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1186:    const d = _m2PairData(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1203:  a.download = 'm2_sr_levels_' + new Date().toISOString().slice(0,10) + '.csv';
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1259:// Block 1: S/R核心数据（最先加载，替换骨架）
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1272:function _extractM2PairsFromAiFlow(flow) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1278:    const m2 = item.m2 || item.m2_data || {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1279:    if (Object.keys(m2).length) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1280:      out[pair] = {...m2, pair};
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1286:function _m2PayloadHasCore(rawPairs) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1297:function _m2PayloadMissingLevelDetails(rawPairs) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1312:      log('⚠️ M2主接口超时/失败，切换AI数据流兜底: ' + err.message, 'warn');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1316:      log('⚠️ M2主接口返回错误，切换AI数据流兜底: ' + srR.error, 'warn');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1321:    if (!forceLive && _m2PayloadMissingLevelDetails(rawPairs)) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1322:      log('⚠️ M2摘要存在但levels为空，自动强制重算S/R详情...', 'warn');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1324:        log('⚠️ M2强制重算失败，继续使用可用摘要: ' + err.message, 'warn');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1327:      if (_m2PayloadHasCore(liveR.pairs || {})) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1332:    if (!_m2PayloadHasCore(rawPairs)) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1334:        log('❌ M2兜底数据流也失败: ' + err.message, 'error');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1337:      const flowPairs = _extractM2PairsFromAiFlow(flow);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1338:      if (_m2PayloadHasCore(flowPairs)) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1343:    if (!_m2PayloadHasCore(rawPairs)) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1344:      log('❌ M2无可用核心数据：主接口与AI数据流均为空', 'error');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1347:    _m2Data = _normalizeM2Pairs(rawPairs);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1348:    const missingDetails = Object.entries(_m2Data).filter(([_, d]) =>
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1353:      log('⚠️ S/R摘要存在但明细levels缺失: ' + missingDetails.map(([p]) => p).join(','), 'warn');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1355:    _m2DataHealth = srR.data_health || {expected:_IDS.length, available:Object.keys(_m2Data).length, fallback:[], fallback_count:0};
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1356:    const source = fallbackUsed ? 'AI数据流兜底' : (forceLive ? 'M2强制刷新' : 'M2主接口');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1357:    log(`📍 S/R核心加载完成 (${(performance.now()-t0).toFixed(0)}ms · ${source})`, 'ok');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1360:    log('❌ S/R核心加载失败: ' + e.message, 'error');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1365:// Block 2: 天眼+出山AI数据（独立加载）
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1379:      if (_m2Data[pair]) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1380:        _m2Data[pair].current_price = td.current_price;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1381:        _m2Data[pair].current_price_gate = td.current_price_gate;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1382:        _m2Data[pair].current_price_okx = td.current_price_okx;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1383:        _m2Data[pair].current_price_bnb = td.current_price_bnb;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1384:        _m2Data[pair].scene_id = td.scene_id;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1385:        _m2Data[pair].total_score = td.total_score;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1386:        _m2Data[pair].m1_signal = td.m1_signal || td.dominant_signal;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1387:        _m2Data[pair].leverage = td.leverage;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1388:        _m2Data[pair].entry_ok = td.entry_ok;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1389:        _m2Data[pair].scene_short = td.scene_short;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1397:      if (_m2Data[pair]) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1398:        _m2Data[pair].exit_action = cd.exit_action;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1399:        _m2Data[pair].urgency = cd.urgency;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1400:        _m2Data[pair].chushan_reversal = cd.reversal_warning;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1405:    renderM2HeroCards();
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1421:async function loadM2All(forceLive=false) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1423:  log(forceLive ? '📍 强制刷新M2三所多时线S/R...' : '📍 分布式加载M2数据...');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1437:  // Step 1: Block 1 — S/R核心（同步等待）
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1442:    document.getElementById('sub-info').textContent = 'S/R加载失败';
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1449:    const d = _m2PairData(id);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1450:    const core = _resolveM2Core(d);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1461:  renderM2HeroCards();
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1465:    return s + _m2Score(_m2PairData(id));
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1467:  const bestPair = _IDS.slice().sort((a, b) => _m2Score(_m2PairData(b)) - _m2Score(_m2PairData(a)))[0];
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1468:  const bestScore = _m2Score(_m2PairData(bestPair)).toFixed(0);
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1477:  const fb = _m2DataHealth.fallback_count ? ` | 兜底${_m2DataHealth.fallback_count}` : '';
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1478:  document.getElementById('sub-info').textContent = `已扫描${Object.keys(_m2Data).length}个${fb}${forceLive ? ' | 强刷' : ''} | ⏱${(performance.now()-t0).toFixed(0)}ms`;
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1492:  log(`✅ 完成 (${(performance.now()-t0).toFixed(0)}ms) | ${Object.keys(_m2Data).length}个交易对 | 天眼:${Object.keys(_tianyanMap).length} 出山:${Object.keys(_exitAiMap).length}`, 'ok');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1494:  // Step 2: Block 2 — AI数据后台补齐，不阻塞M2核心页面首屏
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1500:  log('📍 M2 S/R三所交叉验证页面加载完成', 'ok');
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1504:  setTimeout(() => loadM2All(), 100);
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:5:    <title>🦁 天眼AI V5.1 英雄卡</title>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:67:            <h1>天眼AI V5.1</h1>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:85:            <span class="role-tag" style="background:rgba(100,116,139,0.2);color:var(--dim);border-color:rgba(100,116,139,0.4);">❌ 动态止盈（出山AI）</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:110:                S/R 铁律违反（核心 · 必须满足）
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:114:                多重时线（15m/1h/4h）聚合确认S/R后：
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:172:                    <span>B1 · 中间地带入场：入场价距聚合S/R &gt; 3%</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:195:        <div class="section-title">S/R 多重时线效准流程</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:197:            <div style="color:var(--blue);font-weight:600;">① 各时线分别计算 S/R（15m / 1h / 4h 各取近20根）</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:199:            <div style="color:var(--gold);font-weight:600;margin-top:4px;">② 三线聚合（取各时线S/R交集）</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:202:            <div style="padding-left:12px;">→ 现价是否跌破/突破聚合S/R → 铁律违反确认</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:230:                    <span>R3 · S/R验证：价格在最近支撑/阻力 <b style="color:var(--gold)">±1%</b> 范围内</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-hero-card.html:287:    <div class="footer">天眼AI V5.1 · 方向错误12h/10h冷却 · 入场时机差无冷却 · 自动反手AI授权 · 2026-04-24</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:6:<title>📊 M4技术面 · RSI/ATR/OI三所交叉验证</title>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:75:/* ── Hero Card ──────────────────────────────── */
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:137:/* ── Hero Card 风格（Task 10：AI面板重构）─────────── */
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:162:.hc-m3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin:6px 0}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:163:.hc-m3-cell{text-align:center;border-radius:6px;padding:5px 3px}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:164:.hc-m3-cell.green{background:rgba(63,185,80,.1)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:165:.hc-m3-cell.red{background:rgba(248,81,73,.1)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:166:.hc-m3-cell.blue{background:rgba(88,166,255,.1)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:167:.hc-m3-cell.orange{background:rgba(240,136,62,.1)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:168:.hc-m3-cell.teal{background:rgba(20,184,166,.1)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:169:.hc-m3-num{font-size:15px;font-weight:900}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:170:.hc-m3-lbl{font-size:9px;color:var(--muted);margin-top:1px}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:212:    <h1>📊 M4技术面 · RSI/ATR/OI三所交叉验证</h1>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:223:    <span style="font-size:13px;font-weight:900;color:var(--purple)">📊 M4技术面</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:236:    <button class="tf-btn" id="tab-tianyan" onclick="switchTab('tianyan')">🛡️ 天眼AI</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:237:    <button class="tf-btn" id="tab-chushan" onclick="switchTab('chushan')">🏔️ 出山AI</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:248:        <span style="font-size:11px;font-weight:900;color:var(--purple)">📋 M4技术面实时详情</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:254:      <div class="cards-row" id="m4-hero-cards" style="align-items:start"></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:269:            <div class="ai-status-label" style="color:var(--green)">天眼AI · 入场质量</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:277:            <div class="ai-status-label" style="color:var(--orange)">出山AI · 持仓卫士</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:304:        <button class="btn btn-sm" onclick="exportCSVM4()">📥导出</button>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:330:    <!-- 天眼AI -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:333:        <span style="font-size:11px;font-weight:700;color:var(--green)">🛡️ 天眼AI · 入场审计</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:334:        <span style="font-size:9px;color:var(--muted);margin-left:4px">M4 RSI多时线衰竭检测</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:339:    <!-- 出山AI -->
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:342:        <span style="font-size:11px;font-weight:700;color:#f0883e">🏔️ 出山AI · 持仓卫士</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:385:let _m4Data = {};
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:445://  _m4_ai_sections — 四板块内容（M1风格）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:447:function _m4_ai_sections(p, id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:464:  // ═══ 1. 📊 RSI详情 — 蓝色（M4核心数据）══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:522:  // ═══ 2. 🛡️ 天眼AI — 绿色（入场审计）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:539:    // RSI衰竭判断（M4数据驱动）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:546:    ) : tyReason || '🛡️ 天眼AI持续监控中，等待下一轮扫描...';
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:550:      <div class="round-name">🛡️ <b style="color:var(--green)">天眼AI · 入场审计</b></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:558:      ${tyConf === 0 ? _m4_tianyan_realtime(id) : `
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:570:  // ═══ 3. 🏔️ 出山AI — 橙色（持仓卫士）═══════════════
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:591:    // 自动生成话术（M4数据驱动）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:593:      eaScene === 'full_close' ? `⚠️ 出山AI：${eaTier}止盈/止损触发，RSI=${rsi1h.toFixed(1)}，建议${eaActionLabel}` :
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:594:      eaScene === 'partial_close' ? `🎯 出山AI：综合RSI=${avgRSI.toFixed(1)}，建议分批止盈` :
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:595:      eaScene === 'reversal' ? `🔄 出山AI：反转信号，OI=${oi?.total?.toFixed(1)||'--'}亿，警惕趋势反转` :
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:596:      `📊 出山AI评测中：R2健康=${eaHealth} | RSI=${rsi1h.toFixed(1)} | ATR=$${fmtAtr(atr)}`
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:601:      <div class="round-name">🏔️ <b style="color:#f0883e">出山AI · 持仓卫士</b></div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:609:      ${eaConf === 0 ? _m4_chushan_realtime(id) : `
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:687://  天眼AI · 实时市场分析引擎（不依赖持仓数据）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:690:function _m4_tianyan_realtime(id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:710:  // M4-13衰竭：文档V1.1标准（4H≥65 + 1H≥70 + 15m≥70 同时成立）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:723:  // ── 入场置信度计算（M4-01~M4-13场景对齐）──────────────
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:729:  // M4-13衰竭优先检测
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:732:    entryTags = ['🚨 M4-13多头衰竭预警', '⛔ 禁止逆势做多', `三所RSI=${tripleAvg.toFixed(1)}`];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:735:    entryTags = ['🚨 M4-13空头衰竭预警', '⛔ 禁止逆势做空', `三所RSI=${tripleAvg.toFixed(1)}`];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:736:  // M4-01~M4-06 RSI分级
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:738:    // M4-03 RSI极端(>75)
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:740:    entryTags = ['🚨 M4-03 RSI极端超买', '⛔ 立即禁止入场'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:742:    // M4-01 RSI超买(70-75)
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:744:    entryTags = ['🔴 M4-01 RSI超买', '⛔ 追高危险，建议观望'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:746:    // M4-04 RSI偏强(60-70)，三所同向确认
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:750:      ? ['🟡 M4-04偏强+三所确认✅', `三所RSI=${tripleAvg.toFixed(1)}置信度+15%`]
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:751:      : ['🟡 M4-04 RSI偏强，追高风险', '⚠️ 建议等回落'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:753:    // M4-06 RSI中性(50-60)
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:755:    entryTags = ['✅ M4-06 RSI中性，配合良好', '✅ 回落至合理区间'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:760:    // M4-05 RSI偏弱(30-45)
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:762:    entryTags = ['🟡 M4-05 RSI偏弱', '⚠️ 需确认止跌信号'];
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:768:  // OI修正（M4-07~M4-09）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:770:    // M4-07 OI大幅加仓
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:772:    entryTags.push(`📈 M4-07 OI大幅加仓+10%`);
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:774:    // M4-07 OI稳步加仓
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:776:    entryTags.push(`📈 M4-07 OI稳步加仓`);
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:778:    // M4-09 OI大幅减仓
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:780:    entryTags.push('📉 M4-09 OI大幅减仓，机构出逃');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:782:    // M4-08 OI减仓
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:784:    entryTags.push('📉 M4-08 OI减仓，上涨动力减弱');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:827:    <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:828:      <div class="hc-m3-cell green">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:829:        <div class="hc-m3-num">${entryConf}%</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:830:        <div class="hc-m3-lbl">置信度</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:832:      <div class="hc-m3-cell blue">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:833:        <div class="hc-m3-num">${rsi15m.toFixed(1)}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:834:        <div class="hc-m3-lbl">RSI15m</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:836:      <div class="hc-m3-cell teal">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:837:        <div class="hc-m3-num">${oiChg > 0 ? '+' : ''}${oiChg.toFixed(1)}%</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:838:        <div class="hc-m3-lbl">OI变化</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:849://  出山AI · 实时市场保护分析（不依赖持仓数据）
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:851:// 生成市场保护实时评估：RSI衰竭预警 + ATR止损 + OI反转信号 + 巨量预警
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:852:function _m4_chushan_realtime(id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:957:    <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:958:      <div class="hc-m3-cell red">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:959:        <div class="hc-m3-num" style="color:var(--red)">${protectConf}%</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:960:        <div class="hc-m3-lbl">预警置信</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:962:      <div class="hc-m3-cell blue">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:963:        <div class="hc-m3-num">${rsi15m.toFixed(1)}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:964:        <div class="hc-m3-lbl">RSI15m</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:966:      <div class="hc-m3-cell teal">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:967:        <div class="hc-m3-num">${oiChg > 0 ? '+' : ''}${oiChg.toFixed(1)}%</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:968:        <div class="hc-m3-lbl">OI变化</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:981:function _m4_unified_speech(id) {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1077:    <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1078:      <div class="hc-m3-cell teal">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1079:        <div class="hc-m3-num" style="color:var(--teal)">${rsi15m.toFixed(1)}</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1080:        <div class="hc-m3-lbl">RSI15m</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1082:      <div class="hc-m3-cell blue">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1083:        <div class="hc-m3-num" style="color:var(--blue)">${oiChg > 0 ? '+' : ''}${oiChg.toFixed(1)}%</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1084:        <div class="hc-m3-lbl">OI变化</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1086:      <div class="hc-m3-cell orange">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1087:        <div class="hc-m3-num" style="color:var(--orange)">${stopPct}%</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1088:        <div class="hc-m3-lbl">ATR止损</div>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1156:  const el = document.getElementById('m4-hero-cards');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1191:        <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1193:            `<div class="hc-m3-cell ${m.bg}">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1224:        <div class="hc-m3">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1226:            `<div class="hc-m3-cell ${m.bg}">
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1243:function renderM4HeroCards() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1244:  const el = document.getElementById('m4-hero-cards');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1324:    ${_m4_ai_sections(d, id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1368://  天眼AI卡
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1389:        ${_m4_unified_speech(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1399:        <span class="badge green">天眼AI</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1401:      ${_m4_ai_sections(d, id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1407://  出山AI卡
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1423:        ${_m4_unified_speech(id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1433:        <span class="badge yellow">出山AI</span>
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1435:      ${_m4_ai_sections(d, id)}
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1477:function exportCSVM4() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1491:  a.download = 'm4_rsi_' + new Date().toISOString().slice(0,10) + '.csv';
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1552://  获取M4真实数据
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1554:async function fetchM4Data() {
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1557:    const resp = await fetch('/api/m4/indicators?_=' + ts);
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1560:      log('M4 API错误: ' + json.error, 'error');
+
+===== frontend api calls =====
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1063:        fetch('/api/node/' + port)
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1108:    var giantR = await fetch('/api/bt2/giant_summary_all').then(function(r){return r.json();}).catch(function(){return{};});
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_giant_candle.html:1128:    var tyR = await fetch('/api/bt2/sr_ai_all').then(function(r){return r.json();}).catch(function(){return{};});
+/Users/luxiangnan/freqtrade_console/static/tabs/compare.html:421:    var r = await fetch('/api/backtest/compare_analysis?ports=' + ports.join(','));
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:181:// 数据源: /api/bt2/giant_candles/{pair}
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:212:  const url = `/api/bt2/giant_candles/${encodeURIComponent(pair)}?exchange=${exchange}&tf=${tf}&limit=300&cache=1`
+/Users/luxiangnan/freqtrade_console/static/tabs/m3-giant-candle.html:218:    const r = await fetch(url)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1051:    const r = await fetch('/api/prices/realtime');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1113:    const r = await fetch('/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1226:    const r = await fetch('/api/m1/ai_summary');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1267:    const res = await fetch('/api/tianyan/reverse_config');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1280:    await fetch('/api/tianyan/reverse_config', {
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1290:    const res = await fetch('/api/tianyan/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1317:      const hRes = await fetch('/api/tianyan/intervention_history?page_size=1');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1329:      const hcRes = await fetch('/api/hero_cards/tianyan_status?compact=1');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1334:        const bpRes = await fetch('/api/tianyan/bot_positions');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1372:    const res = await fetch('/api/tianyan/bot_positions');
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1861:    const res = await fetch('/api/tianyan/intervention_history?' + params.toString());
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:1974:    const res = await fetch('/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb')
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2149:    const res = await fetch('/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb')
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2184:    const res = await fetch('/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb')
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2271:    const resp = await fetch('/api/ports_status')
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2283:          const r = await fetch(`/api/node/${port}/detail`)
+/Users/luxiangnan/freqtrade_console/static/tabs/tianyan-ai.html:2321:    await fetch('/api/tianyan/scan', {method:'POST'});
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1225:    fetch('/api/node/' + p).then(r => r.json()).catch(() => null)
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1264:    const r = await fetch(url, {signal: ctl.signal});
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1310:    const srUrl = forceLive ? '/api/bt2/sr_levels?force_live=1' : '/api/bt2/sr_levels';
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1323:      const liveR = await _fetchJsonFast('/api/bt2/sr_levels?force_live=1', 20000).catch(err => {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1333:      const flow = await _fetchJsonFast('/api/v1/ai_data_flow?pairs=btc,eth,sol,bnb,doge', 5000).catch(err => {
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1370:      _fetchJsonFast('/api/bt2/sr_ai_all', 2200).catch(() => ({})),
+/Users/luxiangnan/freqtrade_console/static/tabs/m2_sr.html:1371:      _fetchJsonFast('/api/exit_ai/status', 2200).catch(() => ({})),
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1513:    fetch('/api/node/' + p).then(r => r.json()).catch(() => null)
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1557:    const resp = await fetch('/api/m4/indicators?_=' + ts);
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1566:      const resp2 = await fetch('/api/m4/indicators?_=' + Date.now());
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1589:    const resp = await fetch('/api/tianyan/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1614:    const resp = await fetch('/api/exit_ai/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1697:    const resp = await fetch('/api/m4/indicators?_=' + ts);
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1708:      const resp2 = await fetch('/api/m4/indicators?_=' + Date.now());
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1757:    const resp = await fetch('/api/tianyan/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/m4_technical.html:1783:    const resp = await fetch('/api/exit_ai/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest.html:544:  const results = await Promise.allSettled(ports.map(p => fetch('/api/node/'+p).then(r=>r.json()).catch(()=>null)));
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest.html:578:    fetch('/api/m1/scan_all').then(async r => {
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest.html:582:    fetch('/api/m1/ai_decisions?limit=300').then(async r => {
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:617:    fetch(API + '/api/backtest/evaluate_open_positions', {
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:642:    const emResp = await fetch('http://localhost:9099/api/backtest/early_exit_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:678:    const r = await fetch(`http://localhost:${port}/cooldown_status?pair=${pair}`);
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:733:    const url = `http://localhost:9099/api/backtest/early_exit_tasks?action=close&port=${port}&pair=${encodeURIComponent(pair)}${action === 'tp' ? '&half=0' : ''}&trade_id=${tradeId}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:734:    const r = await fetch(url);
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:1883:    const resp = await fetch('http://localhost:9099/api/backtest/early_exit_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:1925:    const resp = await fetch('http://localhost:9099/api/backtest/early_exit_tasks');
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2008:    const url = `http://localhost:9099/api/backtest/early_exit_tasks?action=close&port=${port}&pair=${encodeURIComponent(cleanPair)}${half ? '&half=1' : ''}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2009:    const resp = await fetch(url);
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2032:    const resp = await fetch('http://localhost:9099/api/backtest/early_exit_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2040:    const resp = await fetch('http://localhost:9099/api/backtest/l7_consensus_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2125:    const r = await fetch(API + '/api/exit_ai/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2227:    const r = await fetch(API + '/api/exit_ai/trigger', { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/tabs/live-eval.html:2245:    const r = await fetch(API + '/api/exit_ai/history?page_size=20');
+/Users/luxiangnan/freqtrade_console/static/tabs/risk-control.html:406:    const res = await fetch('/api/risk/portfolio?force=1')
+/Users/luxiangnan/freqtrade_console/static/tabs/risk-control.html:579:    const res = await fetch('/api/risk/execute', {
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest-engine.html:235:    const res = await fetch('/api/backtest/run', {
+/Users/luxiangnan/freqtrade_console/static/tabs/backtest-engine.html:419:    const res = await fetch('/api/backtest/simulate', {
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1089:    const r = await fetch(API + '/api/m1/ai_summary');
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1099:    const r = await fetch(API + '/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb');
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1108:    const r = await fetch(API + '/api/bots/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1118:    const r = await fetch(API + '/api/hero_cards/tianyan_status?compact=1');
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1123:      const logR = await fetch(API + '/api/tianyan/status').catch(() => null);
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1143:    const r = await fetch(API + '/api/hero_cards/exit_ai_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1148:      const logR = await fetch(API + '/api/exit_ai/status').catch(() => null);
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1184:    const r = await fetch(API + '/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb');
+/Users/luxiangnan/freqtrade_console/static/tabs/hero-cards.html:1200:    const r = await fetch(API + '/api/bt2/giant_summary_all');
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:715:      fetch(API + '/api/bot_agent/decisions'),
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:716:      fetch(API + '/api/bot_agent/history?page=0&page_size=50'),
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:717:      fetch(API + '/api/monitor/positions'),
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:999:    const r = await fetch(API + '/api/bot_agent/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:1045:    const r = await fetch(API + '/api/monitor/positions');
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:1092:    const r = await fetch(API + '/api/bot_agent/knowledge');
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:1181:    await fetch(API + '/api/bot_agent/trigger_all', {method:'POST'});
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:1214:  let url = API + `/api/bot_agent/history?page=${currentPage}&page_size=${pageSize}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/bot-agents.html:1221:    const r = await fetch(url);
+/Users/luxiangnan/freqtrade_console/static/tabs/real.html:233:    const r = await fetch('/api/backtest/all_trades?limit=5000');
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_test.html:206:      fetch('/api/bt2/giant_summary_all?tf=15m').then(r => r.json()),
+/Users/luxiangnan/freqtrade_console/static/tabs/m3_test.html:207:      fetch('/api/bt2/held_pairs').then(r => r.json()).catch(() => ({ held_ids: [], held_pairs: {}, has_positions: false })),
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-m4m5-shadow.html:76:  const d = await fetch('/api/l5_m4m5_shadow/status').then(r=>r.json());
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-m4m5-shadow.html:103:  await fetch('/api/l5_m4m5_shadow/run');
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-m4m5-shadow.html:104:  await fetch('/api/l5_m4m5_shadow/report');
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-fund-flow-v2.html:87:  const d = await fetch('/api/l5/fund_flow_v2').then(r=>r.json());
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:186:  '/api/l5/market_intel?pair=all',
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:187:  '/api/l5/backtest_orderbook_status',
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:188:  '/api/l5/evolution_status',
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:189:  '/api/l5/daily_attribution?hours=24',
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:190:  '/api/l5_m4m5_shadow/status',
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:191:  '/api/l5/fund_flow_v2'
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:211:    const res = await fetch(API + path, {signal: controller.signal, cache: 'no-store'});
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:229:    intel: fallback['/api/l5/market_intel?pair=all'] || {pairs:{}},
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:230:    status: fallback['/api/l5/backtest_orderbook_status'] || {},
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:231:    evolution: fallback['/api/l5/evolution_status'] || {},
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:232:    attribution: fallback['/api/l5/daily_attribution?hours=24'] || {trade_outcome_attribution:{}},
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:233:    shadow: fallback['/api/l5_m4m5_shadow/status'] || {latest:{pairs:[]}, report:{}},
+/Users/luxiangnan/freqtrade_console/static/tabs/l5-evolution.html:234:    fundFlow: fallback['/api/l5/fund_flow_v2'] || {pairs:{}}
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:970:let _mtfData = {};           // 多时线数据（从 /api/m1/scan_all.mtf 同步）
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1034:  // 手动强制刷新：从 /api/m1/scan_all 拉取最新 MTF 数据
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1036:    const r = await fetch('/api/m1/scan_all').then(x => x.json()).catch(() => null);
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1115:    fetch('/api/node/' + p).then(r => r.json()).catch(() => null)
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1147:    const scanR = await fetch('/api/m1/scan_all').then(r => r.json());
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1167:    const srR = await fetch('/api/bt2/sr_levels').then(r => r.json()).catch(() => ({}));
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1183:    const tyR = await fetch('/api/tianyan/status').then(r => r.json()).catch(() => ({}));
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1204:    const eaR = await fetch('/api/exit_ai/status').then(r => r.json()).catch(() => ({}));
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1225:    const decR = await fetch('/api/m1/ai_decisions?limit=300').then(r => r.json()).catch(() => ({}));
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1305:      fetch('/api/m1/scan_all').then(x => x.json()).catch(() => null),
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1306:      fetch('/api/bt2/sr_levels').then(x => x.json()).catch(() => ({})),
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1307:      fetchAi ? fetch('/api/tianyan/status').then(x => x.json()).catch(() => ({})) : Promise.resolve(null),
+/Users/luxiangnan/freqtrade_console/static/tabs/m1_v2.html:1308:      fetchAi ? fetch('/api/exit_ai/status').then(x => x.json()).catch(() => ({})) : Promise.resolve(null),
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:932:    const resp = await fetch(API + '/api/exit_ai/status');
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:935:      const hcResp = await fetch(API + '/api/hero_cards/exit_ai_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:963:    const resp = await fetch(API + '/api/monitor/positions');
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:975:    await fetch(API + '/api/exit_ai/trigger', {method:'POST'});
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:1283:  let url = API + `/api/exit_ai/history?page=${currentPage}&page_size=${pageSize}`;
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:1290:    const resp = await fetch(url);
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:1672:    const url = '/api/hero_cards/exit_ai_status';
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:1674:    const r = await fetch(url);
+/Users/luxiangnan/freqtrade_console/static/tabs/exit-ai.html:1679:      const fr = await fetch('/api/v1/ai_data_flow?pairs=btc,eth,sol,doge,bnb');
+/Users/luxiangnan/freqtrade_console/static/tabs/summary.html:216:    fetch(API + '/api/backtest/summary?port=' + port)
+/Users/luxiangnan/freqtrade_console/static/tabs/exit.html:314:    const r = await fetch(API + '/api/backtest/entry_exit_stats', {
+/Users/luxiangnan/freqtrade_console/static/tabs/exit.html:711:    const r = await fetch(parent._apiBase + '/api/hero_cards/exit_ai_status');
+/Users/luxiangnan/freqtrade_console/static/tabs/exit.html:718:      const flowR = await fetch(API + '/api/v1/ai_data_flow?pairs=btc,eth,sol,bnb,doge');
+/Users/luxiangnan/freqtrade_console/static/tabs/entry.html:171:    const r = await fetch(API + '/api/backtest/entry_exit_stats', {
+/Users/luxiangnan/freqtrade_console/static/tabs/l123-summary.html:505:    const r = await fetch("/api/l123/positions");
+/Users/luxiangnan/freqtrade_console/static/tabs/l123-summary.html:601:    const gatePromises = PAIRS.map(p => fetch(`/api/l123/indicators/${p}`).then(r => r.json()).catch(() => null));
+/Users/luxiangnan/freqtrade_console/static/tabs/l123-summary.html:605:    const okxPromises = PAIRS.map(p => fetch(`/api/l123/indicators_okx/${p}`).then(r => r.json()).catch(() => null));
+/Users/luxiangnan/freqtrade_console/static/tabs/l123-summary.html:724:      fetch("/api/l123/m3/stats"),
+/Users/luxiangnan/freqtrade_console/static/tabs/l123-summary.html:725:      fetch("/api/l123/m3/peaks"),
+/Users/luxiangnan/freqtrade_console/static/tabs/trades.html:226:    fetch(API + '/api/backtest/trades?port=' + port + '&limit=10000&sort=close_date&order=desc')
+/Users/luxiangnan/freqtrade_console/static/accounts.html:140:  const res = await fetch(`${PARENT_BASE}${path}`, {
+/Users/luxiangnan/freqtrade_console/static/accounts.html:159:      api('/api/accounts'),
+/Users/luxiangnan/freqtrade_console/static/accounts.html:160:      api('/api/bots/status').catch(() => []),
+/Users/luxiangnan/freqtrade_console/static/accounts.html:161:      api('/api/agent/status').catch(() => ({agents:{}})),
+/Users/luxiangnan/freqtrade_console/static/accounts.html:260:    const data = await api(`/api/accounts/${encodeURIComponent(accId)}/start`, { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/accounts.html:280:    await api(`/api/accounts/${encodeURIComponent(accId)}/stop`, { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/accounts.html:293:    const data = await api(`/api/accounts/${encodeURIComponent(accId)}/test`, { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/accounts.html:305:    await api(`/api/accounts/${encodeURIComponent(accId)}`, { method: 'DELETE' });
+/Users/luxiangnan/freqtrade_console/static/retail_inbound.html:136:            fetch('/api/upload/inbound', {
+/Users/luxiangnan/freqtrade_console/static/retail_inbound.html:154:            fetch('/api/upload/list')
+/Users/luxiangnan/freqtrade_console/static/retail_inbound.html:179:            fetch('/api/upload/history')
+/Users/luxiangnan/freqtrade_console/static/retail_inbound.html:200:            fetch('/api/upload/recognize', {
+/Users/luxiangnan/freqtrade_console/static/backtest.html:199:    const r = await fetch('/api/backtest/overview');
+/Users/luxiangnan/freqtrade_console/static/data_flow.html:759:                        const resp = await fetch(`/api/sr/results?pair=${pair}&exchange=${exchange}&timeframe=${tf}`);
+/Users/luxiangnan/freqtrade_console/static/data_flow.html:809:                    const resp = await fetch(`/api/market_data/${okxSymbol}`);
+/Users/luxiangnan/freqtrade_console/static/data_flow.html:864:                const response = await fetch(`/api/market_data/${apiSymbol}`);
+/Users/luxiangnan/freqtrade_console/static/data_flow.html:1212:                const response = await fetch(`/api/signal/entry?symbol=${encodeURIComponent(pair)}`);
+/Users/luxiangnan/freqtrade_console/static/data_flow.html:1557:    fetch('/api/upload/inbound', {
+/Users/luxiangnan/freqtrade_console/static/data_flow.html:1575:    fetch('/api/upload/list')
+/Users/luxiangnan/freqtrade_console/static/test.html:12:        const res = await fetch('/api/rules/entry');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:289:                const res = await fetch('http://localhost:9099/api/dashboard');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:337:                const priceRes = await fetch('http://localhost:9099/api/dashboard/prices');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:341:                const srRes = await fetch('http://localhost:9099/api/dashboard/sr');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:370:                const res = await fetch('http://localhost:9099/api/dashboard/signals');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:392:                const res = await fetch('http://localhost:9099/api/dashboard/trades');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:416:                const res = await fetch('http://localhost:9099/api/dashboard/sr');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:495:                const response = await fetch('http://localhost:9099/api/backtest/run', {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:620:                const res = await fetch('http://localhost:9099/api/dashboard');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_数据中心.html:633:                await fetch(`https://api.telegram.org/bot8740155718:AAHm4FVwgVdZ1s0EVsoLK2BHEJBMJrPuHt4/sendMessage`, {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:780:                const resp = await fetch('/api/rules/entry/manual_exit_status');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:825:                const resp = await fetch('/api/rules/' + RULE + '/bots');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:866:                const resp = await fetch('/api/rules/' + RULE + '/bots');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:894:                const resp = await fetch('/api/rules/' + RULE + '/default');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:917:                const resp = await fetch('/api/rules/' + RULE + '/default', {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:1003:            fetch('/api/rules/' + RULE, {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_出场规则_完整版.html:1031:                const resp = await fetch('/api/rules/' + RULE + '/push', {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:635:                    <tr><td class="td-mono">/api/ai/agent/start</td><td>POST</td><td>启动天眼AI</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:636:                    <tr><td class="td-mono">/api/ai/agent/stop</td><td>POST</td><td>停止天眼AI</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:637:                    <tr><td class="td-mono">/api/ai/agent/status</td><td>GET</td><td>获取运行状态</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:638:                    <tr><td class="td-mono">/api/ai/agent/trigger</td><td>POST</td><td>手动触发扫描</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:639:                    <tr><td class="td-mono">/api/ai/positions/all</td><td>GET</td><td>获取所有持仓</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:640:                    <tr><td class="td-mono">/api/ai/blacklist</td><td>GET/POST</td><td>黑名单管理</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:641:                    <tr><td class="td-mono">/api/ai/alerts</td><td>GET/POST</td><td>预警管理</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:642:                    <tr><td class="td-mono">/api/ai/intervention</td><td>GET</td><td>干预历史</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:643:                    <tr><td class="td-mono">/api/ai/intervention/act</td><td>POST</td><td>执行干预</td></tr>
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:723:        const r = await fetch(url, {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:742:        const bal = await api('http://localhost:9099/api/node/' + PORT);
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:755:        const prof = await fetch('http://localhost:9099/api/monitor/balances', { headers: { 'Content-Type': 'application/json' } });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:770:    const positions = await api('http://localhost:9099/api/ai/positions/all');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:776:    const status = await api('http://localhost:9099/api/ai/status');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:813:    const alerts = await api('http://localhost:9099/api/ai/alerts?port=' + PORT + '&page=0&page_size=5');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:833:    const interventions = await api('http://localhost:9099/api/ai/intervention');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:859:    const positions = await api('http://localhost:9099/api/ai/positions/all');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:900:    const positions = await api('http://localhost:9099/api/ai/positions/all');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:971:    const r = await api('http://localhost:9099/api/ai/intervention/act', { method: 'POST', body: JSON.stringify(body) });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:987:    const data = await api('http://localhost:9099/api/ai/intervention');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1018:    const data = await api('http://localhost:9099/api/ai/blacklist');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1053:    const r = await api('http://localhost:9099/api/ai/blacklist/delete', { method: 'POST', body: JSON.stringify({ pair, port: PORT }) });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1062:    const r = await api('http://localhost:9099/api/ai/blacklist', { method: 'POST', body: JSON.stringify({ pair, port: PORT, level }) });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1071:    const url = `http://localhost:9099/api/ai/alerts?port=${PORT}&page=${alertsPage}&page_size=20${pair ? '&pair=' + encodeURIComponent(pair) : ''}`;
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1110:    const r = await api('http://localhost:9099/api/ai/alerts/verify', { method: 'POST', body: JSON.stringify({ alert_id: id, actual_direction: direction, pnl_after: 0 }) });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1123:    const r = await api('http://localhost:9099/api/ai/alerts', { method: 'POST', body: JSON.stringify({ pair, port: PORT, alert_type: type, trigger_price: parseFloat(price), expected_direction: dir }) });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1133:    const text = await fetch('http://localhost:9099/api/ai/rules').then(r => r.text()).catch(() => '加载失败');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1138:    const text = await fetch('http://localhost:9099/api/ai/rules').then(r => r.text()).catch(() => '');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1155:    const r = await api('http://localhost:9099/api/ai/agent/start', { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1166:    const r = await api('http://localhost:9099/api/ai/agent/stop', { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1177:    const r = await api('http://localhost:9099/api/ai/agent/trigger', { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1213:        const r = await api('http://localhost:9099/api/ai/agent/status');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_AI子代理中心.html:1242:        const r = await fetch('https://api.minimaxi.chat/v1/text/chatcompletion_v2', {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1003:                const resp = await fetch('/api/rules/exit/inject_confirm_status');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1044:                const resp = await fetch('/api/rules/' + RULE + '/bots');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1115:                const resp = await fetch('/api/rules/' + RULE + '/bots');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1148:                const resp = await fetch('/api/rules/' + RULE + '/default');
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1177:                const resp = await fetch('/api/rules/' + RULE + '/default', {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1252:            fetch('/api/rules/' + RULE, {
+/Users/luxiangnan/freqtrade_console/static/rules/V6.5_入场规则_完整版.html:1282:                const resp = await fetch('/api/rules/' + RULE + '/push', {
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:265:  const res = await fetch(`${PARENT_BASE}${path}`, {
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:372:    const src = await api(`/api/accounts/${encodeURIComponent(accId)}/clone`);
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:454:    const accs = await api('/api/accounts');
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:490:    const url = `${PARENT_BASE}/api/accounts/${encodeURIComponent(accId)}`;
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:491:    const res = await fetch(url, { headers: { 'Content-Type': 'application/json' } });
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:624:      ? `/api/accounts/${encodeURIComponent(editId)}`
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:625:      : '/api/accounts';
+/Users/luxiangnan/freqtrade_console/static/account_edit.html:650:    const result = await api(`/api/accounts/${encodeURIComponent(editId)}/test`, { method: 'POST' });
+/Users/luxiangnan/freqtrade_console/static/monitor.html:435:    const r = await fetch(`${BASE}/api/monitor/positions`);
+/Users/luxiangnan/freqtrade_console/static/monitor.html:613:    const r = await fetch(`${BASE}/api/rules/entry/manual_exit_status`);
+/Users/luxiangnan/freqtrade_console/static/monitor.html:757:    await doApi('/api/monitor/leverage', body, items);
+/Users/luxiangnan/freqtrade_console/static/monitor.html:767:    const ep = { close: '/api/monitor/close', add: '/api/monitor/add_position', reverse: '/api/monitor/reverse', partial: '/api/monitor/partial_close' };
+/Users/luxiangnan/freqtrade_console/static/monitor.html:799:    await doApi('/api/monitor/leverage', { port: it.port, trade_id: it.trade_id, leverage: lev }, [it]);
+/Users/luxiangnan/freqtrade_console/static/monitor.html:813:    r = await fetch(`${BASE}${endpoint}`, {
+/Users/luxiangnan/freqtrade_console/static/monitor.html:848:    if (endpoint === '/api/monitor/reverse') {
+/Users/luxiangnan/freqtrade_console/static/monitor.html:865:  if (endpoint === '/api/monitor/close' || endpoint === '/api/monitor/partial_close') {
+/Users/luxiangnan/freqtrade_console/static/monitor.html:881:    const r = await fetch(`${BASE}/api/monitor/balances`);
+/Users/luxiangnan/freqtrade_console/static/monitor.html:1016:    const r = await fetch(`${BASE}/api/monitor/force_entry`, {
+/Users/luxiangnan/freqtrade_console/static/upload_inbound.html:98:            fetch('/api/upload/inbound', {
+/Users/luxiangnan/freqtrade_console/static/upload_inbound.html:118:            fetch('/api/upload/list')
