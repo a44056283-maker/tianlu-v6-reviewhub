@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  OpenClaw 每日备份 LaunchAgent（草案）
+  暂不安装，等待 GPT/用户确认后再应用
+
+  安装方法（GPT 审核后执行）：
+  cp com.tianlu.openclaw-daily-backup.plist ~/Library/LaunchAgents/
+  launchctl load ~/Library/LaunchAgents/com.tianlu.openclaw-daily-backup.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.tianlu.openclaw-daily-backup</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/luxiangnan/Desktop/Tianlu_V6_5_Workspace/05_Claude_Tasks/backup_openclaw_daily.sh</string>
+    </array>
+    <!-- 每天 04:00 执行 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>4</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/Users/luxiangnan/Desktop/Tianlu_V6_5_Workspace/07_TEST_LOGS/backup_openclaw_daily.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/luxiangnan/Desktop/Tianlu_V6_5_Workspace/07_TEST_LOGS/backup_openclaw_daily.err</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/luxiangnan/Desktop/Tianlu_V6_5_Workspace/05_Claude_Tasks</string>
+</dict>
+</plist>

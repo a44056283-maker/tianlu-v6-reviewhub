@@ -1,0 +1,129 @@
+#!/bin/bash
+# backup_openclaw_daily.sh
+# OpenClaw 每日参数备份脚本（草案）
+# 用途：备份 OpenClaw 核心配置到本地，不上传 GitHub
+# 执行：手动或 cron，不自动安装 LaunchAgent
+
+set -e
+
+TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
+BACKUP_ROOT="$HOME/Desktop/Tianlu_V6_5_Workspace/04_BACKUPS/openclaw_daily"
+TARGET_DIR="$BACKUP_ROOT/$TIMESTAMP"
+LOG="$HOME/Desktop/Tianlu_V6_5_Workspace/07_TEST_LOGS/backup_openclaw_daily.log"
+
+# 外部硬盘目标（可选，需要用户确认后再启用）
+EXT_TARGET="/Volumes/TianLu_Storage/Tianlu_V6_5_DataVault/OPENCLAW_CONFIG_BACKUP/$TIMESTAMP"
+
+mkdir -p "$TARGET_DIR"
+mkdir -p "$(dirname $LOG)"
+
+log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
+
+log "=== OpenClaw Daily Backup 开始 ==="
+
+# 1. openclaw.json
+if [ -f "$HOME/.openclaw/openclaw.json" ]; then
+    cp "$HOME/.openclaw/openclaw.json" "$TARGET_DIR/openclaw.json"
+    log "✓ openclaw.json"
+else
+    log "✗ openclaw.json 未找到"
+fi
+
+# 2. agents 配置（每个 agent 的 models.json + auth-profiles.json）
+AGENTS_DIR="$HOME/.openclaw/agents"
+if [ -d "$AGENTS_DIR" ]; then
+    mkdir -p "$TARGET_DIR/agents"
+    for agent in "$AGENTS_DIR"/*; do
+        [ -d "$agent" ] || continue
+        agent_name=$(basename "$agent")
+        agent_dest="$TARGET_DIR/agents/$agent_name"
+        mkdir -p "$agent_dest/agent"
+
+        # models.json
+        if [ -f "$agent/agent/models.json" ]; then
+            # 脱敏：只保留结构，key 替换为掩码
+            python3 -c "
+import json, sys
+with open('$agent/agent/models.json') as f:
+    data = json.load(f)
+# 脱敏 apiKey
+def redact(d):
+    if isinstance(d, dict):
+        return {k: ('***REDACTED***' if k == 'apiKey' and len(str(v)) > 8 else redact(v)) for k, v in d.items()}
+    elif isinstance(d, list):
+        return [redact(i) for i in d]
+    return d
+with open('$agent_dest/agent/models.json', 'w') as f:
+    json.dump(redact(data), f, indent=2, ensure_ascii=False)
+" 2>/dev/null && log "✓ agents/$agent_name/models.json (脱敏)" || log "✗ agents/$agent_name/models.json 失败"
+        fi
+
+        # auth-profiles.json（脱敏）
+        if [ -f "$agent/agent/auth-profiles.json" ]; then
+            python3 -c "
+import json
+with open('$agent/agent/auth-profiles.json') as f:
+    data = json.load(f)
+def redact(d):
+    if isinstance(d, dict):
+        return {k: ('***REDACTED***' if any(x in k.lower() for x in ['token','key','secret','password','auth']) and len(str(v)) > 4 else redact(v)) for k, v in d.items()}
+    elif isinstance(d, list):
+        return [redact(i) for i in d]
+    return d
+with open('$agent_dest/agent/auth-profiles.json', 'w') as f:
+    json.dump(redact(data), f, indent=2, ensure_ascii=False)
+" 2>/dev/null && log "✓ agents/$agent_name/auth-profiles.json (脱敏)" || true
+        fi
+    done
+fi
+
+# 3. cron 配置
+if [ -d "$HOME/.openclaw/cron" ]; then
+    mkdir -p "$TARGET_DIR/cron"
+    find "$HOME/.openclaw/cron" -type f -name "*.jsonl" | head -50 | while read f; do
+        # 只备份最近 10 条 run 的摘要，不备份完整日志
+        basename "$f" | grep -q "run" && {
+            echo "$(date -r "$f" '+%Y-%m-%d %H:%M') $(basename $f)" >> "$TARGET_DIR/cron/run_index.txt"
+        }
+    done
+    log "✓ cron 索引"
+fi
+
+# 4. Gateway LaunchAgent plist
+if [ -f "$HOME/Library/LaunchAgents/ai.openclaw.gateway.plist" ]; then
+    cp "$HOME/Library/LaunchAgents/ai.openclaw.gateway.plist" "$TARGET_DIR/ai.openclaw.gateway.plist"
+    log "✓ ai.openclaw.gateway.plist"
+fi
+
+# 5. 备份摘要
+cat > "$TARGET_DIR/BACKUP_MANIFEST.md" << EOF
+# OpenClaw 每日备份清单
+备份时间：$TIMESTAMP
+备份路径：$TARGET_DIR
+
+## 包含内容
+- openclaw.json（主配置）
+- agents/*/agent/models.json（已脱敏）
+- agents/*/agent/auth-profiles.json（已脱敏）
+- cron/run_index.txt（最近运行索引）
+- ai.openclaw.gateway.plist
+
+## 不包含（安全）
+- 真实 apiKey / token / secret
+- sessions/*.jsonl（太大，不备份）
+- logs/（太大，不备份）
+
+## 外部硬盘同步（需确认）
+EOF
+log "✓ BACKUP_MANIFEST.md"
+
+# 6. 可选：rsync 到外接硬盘（需要用户确认后再启用）
+# if [ -d "/Volumes/TianLu_Storage" ]; then
+#     mkdir -p "$EXT_TARGET"
+#     rsync -a --exclude='sessions' --exclude='logs' "$TARGET_DIR/" "$EXT_TARGET/"
+#     log "✓ 同步到 $EXT_TARGET"
+# fi
+
+log "=== OpenClaw 每日备份完成 ==="
+log "备份位置：$TARGET_DIR"
+echo ""
