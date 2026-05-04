@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "timezone": "Asia/Shanghai",
+  "max_open_trades": 14,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 1.0,
+  "dry_run": false,
+  "cancel_open_orders_on_exit": true,
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "leverage": {
+    "long": 5,
+    "short": 5
+  },
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList",
+      "config": {
+        "pair_list": [
+          "BTC/USDT:USDT",
+          "ETH/USDT:USDT",
+          "SOL/USDT:USDT",
+          "DOGE/USDT:USDT",
+          "BNB/USDT:USDT",
+          "XRP/USDT:USDT"
+        ]
+      }
+    }
+  ],
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60,
+    "stoploss_on_exchange_limit_ratio": 0.98
+  },
+  "stoploss": -999.0,
+  "trailing_stop": false,
+  "minimal_roi": {
+    "0": 999
+  },
+  "bot_name": "天禄",
+  "initial_state": "running",
+  "force_entry_enable": true,
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "position_stacking": true,
+  "timeframe": "15m",
+  "strategy": "FOttStrategy",
+  "temporary_pair_freeze": {
+    "DOGE/USDT:USDT": {
+      "enabled": true,
+      "duration_hours": 24,
+      "reason": "batch_stoploss_loop",
+      "block_auto_entry": true,
+      "block_auto_dca": true
+    }
+  },
+  "dca_pause_rules": {
+    "SOL/USDT:USDT:SHORT": {
+      "enabled": true,
+      "reason": "dca_full_layer_roe_negative",
+      "block_new_dca": true
+    }
+  }
+}

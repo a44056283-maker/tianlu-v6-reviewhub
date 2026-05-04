@@ -1,0 +1,120 @@
+{
+  "exchange": {
+    "name": "okx",
+    "enable_ws": false,
+    "key": "edb9e15e-2561-4bfa-b5ab-2085f758af47",
+    "secret": "6346D010FD99490E7AF2E7AEFB9DD30A",
+    "ccxt_config": {
+      "password": "Xy@06130822",
+      "ws_options": {
+        "connect_timeout": 90000,
+        "ping_timeout": 45000,
+        "ping_interval": 45000
+      },
+      "verify": false,
+      "aiohttp_trust_env": true,
+      "aiohttp_proxy": "http://127.0.0.1:7890",
+      "proxies": {
+        "http": "http://127.0.0.1:7890",
+        "https": "http://127.0.0.1:7890"
+      }
+    },
+    "ccxt_async_config": {
+      "ws_options": {
+        "connect_timeout": 90000,
+        "ping_timeout": 45000,
+        "ping_interval": 45000
+      },
+      "verify": false,
+      "aiohttp_trust_env": true,
+      "aiohttp_proxy": "http://127.0.0.1:7890",
+      "proxies": {
+        "http": "http://127.0.0.1:7890",
+        "https": "http://127.0.0.1:7890"
+      }
+    },
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "BNB/USDT:USDT",
+      "DOGE/USDT:USDT"
+    ],
+    "pair_blacklist": [
+      "ADA/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "BLUR/USDT:USDT",
+      "DOT/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "ENA/USDT:USDT",
+      "FT/USDT:USDT",
+      "INJ/USDT:USDT",
+      "IO/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "LINK/USDT:USDT",
+      "LTC/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ORDI/USDT:USDT",
+      "PEPE/USDT:USDT",
+      "PIXEL/USDT:USDT",
+      "POL/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "SAGA/USDT:USDT",
+      "SEI/USDT:USDT",
+      "STRK/USDT:USDT",
+      "SUI/USDT:USDT",
+      "THETA/USDT:USDT",
+      "TIA/USDT:USDT",
+      "TNS/USDT:USDT",
+      "TRX/USDT:USDT",
+      "UNI/USDT:USDT",
+      "WIF/USDT:USDT",
+      "WLD/USDT:USDT",
+      "WOO/USDT:USDT",
+      "XLM/USDT:USDT",
+      "XRP/USDT:USDT"
+    ]
+  },
+  "user_data_dir": "/Users/luxiangnan/freqtrade/user_data_okx_9097",
+  "db_url": "sqlite:////Users/luxiangnan/freqtrade/user_data_okx_9097/tradesv3_okx.sqlite?timeout=120",
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 9097,
+    "verbosity": "error",
+    "enable_openapi": true,
+    "jwt_secret_key": "freqtrade_secret_key_change_this_9097",
+    "ws_token": "freqtrade_ws_token_change_this_9097",
+    "username": "admin",
+    "password": "Xy@06130822"
+  },
+  "leverage": {
+    "long": 10,
+    "short": 10
+  },
+  "position_stacking": true,
+  "short_allowed": true,
+  "hedging": true,
+  "temporary_pair_freeze": {
+    "DOGE/USDT:USDT": {
+      "enabled": true,
+      "duration_hours": 24,
+      "reason": "batch_stoploss_loop",
+      "block_auto_entry": true,
+      "block_auto_dca": true
+    }
+  },
+  "dca_pause_rules": {
+    "SOL/USDT:USDT:SHORT": {
+      "enabled": true,
+      "reason": "dca_full_layer_roe_negative",
+      "block_new_dca": true
+    }
+  }
+}

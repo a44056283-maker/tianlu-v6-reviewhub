@@ -1,0 +1,27 @@
+{
+  "note": "PLACEHOLDER - Mac B config unavailable via SSH",
+  "bot_port": 8083,
+  "bot_name": "MacB-Gate-b15637798222",
+  "user_data_dir": "/Users/luxiangnan/freqtrade_bots/user_data_gate_b15637798222",
+  "config_source": "luxiangnan@192.168.13.104:/Users/luxiangnan/freqtrade_bots/config_8083_overlay.json",
+  "status": "SSH_ACCESS_DENIED",
+  "required_patches": {
+    "temporary_pair_freeze": {
+      "DOGE/USDT:USDT": {
+        "enabled": true,
+        "duration_hours": 24,
+        "reason": "batch_stoploss_loop",
+        "block_auto_entry": true,
+        "block_auto_dca": true
+      }
+    },
+    "dca_pause_rules": {
+      "SOL/USDT:USDT:SHORT": {
+        "enabled": true,
+        "reason": "dca_full_layer_roe_negative",
+        "block_new_dca": true
+      }
+    }
+  },
+  "apply_instructions": "ssh luxiangnan@192.168.13.104 'cat /Users/luxiangnan/freqtrade_bots/config_8083_overlay.json' to read, then use the _apply_patches.sh script to patch"
+}

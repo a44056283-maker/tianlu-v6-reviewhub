@@ -1,0 +1,102 @@
+{
+  "exchange": {
+    "name": "gateio",
+    "key": "eea4664dc846a7d3628d371ee8aa73ef",
+    "secret": "dfb50e74f6926ba269428a8fcd0436414e0ab08f49493b75804bfb9666b34d20",
+    "ccxt_config": {
+      "timeout": 120000,
+      "proxies": {}
+    },
+    "ccxt_async_config": {
+      "proxies": {}
+    },
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "BNB/USDT:USDT",
+      "DOGE/USDT:USDT"
+    ],
+    "pair_blacklist": [
+      "ADA/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "BLUR/USDT:USDT",
+      "DOT/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "ENA/USDT:USDT",
+      "FT/USDT:USDT",
+      "INJ/USDT:USDT",
+      "IO/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "LINK/USDT:USDT",
+      "LTC/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ORDI/USDT:USDT",
+      "PEPE/USDT:USDT",
+      "PIXEL/USDT:USDT",
+      "POL/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "SAGA/USDT:USDT",
+      "SEI/USDT:USDT",
+      "STRK/USDT:USDT",
+      "SUI/USDT:USDT",
+      "THETA/USDT:USDT",
+      "TIA/USDT:USDT",
+      "TNS/USDT:USDT",
+      "TRX/USDT:USDT",
+      "UNI/USDT:USDT",
+      "WIF/USDT:USDT",
+      "WLD/USDT:USDT",
+      "WOO/USDT:USDT",
+      "XLM/USDT:USDT",
+      "XRP/USDT:USDT"
+    ],
+    "password": "9091API"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0.0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 9091,
+    "verbosity": "error",
+    "enable_openapi": true,
+    "jwt_secret_key": "freqtrade_secret_key_9091",
+    "ws_token": "freqtrade_ws_token_9091",
+    "username": "freqtrade",
+    "password": "freqtrade"
+  },
+  "leverage": {
+    "long": 10,
+    "short": 10
+  },
+  "db_url": "sqlite:////Users/luxiangnan/freqtrade/user_data_gate85363904550/tradesv3_gate.sqlite?timeout=120&check_same_thread=False&pool_size=20",
+  "user_data_dir": "/Users/luxiangnan/freqtrade/user_data_gate85363904550",
+  "position_stacking": true,
+  "short_allowed": true,
+  "temporary_pair_freeze": {
+    "DOGE/USDT:USDT": {
+      "enabled": true,
+      "duration_hours": 24,
+      "reason": "batch_stoploss_loop",
+      "block_auto_entry": true,
+      "block_auto_dca": true
+    }
+  },
+  "dca_pause_rules": {
+    "SOL/USDT:USDT:SHORT": {
+      "enabled": true,
+      "reason": "dca_full_layer_roe_negative",
+      "block_new_dca": true
+    }
+  }
+}

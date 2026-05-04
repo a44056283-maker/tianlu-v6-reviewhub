@@ -1,0 +1,212 @@
+--- PATCH.diff: LIVE_STRATEGY_DCA_L5_FORCE_ROLLOUT_20260504
+--- Generated: 2026-05-04 14:35
+--- This diff shows all code changes (NOT overlay config changes)
+
+================================================================================
+PATCH P0-3: v65_autopilot.py — 修复 DCA 触发清除止损冷却
+================================================================================
+File: ~/freqtrade_console/bt_tools/v65_autopilot.py
+Lines: ~6268-6272
+
+--- BEFORE
++++ AFTER
+@@
+  # ── 止损冷却状态清理（机器人主动平仓后清冷却）──────────────────────
+  # 当外部触发全平或止损时，清理对应交易对的止损冷却状态
+- if pair in _stoploss_state:
+-     del _stoploss_state[pair]
++ # Bugfix 2026-05-04: DCA触发时不应清除止损冷却，否则冷却保护失效
++ if pair in _stoploss_state and not (_dca_triggered):
++     del _stoploss_state[pair]
+  _log(f"[止损冷却] 清空 {pair} 止损状态（外部全平/止损）")
+
+================================================================================
+PATCH P0-4: v65_autopilot.py — 新增 ExitDecisionGate 类
+================================================================================
+File: ~/freqtrade_console/bt_tools/v65_autopilot.py
+Insert after: ~line 4669 (after existing profit tightening logic)
+
+--- INSERT (new class before existing exit logic)
++++
+
+class ExitDecisionGate:
+    """
+    出场裁决闸门
+
+    所有出场动作必须经过此门控：
+    1. 不在 post_loss_observation 观察期内执行自学习收紧
+    2. 不在 post_exit_continuation 状态下执行新入场
+    3. 连续亏损收紧需门控确认（防止"卖在黎明前"）
+    """
+    def __init__(self):
+        self._post_loss_observation = {}   # {pair: end_timestamp}
+        self._post_exit_continuation = {} # {pair: end_timestamp}
+        self._temp_thresh_override = {}   # {pair: threshold_override}
+        self.OBSERVATION_WINDOW = 3600     # 1小时后恢复
+
+    def is_in_observation(self, pair):
+        import time
+        if pair not in self._post_loss_observation:
+            return False
+        return time.time() < self._post_loss_observation[pair]
+
+    def record_loss(self, pair):
+        import time
+        self._post_loss_observation[pair] = time.time() + self.OBSERVATION_WINDOW
+
+    def request_threshold_override(self, pair, proposed_thresh):
+        """请求收紧止盈阈值，门控裁决是否批准"""
+        if self.is_in_observation(pair):
+            return False  # 拒绝：观察期内不允许收紧
+        self._temp_thresh_override[pair] = proposed_thresh
+        return True
+
+    def get_threshold(self, pair, default):
+        return self._temp_thresh_override.get(pair, default)
+
+--- MODIFY existing code at lines 4670-4675
++++
+
+    # OLD (bypass gate):
+    if consec_losses >= 2 and profit_pct > 5:
+        thresh = 10
+        _log(f"[自学习微调] {pair} 连续亏损{consec_losses}次，收紧止盈触发至{thresh}%")
+        _temp_thresh_override[base] = thresh
+
+    # NEW (with gate):
+    if consec_losses >= 2 and profit_pct > 5:
+        gate = ExitDecisionGate()  # 或复用全局单例
+        if gate.request_threshold_override(base, 10):
+            _log(f"[自学习微调] {pair} 连续亏损{consec_losses}次，闸门批准收紧至10%")
+            _temp_thresh_override[base] = 10
+        else:
+            _log(f"[自学习微调] {pair} 连续亏损{consec_losses}次，闸门拒绝（观察期内）")
+
+================================================================================
+PATCH P0-5: v65_autopilot.py — stagger_delay 负数保护
+================================================================================
+File: ~/freqtrade_console/bt_tools/v65_autopilot.py
+Line: ~5267
+
+--- BEFORE
++++ AFTER
+@@
+- stagger_delay = ((_LISTEN_PORT - 9000) * 0.05)
++ stagger_delay = max(0, ((_LISTEN_PORT - 9000) * 0.05))
+
+================================================================================
+PATCH P1-1: console_server.py — 新增 ForceGuard 审计日志常量
+================================================================================
+File: ~/freqtrade_console/console_server.py
+Insert near top (after imports):
+
+--- INSERT
++++
+
+# ── ForceGuard 审计日志路径 ───────────────────────────────────────────────
+import os
+from pathlib import Path
+_FORCE_AUDIT_LOG = Path.home() / ".tianlu" / "logs" / "force_action_audit.log"
+_FORCE_AUDIT_LOG.parent.mkdir(parents=True, exist_ok=True)
+
+def _log_force_action(bot_id, action, pair, reason, confirmed_by):
+    """记录所有强制操作到审计日志"""
+    import datetime
+    ts = datetime.datetime.now().isoformat()
+    entry = f"{ts} | BOT={bot_id} | ACTION={action} | PAIR={pair} | REASON={reason} | CONFIRMED={confirmed_by}\n"
+    with open(_FORCE_AUDIT_LOG, "a") as f:
+        f.write(entry)
+
+================================================================================
+PATCH P1-2: v65_autopilot.py — 新增 PostExitContinuation 状态字段
+================================================================================
+File: ~/freqtrade_console/bt_tools/v65_autopilot.py
+Insert near top (after existing state dicts):
+
+--- INSERT
++++
+
+# ── PostExitContinuation 状态 ─────────────────────────────────────────────
+# 出场后进入观察期，期间不允许反向开仓，防止连续亏损→立即反向→双杀
+_post_exit_continuation = {}  # {pair: exit_timestamp}
+POST_EXIT_OBSERVATION = 1800  # 30分钟观察窗口
+
+def is_in_post_exit_continuation(pair):
+    import time
+    if pair not in _post_exit_continuation:
+        return False
+    return (time.time() - _post_exit_continuation[pair]) < POST_EXIT_OBSERVATION
+
+def record_exit_for_continuation(pair):
+    import time
+    _post_exit_continuation[pair] = time.time()
+
+================================================================================
+PATCH P1-3: v65_autopilot.py — 新增 L5CandidateRegistry 和 L5PromotionGate
+================================================================================
+File: ~/freqtrade_console/bt_tools/v65_autopilot.py
+Insert after post_exit_continuation:
+
+--- INSERT
++++
+
+# ── L5 候选注册表 ────────────────────────────────────────────────────────
+class L5CandidateRegistry:
+    """
+    L5 候选策略注册表
+
+    所有候选晋级实盘的策略必须先在此注册，
+    经过影子实验验证后才能晋级。
+    """
+    def __init__(self):
+        self._candidates = {}  # {strategy_name: {registered_at, promotion_trials, win_rate, auto_apply_to_live}}
+
+    def register(self, strategy_name):
+        if strategy_name not in self._candidates:
+            self._candidates[strategy_name] = {
+                "registered_at": None,
+                "promotion_trials": 0,
+                "win_rate": 0.0,
+                "auto_apply_to_live": False  # 硬编码：默认禁止自动写入实盘
+            }
+
+    def is_promotion_ready(self, strategy_name):
+        c = self._candidates.get(strategy_name, {})
+        return (c.get("promotion_trials", 0) >= 5 and
+                c.get("win_rate", 0) >= 0.55 and
+                c.get("auto_apply_to_live") is False)  # 必须明确禁止自动写入
+
+# ── L5 晋级闸门 ──────────────────────────────────────────────────────────
+class L5PromotionGate:
+    """
+    L5 晋级闸门
+
+    所有晋级必须满足以下条件：
+    1. 影子实验次数 >= 5
+    2. 胜率 >= 55%
+    3. auto_apply_to_live == False（禁止自动写入）
+    """
+    def __init__(self):
+        self._registry = L5CandidateRegistry()
+
+    def try_promote(self, strategy_name):
+        if self._registry.is_promotion_ready(strategy_name):
+            return True  # 闸门通过（但实际写入仍需人工确认）
+        return False
+
+# 全局实例
+_L5_REGISTRY = L5CandidateRegistry()
+_L5_PROMOTION_GATE = L5PromotionGate()
+
+================================================================================
+PATCH SUMMARY
+================================================================================
+| 编号  | 文件                  | 行数变化 | 说明                    |
+|-------|-----------------------|----------|-------------------------|
+| P0-3  | v65_autopilot.py      | -1/+3    | DCA不清除止损冷却       |
+| P0-4  | v65_autopilot.py      | +45/-5   | ExitDecisionGate类     |
+| P0-5  | v65_autopilot.py      | -1/+1    | stagger_delay负数保护   |
+| P1-1  | console_server.py     | +15      | ForceGuard审计日志      |
+| P1-2  | v65_autopilot.py      | +11      | PostExitContinuation    |
+| P1-3  | v65_autopilot.py      | +45      | L5CandidateRegistry    |
+----------------------------------------------------------------------------------------------
