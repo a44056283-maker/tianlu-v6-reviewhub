@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L5 Evolution Lab · Backtest Cockpit</title>
+  <style>
+    :root{
+      --bg:#050b14;
+      --bg2:#081323;
+      --panel:#0c1829;
+      --panel2:#0f2035;
+      --panel3:#122942;
+      --line:#1e3a58;
+      --line2:#284d73;
+      --text:#eaf6ff;
+      --muted:#8aa3bb;
+      --soft:#b9cce0;
+      --cyan:#34e7f5;
+      --blue:#2f93ff;
+      --green:#28e2a0;
+      --red:#ff5f7d;
+      --gold:#ffb84d;
+      --purple:#9a7cff;
+      --shadow:0 18px 48px rgba(0,0,0,.28);
+      --glow:0 0 28px rgba(52,231,245,.14);
+      --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:radial-gradient(circle at 72% -10%,rgba(52,231,245,.14),transparent 28%),radial-gradient(circle at 12% 18%,rgba(47,147,255,.13),transparent 26%),linear-gradient(180deg,#07111f 0%,#040812 100%);color:var(--text);font:13px/1.45 var(--font);letter-spacing:0;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(52,231,245,.045) 1px,transparent 1px),linear-gradient(rgba(52,231,245,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black 0%,transparent 88%);opacity:.5}
+    button,select{font:inherit}
+    .app{position:relative;display:grid;grid-template-columns:178px 1fr;min-height:100vh}
+    .side{position:sticky;top:0;height:100vh;padding:18px 12px;border-right:1px solid rgba(52,231,245,.12);background:linear-gradient(180deg,rgba(7,18,32,.96),rgba(4,10,18,.96));box-shadow:8px 0 30px rgba(0,0,0,.22)}
+    .brand{display:flex;gap:10px;align-items:center;margin:0 6px 22px}
+    .logo{width:34px;height:34px;border-radius:10px;border:1px solid rgba(52,231,245,.45);background:conic-gradient(from 210deg,var(--cyan),var(--blue),var(--purple),var(--cyan));box-shadow:0 0 22px rgba(52,231,245,.28);position:relative}
+    .logo:after{content:"";position:absolute;inset:9px;border-radius:6px;background:#07111f}
+    .brand b{display:block;font-size:16px;line-height:1.1}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .nav{display:grid;gap:7px}.nav a{display:flex;gap:10px;align-items:center;color:var(--soft);text-decoration:none;border:1px solid transparent;border-radius:10px;padding:10px 12px;font-weight:750}.nav a.active,.nav a:hover{color:var(--cyan);background:linear-gradient(90deg,rgba(47,147,255,.18),rgba(52,231,245,.07));border-color:rgba(52,231,245,.18)}.nav i{font-style:normal;width:18px;text-align:center;color:inherit}
+    .side-foot{position:absolute;left:14px;right:14px;bottom:18px;border:1px solid rgba(52,231,245,.18);border-radius:14px;background:rgba(52,231,245,.05);padding:12px;color:var(--muted);font-size:12px}.side-foot b{display:block;color:var(--cyan);margin-bottom:4px}
+    .main{padding:16px;min-width:0}
+    .topbar{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-bottom:14px}
+    .title-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.title-row h1{font-size:22px;margin:0;font-weight:900}.title-row p{margin:4px 0 0;color:var(--muted)}
+    .top-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.select,.chip{border:1px solid rgba(52,231,245,.18);background:rgba(255,255,255,.025);color:var(--text);border-radius:10px;padding:8px 10px}.chip{display:inline-flex;gap:7px;align-items:center;color:var(--muted);font-weight:800}.chip.ok{color:var(--green);border-color:rgba(40,226,160,.25);background:rgba(40,226,160,.07)}.chip.warn{color:var(--gold);border-color:rgba(255,184,77,.25);background:rgba(255,184,77,.07)}
+    .tabs{display:flex;gap:10px;margin:0 0 14px;border-bottom:1px solid rgba(52,231,245,.13);padding-bottom:10px}.tab{border:1px solid rgba(52,231,245,.18);background:rgba(255,255,255,.025);color:var(--soft);border-radius:11px;padding:10px 14px;font-weight:900;cursor:pointer}.tab.active{color:#041019;background:linear-gradient(90deg,var(--cyan),#7df7ff);border-color:transparent;box-shadow:0 0 24px rgba(52,231,245,.2)}
+    .kpis{display:grid;grid-template-columns:repeat(10,minmax(118px,1fr));gap:10px;margin-bottom:12px}.kpi{min-height:78px;border:1px solid rgba(52,231,245,.13);border-radius:12px;background:linear-gradient(180deg,rgba(15,32,53,.88),rgba(9,20,34,.9));padding:12px;box-shadow:var(--shadow);overflow:hidden}.kpi small{display:block;color:var(--muted);font-weight:800}.kpi b{display:block;font:900 22px/1.2 var(--mono);margin-top:6px;color:var(--cyan)}.kpi.red b{color:var(--red)}.kpi.green b{color:var(--green)}.kpi.gold b{color:var(--gold)}.kpi.purple b{color:var(--purple)}
+    .market-strip{display:grid;grid-template-columns:1.08fr .92fr;gap:10px;margin-bottom:12px}.strip-card,.panel{border:1px solid rgba(52,231,245,.15);border-radius:13px;background:linear-gradient(180deg,rgba(13,29,48,.9),rgba(7,16,28,.94));box-shadow:var(--shadow),var(--glow);min-width:0}.strip-card{padding:10px 12px}.strip-title{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--soft);font-weight:900;margin-bottom:9px}.scenario-list{display:flex;gap:8px;flex-wrap:wrap}.scenario{border:1px solid rgba(52,231,245,.15);background:rgba(255,255,255,.025);border-radius:9px;padding:7px 12px;color:var(--muted);font-weight:850}.scenario.active{color:#06111d;background:linear-gradient(90deg,var(--gold),#ffd98a);border-color:transparent}.scenario.good{color:var(--green);border-color:rgba(40,226,160,.28);background:rgba(40,226,160,.07)}.scenario.bad{color:var(--red);border-color:rgba(255,95,125,.28);background:rgba(255,95,125,.07)}
+    .view{display:none}.view.active{display:block}.cockpit-grid{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(320px,.9fr);gap:12px}.panel{padding:14px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.panel-title{font-weight:950;font-size:15px}.sub{color:var(--muted);font-size:12px}.tool-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.tool{border:1px solid rgba(52,231,245,.18);border-radius:8px;padding:6px 9px;color:var(--muted);background:rgba(255,255,255,.025);font-weight:800}.tool.active{color:#06111d;background:var(--cyan);border-color:transparent}
+    .chart{height:360px;border:1px solid rgba(52,231,245,.13);border-radius:12px;background:linear-gradient(180deg,rgba(6,14,25,.98),rgba(4,9,17,.98));position:relative;overflow:hidden}.chart:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(52,231,245,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(52,231,245,.045) 1px,transparent 1px);background-size:42px 36px}.chart svg{position:absolute;inset:0;width:100%;height:100%}.price-label{position:absolute;left:14px;top:12px;color:var(--soft);font-family:var(--mono);z-index:1}.legend{position:absolute;left:14px;right:14px;bottom:12px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;z-index:1}.spark{height:56px;border:1px solid rgba(52,231,245,.12);border-radius:9px;background:rgba(255,255,255,.025);padding:7px;color:var(--muted);font-size:11px}.spark b{display:block;color:var(--cyan);font-family:var(--mono);margin-top:5px}
+    .rows{display:grid;gap:8px}.row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid rgba(52,231,245,.11);border-radius:10px;background:rgba(255,255,255,.025);padding:10px}.row b{display:block}.row small{display:block;color:var(--muted);margin-top:3px}.badge{display:inline-flex;align-items:center;border-radius:999px;border:1px solid rgba(52,231,245,.2);padding:5px 8px;color:var(--cyan);font-weight:900;background:rgba(52,231,245,.06)}.badge.green{color:var(--green);border-color:rgba(40,226,160,.25);background:rgba(40,226,160,.06)}.badge.red{color:var(--red);border-color:rgba(255,95,125,.25);background:rgba(255,95,125,.06)}.badge.gold{color:var(--gold);border-color:rgba(255,184,77,.25);background:rgba(255,184,77,.06)}.badge.purple{color:var(--purple);border-color:rgba(154,124,255,.25);background:rgba(154,124,255,.06)}
+    .ai-score{display:grid;grid-template-columns:116px 1fr;gap:14px;align-items:center}.dial{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cyan) 0 88%,rgba(52,231,245,.12) 88% 100%);box-shadow:0 0 28px rgba(52,231,245,.22)}.dial div{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:#081323;border:1px solid rgba(52,231,245,.2);font:900 31px/1 var(--mono);color:var(--cyan)}.assessment{display:grid;gap:8px}.assessment .line{display:grid;grid-template-columns:1fr auto;gap:8px;border-bottom:1px solid rgba(52,231,245,.1);padding-bottom:7px;color:var(--muted)}.assessment .line b{color:var(--text)}
+    .bottom-grid{display:grid;grid-template-columns:1.08fr .92fr 1fr;gap:12px;margin-top:12px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.scene-card{border:1px solid rgba(52,231,245,.12);border-radius:11px;background:rgba(255,255,255,.025);padding:10px;min-height:112px}.scene-card b{display:block;color:var(--text)}.scene-card p{margin:6px 0 0;color:var(--muted);font-size:12px}.table{width:100%;border-collapse:collapse;min-width:620px}.table-wrap{overflow:auto}.table th,.table td{padding:9px 10px;border-bottom:1px solid rgba(52,231,245,.1);white-space:nowrap;text-align:left}.table th{color:var(--muted);font-size:11px;text-transform:uppercase}
+    .evo-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}.strategy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.strategy-card{border:1px solid rgba(52,231,245,.13);border-radius:13px;background:linear-gradient(180deg,rgba(15,32,53,.86),rgba(7,16,28,.92));padding:13px}.strategy-card h3{margin:0 0 7px;font-size:14px}.score-line{display:grid;grid-template-columns:1fr 52px;gap:9px;align-items:center;margin:9px 0}.bar{height:8px;background:rgba(255,255,255,.07);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:inherit}.timeline{display:grid;gap:10px}.event{display:grid;grid-template-columns:82px 1fr;gap:10px;border:1px solid rgba(52,231,245,.12);border-radius:11px;background:rgba(255,255,255,.025);padding:10px}.event time{color:var(--cyan);font-family:var(--mono);font-weight:900}.prompt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.prompt{border:1px solid rgba(52,231,245,.12);border-radius:11px;padding:10px;background:rgba(255,255,255,.025)}.prompt b{display:block;color:var(--gold);margin-bottom:5px}.prompt span{color:var(--muted);font-size:12px}
+    .footer-note{margin-top:12px;border:1px solid rgba(255,184,77,.22);border-radius:13px;background:rgba(255,184,77,.06);padding:12px;color:#d8c7a3}.footer-note b{color:var(--gold)}
+    @media(max-width:1380px){.kpis{grid-template-columns:repeat(5,minmax(118px,1fr))}.cockpit-grid,.market-strip,.evo-grid{grid-template-columns:1fr}.bottom-grid{grid-template-columns:1fr}.cards,.strategy-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.app{grid-template-columns:1fr}.side{position:relative;height:auto}.side-foot{position:relative;left:auto;right:auto;bottom:auto;margin-top:14px}.main{padding:12px}.topbar{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards,.strategy-grid,.prompt-grid{grid-template-columns:1fr}.chart{height:320px}.legend{grid-template-columns:1fr}.ai-score{grid-template-columns:1fr}.tabs{overflow:auto}.tab{white-space:nowrap}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="side">
+      <div class="brand">
+        <span class="logo"></span>
+        <div><b>天禄 Backtest Lab</b><small>L5 Evolution Laboratory</small></div>
+      </div>
+      <nav class="nav" aria-label="L5 internal navigation">
+        <a class="active" href="#overview" data-target-tab="backtest"><i>⌂</i>总览</a>
+        <a href="#warehouse" data-target-tab="backtest"><i>▣</i>历史数据仓</a>
+        <a href="#slices" data-target-tab="backtest"><i>◌</i>市场切片</a>
+        <a href="#macd" data-target-tab="backtest"><i>⌁</i>MACD 图形中心</a>
+        <a href="#params" data-target-tab="evolution"><i>⚙</i>参数工坊</a>
+        <a href="#tasks" data-target-tab="backtest"><i>▤</i>回测任务</a>
+        <a href="#ai" data-target-tab="backtest"><i>◎</i>AI 评测</a>
+        <a href="#gate" data-target-tab="evolution"><i>◇</i>策略准入</a>
+        <a href="#report" data-target-tab="evolution"><i>□</i>报告中心</a>
+      </nav>
+      <div class="side-foot"><b>安全边界</b>UI MVP 仅 mock/GET 只读数据。不下单、不平仓、不加仓、不改仓。</div>
+    </aside>
+
+    <main class="main" id="overview">
+      <header class="topbar">
+        <div class="title-row">
+          <div>
+            <h1>L5 Evolution Lab / L5 进化实验室</h1>
+            <p>自适应策略回测驾驶舱 · MACD 图形中心 · 策略进化准入</p>
+          </div>
+          <span class="chip ok">只读 UI MVP</span>
+          <span class="chip">Mock + Readonly Data</span>
+          <span class="chip warn">No Live Trading</span>
+        </div>
+        <div class="top-controls">
+          <select class="select" aria-label="environment"><option>回测环境</option><option>模拟环境</option><option>生产环境只读</option></select>
+          <span class="chip ok" id="dataSource">数据源：初始化</span>
+          <span class="chip">回测版本 v2.3.7</span>
+          <span class="chip">Quant_Master</span>
+        </div>
+      </header>
+
+      <section class="tabs" aria-label="L5 module tabs">
+        <button class="tab active" data-tab="backtest">Backtest Cockpit / 回测驾驶舱</button>
+        <button class="tab" data-tab="evolution">Strategy Evolution / 策略进化中心</button>
+      </section>
+
+      <section class="kpis" id="kpis"></section>
+
+      <section class="market-strip">
+        <div class="strip-card">
+          <div class="strip-title"><span>市场状态识别</span><span id="currentSlice">当前样本：缩量垃圾时间</span></div>
+          <div class="scenario-list" id="scenarioList"></div>
+        </div>
+        <div class="strip-card">
+          <div class="strip-title"><span>准入结论</span><span id="admissionText">综合评分 ≥ 85 才允许进入候选</span></div>
+          <div class="scenario-list">
+            <span class="scenario good">风险中低</span>
+            <span class="scenario good">信号质量优</span>
+            <span class="scenario">策略稳定性优</span>
+            <span class="scenario active">准入通过</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="view active" id="tab-backtest">
+        <div class="cockpit-grid">
+          <article class="panel" id="macd">
+            <div class="panel-head">
+              <div><div class="panel-title">MACD 图形 K 线分析区</div><div class="sub">K线 / 成交量 / 资金流 / MACD / RSI / 波动率 / 权益曲线 / 回撤曲线 / 热力图</div></div>
+              <div class="tool-row" id="periods"></div>
+            </div>
+            <div class="chart">
+              <div class="price-label" id="priceLabel">BTC/USDT · 15m · GET readonly + mock fallback</div>
+              <svg viewBox="0 0 1000 360" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="equity" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#34e7f5" stop-opacity=".45"/><stop offset="1" stop-color="#34e7f5" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="drawdown" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff5f7d" stop-opacity=".32"/><stop offset="1" stop-color="#ff5f7d" stop-opacity="0"/></linearGradient>
+                </defs>
+                <polyline points="20,250 80,238 145,228 205,206 270,214 330,184 385,195 445,174 505,160 565,170 630,132 690,150 750,118 812,138 880,110 960,92" fill="none" stroke="#34e7f5" stroke-width="3"/>
+                <polygon points="20,250 80,238 145,228 205,206 270,214 330,184 385,195 445,174 505,160 565,170 630,132 690,150 750,118 812,138 880,110 960,92 960,330 20,330" fill="url(#equity)"/>
+                <polyline points="20,92 80,110 145,118 205,128 270,114 330,138 385,128 445,150 505,142 565,168 630,150 690,176 750,158 812,194 880,172 960,188" fill="none" stroke="#ff5f7d" stroke-width="2"/>
+                <polygon points="20,92 80,110 145,118 205,128 270,114 330,138 385,128 445,150 505,142 565,168 630,150 690,176 750,158 812,194 880,172 960,188 960,210 20,210" fill="url(#drawdown)"/>
+                <g opacity=".82">
+                  <rect x="70" y="170" width="8" height="34" fill="#28e2a0"/><rect x="95" y="150" width="8" height="48" fill="#28e2a0"/><rect x="120" y="166" width="8" height="31" fill="#ff5f7d"/>
+                  <rect x="240" y="128" width="8" height="64" fill="#28e2a0"/><rect x="265" y="138" width="8" height="52" fill="#ff5f7d"/><rect x="290" y="120" width="8" height="70" fill="#28e2a0"/>
+                  <rect x="525" y="102" width="8" height="84" fill="#28e2a0"/><rect x="550" y="124" width="8" height="56" fill="#ff5f7d"/><rect x="575" y="96" width="8" height="91" fill="#28e2a0"/>
+                  <rect x="780" y="88" width="8" height="96" fill="#28e2a0"/><rect x="805" y="112" width="8" height="72" fill="#ff5f7d"/><rect x="830" y="82" width="8" height="102" fill="#28e2a0"/>
+                </g>
+                <g opacity=".72">
+                  <line x1="0" y1="258" x2="1000" y2="258" stroke="#9a7cff" stroke-width="2"/><line x1="0" y1="288" x2="1000" y2="288" stroke="#2f93ff" stroke-width="2"/>
+                  <polyline points="20,298 100,292 180,304 260,282 340,290 420,276 500,282 580,268 660,274 740,255 820,264 900,248 960,252" fill="none" stroke="#ffb84d" stroke-width="2"/>
+                </g>
+              </svg>
+              <div class="legend">
+                <div class="spark">回测权益曲线<b>+132.67%</b></div>
+                <div class="spark">回撤曲线<b class="red">最大 -12.38%</b></div>
+                <div class="spark">资金密度热力区间<b>67,400 - 72,800</b></div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="panel" id="ai">
+            <div class="panel-head"><div><div class="panel-title">AI 波段回测评测</div><div class="sub">AI backtest review</div></div><span class="badge green">中低风险</span></div>
+            <div class="ai-score">
+              <div class="dial"><div>88</div></div>
+              <div class="assessment" id="assessment"></div>
+            </div>
+            <div class="rows" style="margin-top:14px">
+              <div class="row"><div><b>策略建议</b><small>当前处于缩量垃圾时间，建议降低仓位，等待放量突破信号。</small></div><span class="badge gold">观察为主</span></div>
+              <div class="row"><div><b>场景解释</b><small>成交量低迷，价格在窄幅区间震荡，无明显趋势延续性。</small></div><span class="badge">严格止损</span></div>
+              <div class="row"><div><b>风控摘要</b><small>手续费和滑点后仍有利润，但波动不足时不建议扩大仓位。</small></div><span class="badge green">通过</span></div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="bottom-grid">
+          <article class="panel" id="slices">
+            <div class="panel-head"><div class="panel-title">回测场景话术库</div><span class="sub">scenario prompt cards</span></div>
+            <div class="cards" id="sceneCards"></div>
+          </article>
+          <article class="panel" id="tasks">
+            <div class="panel-head"><div class="panel-title">策略实验与准入</div><span class="badge green">评分 91</span></div>
+            <div class="table-wrap"><table class="table" id="strategyTable"></table></div>
+          </article>
+          <article class="panel" id="warehouse">
+            <div class="panel-head"><div class="panel-title">数据覆盖与历史样本</div><span class="sub">2019.01 - 2024.05</span></div>
+            <div class="rows" id="coverageRows"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="tab-evolution">
+        <div class="evo-grid">
+          <article class="panel" id="params">
+            <div class="panel-head"><div><div class="panel-title">多策略对比与 AI 策略评分</div><div class="sub">Strategy candidates remain read-only; no runtime parameters are changed.</div></div><span class="badge gold">候选池</span></div>
+            <div class="strategy-grid" id="strategyCards"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div class="panel-title">策略进化时间线</div><span class="sub">evolution timeline</span></div>
+            <div class="timeline" id="timeline"></div>
+          </article>
+        </div>
+
+        <div class="bottom-grid">
+          <article class="panel">
+            <div class="panel-head"><div class="panel-title">参数优化记录</div><span class="badge">mock record</span></div>
+            <div class="table-wrap"><table class="table" id="paramTable"></table></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div class="panel-title">AI 提示词工坊</div><span class="sub">prompt factory</span></div>
+            <div class="prompt-grid" id="prompts"></div>
+          </article>
+          <article class="panel" id="gate">
+            <div class="panel-head"><div class="panel-title">下一轮策略推荐</div><span class="badge purple">接口预留</span></div>
+            <div class="rows" id="recommendations"></div>
+          </article>
+          <article class="panel" id="report">
+            <div class="panel-head"><div class="panel-title">报告中心</div><span class="badge">UI MVP</span></div>
+            <div class="rows">
+              <div class="row"><div><b>当前报告</b><small>本阶段只展示 mock 报告摘要，后续接入 GET 只读回测报告。</small></div><span class="badge">mock</span></div>
+              <div class="row"><div><b>导出边界</b><small>不生成交易指令，不修改策略参数，不写 live runtime。</small></div><span class="badge green">safe</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        <b>PR 安全说明：</b>本页面只做 L5 UI MVP。允许 mock 与现有 GET 只读接口；禁止 POST、禁止真实交易接口、禁止修改策略执行逻辑、禁止修改密钥或 live runtime。
+      </div>
+    </main>
+  </div>
+
+<script>
+const L5State = {
+  loaded: false,
+  activeTab: 'backtest',
+  pair: 'BTC/USDT',
+  timeframe: '15m',
+  readonly: {},
+  mock: {
+    kpis: [
+      ['综合评分','91/100','green'],['净收益率','+132.67%','green'],['最大回撤','-12.38%','red'],['Sharpe','2.18',''],
+      ['胜率','64.37%','green'],['Profit Factor','2.46',''],['样本覆盖天数','1,260 天',''],['手续费影响','-2.31%','red'],
+      ['滑点影响','-1.87%','red'],['是否准入','通过','green']
+    ],
+    scenarios: ['牛市','弱牛市','熊市','弱熊市','震荡市','缩量垃圾时间','放量突破','假突破','插针高风险'],
+    assessment: [['风险评级','中低风险','green'],['信号质量','优','green'],['策略稳定性','优','green'],['过拟合风险','低','green'],['执行一致性','良','green']],
+    scenes: [
+      ['强牛市','持续放量上涨，多头占优','顺势低吸，沿趋势加仓','上涨'],
+      ['弱牛市','震荡上行，量能温和','逢回调观察，控制仓位','上涨'],
+      ['强熊市','持续下跌，空头占优','禁止追多，保留风控','下跌'],
+      ['弱熊市','反弹无力，下跌为主','高位止盈，不抢反弹','下跌'],
+      ['缩量垃圾时间','量能低迷，窄幅震荡','降低仓位，等待放量','缩量'],
+      ['放量突破','量价共振突破关键位','突破确认后跟随','突破'],
+      ['假突破','突破后快速回落','禁止追高，等待二次确认','震荡'],
+      ['插针高风险','上下影线异常扩大','严格止损，控制仓位','防守']
+    ],
+    strategies: [
+      ['MACD + ATR','BTC/USDT','+132.67%','-12.38%','2.18','91','通过'],
+      ['EMA(12,26) + RSI','ETH/USDT','+98.41%','-14.21%','1.78','86','通过'],
+      ['Donchian(20) + ATR','Top 20','+54.11%','-18.92%','1.08','74','待观察'],
+      ['RSI(7) + MA(5)','BTC/USDT','-5.23%','-28.13%','-0.12','38','淘汰']
+    ],
+    coverage: [['牛市样本','94.2%','620 天'],['熊市样本','90.1%','420 天'],['震荡样本','91.3%','380 天'],['缩量样本','93.7%','260 天']],
+    versions: [
+      ['v2.3.7','缩量垃圾时间识别加入准入闸门','当前版本'],
+      ['v2.3.2','增加手续费/滑点影响评分','已归档'],
+      ['v2.2.8','MACD 信号区分假突破与放量突破','已归档'],
+      ['v2.1.9','初版多周期回测面板','已归档']
+    ],
+    params: [
+      ['volume_decay_window','20 -> 34','降低缩量误判','待验证'],
+      ['macd_signal_threshold','0.62 -> 0.71','提升假突破过滤','推荐'],
+      ['atr_stop_multiplier','1.8 -> 2.2','降低插针止损','观察'],
+      ['fee_slippage_buffer','0.18% -> 0.24%','提高执行真实性','通过']
+    ],
+    prompts: [
+      ['牛市场景提示词','顺势为主，追踪放量延续，关注突破后回踩确认。'],
+      ['熊市场景提示词','控制反弹误判，重点识别下跌延续和资金流出。'],
+      ['缩量垃圾时间提示词','降低交易频率，等待成交量与资金流同步放大。'],
+      ['插针高风险提示词','识别异常影线与深度薄弱区，严格限制仓位。']
+    ],
+    recommendations: [
+      ['下一轮优先','验证缩量垃圾时间下的 MACD 降噪参数','P0'],
+      ['接口预留','后续接入原生回测任务状态，不接真实交易动作','P1'],
+      ['安全闸门','综合评分低于 85 不进入候选策略池','P0']
+    ]
+  }
+};
+
+function esc(value){return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function badge(text, color=''){return `<span class="badge ${esc(color)}">${esc(text)}</span>`;}
+function row(title, text, tag, color=''){return `<div class="row"><div><b>${esc(title)}</b><small>${esc(text)}</small></div>${badge(tag,color)}</div>`;}
+
+async function getJson(path){
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 4500);
+  try{
+    const res = await fetch(path, {method:'GET', cache:'no-store', signal:controller.signal});
+    if(!res.ok) throw new Error(String(res.status));
+    return await res.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function loadOnce(){
+  if(L5State.loaded) return;
+  L5State.loaded = true;
+  const endpoints = {
+    readiness: '/api/l5/readiness',
+    backtest: '/api/l5/backtest-cockpit',
+    evolution: '/api/l5/strategy-evolution',
+    sources: '/api/l5/data-sources',
+    guard: '/api/l5/guard-status'
+  };
+  const entries = Object.entries(endpoints);
+  const results = await Promise.allSettled(entries.map(([, path]) => getJson(path)));
+  entries.forEach(([name, path], i) => {
+    if(results[i].status === 'fulfilled') L5State.readonly[name] = results[i].value;
+    else L5State.readonly[name] = {readonly:true, source_status:{request:{status:'mock', detail:'request failed'}}, fallback_sources:[path]};
+  });
+  const realCount = countRealSources();
+  const fallbackCount = allFallbacks().length;
+  document.getElementById('dataSource').textContent = realCount ? `数据源：real ${realCount} + fallback ${fallbackCount}` : '数据源：mock fallback';
+  render();
+}
+
+async function reloadBacktest(){
+  const params = new URLSearchParams({pair:L5State.pair, timeframe:L5State.timeframe, limit:'120'});
+  try{
+    L5State.readonly.backtest = await getJson(`/api/l5/backtest-cockpit?${params.toString()}`);
+  } catch(_err) {
+    L5State.readonly.backtest = {readonly:true, pair:L5State.pair, timeframe:L5State.timeframe, source_status:{request:{status:'mock', detail:'request failed'}}, fallback_sources:['/api/l5/backtest-cockpit']};
+  }
+  render();
+}
+
+function countRealSources(){
+  const sourceGroups = [L5State.readonly.backtest?.source_status, L5State.readonly.evolution?.source_status, L5State.readonly.sources?.sources];
+  return sourceGroups.flatMap(group => Object.values(group || {})).filter(x => x && x.status === 'real').length;
+}
+
+function allFallbacks(){
+  return ['readiness','backtest','evolution','sources','guard'].flatMap(key => L5State.readonly[key]?.fallback_sources || []);
+}
+
+function pct(value, fallback){
+  const n = Number(value);
+  if(Number.isFinite(n)) return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`;
+  return fallback;
+}
+
+function panelState(name, status){
+  const color = status === 'real' ? 'green' : status === 'partial' ? 'gold' : status === 'mock' ? 'purple' : '';
+  return row(name, status || 'unavailable', status === 'real' ? 'real' : status === 'partial' ? 'partial' : status === 'mock' ? 'mock' : 'unavailable', color);
+}
+
+function summaryKpis(){
+  const m = L5State.mock;
+  const summary = L5State.readonly.backtest?.backtest_summary;
+  const readiness = L5State.readonly.readiness;
+  if(!summary) return m.kpis;
+  return [
+    ['综合评分', `${L5State.readonly.backtest?.ai_review?.score || 88}/100`, 'green'],
+    ['净收益率', pct(summary.profit_total_pct, '+132.67%'), summary.profit_total_pct >= 0 ? 'green' : 'red'],
+    ['最大回撤', pct(summary.max_drawdown_pct, '-12.38%'), 'red'],
+    ['Sharpe', String(summary.sharpe ?? '2.18'), ''],
+    ['胜率', pct(summary.win_rate_pct, '64.37%'), 'green'],
+    ['Profit Factor', String(summary.profit_factor ?? '2.46'), ''],
+    ['样本数', String(summary.sample_count ?? '91'), ''],
+    ['权益曲线', summary.equity_curve_status || 'mock', summary.equity_curve_status === 'real' ? 'green' : 'purple'],
+    ['只读模式', readiness?.readonly_mode ? '开启' : '开启', 'green'],
+    ['是否准入', '只读展示', 'green']
+  ];
+}
+
+function strategyRows(){
+  const items = L5State.readonly.evolution?.strategies;
+  if(!Array.isArray(items) || !items.length) return L5State.mock.strategies;
+  return items.slice(0, 6).map(item => [
+    item.name || 'L5 strategy',
+    item.pair || '-',
+    item.profit || 'readonly',
+    item.drawdown || 'readonly',
+    item.sharpe || '-',
+    item.score || 0,
+    item.status || 'readonly'
+  ]);
+}
+
+function timelineRows(){
+  const items = L5State.readonly.evolution?.evolution_timeline;
+  if(!Array.isArray(items) || !items.length) return L5State.mock.versions;
+  return items.slice(0, 8).map(item => [item.time || 'progress', item.text || 'L5 progress', item.status || item.source || 'readonly']);
+}
+
+function parameterRows(){
+  const items = L5State.readonly.evolution?.parameter_runs;
+  if(!Array.isArray(items) || !items.length) return L5State.mock.params;
+  return items.slice(0, 8).map(item => [item.name || '-', item.change || '-', item.purpose || '-', item.status || 'readonly']);
+}
+
+function recommendationRows(){
+  const items = L5State.readonly.evolution?.next_recommendations;
+  if(!Array.isArray(items) || !items.length) return L5State.mock.recommendations;
+  return items.slice(0, 8).map(item => [item.title || '建议', item.text || '-', item.priority || 'P1']);
+}
+
+function render(){
+  const m = L5State.mock;
+  const backtest = L5State.readonly.backtest || {};
+  const aiReview = backtest.ai_review || {};
+  document.getElementById('kpis').innerHTML = summaryKpis().map(([label,value,color]) => `<div class="kpi ${esc(color)}"><small>${esc(label)}</small><b>${esc(value)}</b></div>`).join('');
+  document.getElementById('scenarioList').innerHTML = m.scenarios.map(x => `<span class="scenario ${x==='缩量垃圾时间'?'active':(x.includes('风险')?'bad':'')}">${esc(x)}</span>`).join('');
+  document.getElementById('periods').innerHTML = ['1m','5m','15m','1h','4h','1d'].map(x => `<button type="button" class="tool ${x===(backtest.timeframe || L5State.timeframe)?'active':''}" data-timeframe="${esc(x)}">${esc(x)}</button>`).join('');
+  document.getElementById('priceLabel').textContent = `${backtest.pair || 'BTC/USDT'} · ${backtest.timeframe || '15m'} · ${backtest.market?.source || 'mock'} · ${backtest.market?.status || 'mock fallback'}`;
+  document.querySelector('.dial div').textContent = esc(aiReview.score || 88);
+  document.querySelector('#ai .panel-head .badge').textContent = esc(aiReview.rating || '中低风险');
+  const assessmentRows = [
+    ['风险评级', aiReview.rating || '中低风险', 'green'],
+    ['数据状态', backtest.source_status?.backtest_result?.status || 'mock', backtest.source_status?.backtest_result?.status === 'real' ? 'green' : 'purple'],
+    ['MACD 信号', `${(backtest.macd_signals || []).length} 条`, (backtest.macd_signals || []).length ? 'green' : 'purple'],
+    ['只读边界', '无交易动作', 'green'],
+    ['fallback', `${(backtest.fallback_sources || []).length} 项`, (backtest.fallback_sources || []).length ? 'gold' : 'green']
+  ];
+  document.getElementById('assessment').innerHTML = assessmentRows.map(([k,v,c]) => `<div class="line"><span>${esc(k)}</span>${badge(v,c)}</div>`).join('');
+  document.getElementById('sceneCards').innerHTML = m.scenes.map(([name,feature,advice,mode]) => `<div class="scene-card"><b>${esc(name)}</b><p>${esc(feature)}</p><p>${esc(advice)}</p>${badge(mode, name.includes('牛')?'green':name.includes('熊')?'red':name.includes('突破')?'gold':'')}</div>`).join('');
+  const strategies = strategyRows();
+  document.getElementById('strategyTable').innerHTML = `<thead><tr><th>策略</th><th>标的</th><th>收益</th><th>回撤</th><th>Sharpe</th><th>评分</th><th>状态</th></tr></thead><tbody>${strategies.map(x => `<tr>${x.map((v,i) => `<td>${i===6?badge(v, v==='readonly'?'green':v==='通过'?'green':v==='淘汰'?'red':'gold'):esc(v)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+  const sourceStatus = backtest.source_status || {};
+  const moduleStatus = backtest.module_status || {};
+  document.getElementById('coverageRows').innerHTML = [
+    panelState('K线数据', moduleStatus.kline || sourceStatus.candles?.status || 'mock'),
+    panelState('回测指标', moduleStatus.backtest_summary || sourceStatus.backtest_result?.status || 'mock'),
+    panelState('历史交易', moduleStatus.trades || 'mock'),
+    panelState('资金曲线', moduleStatus.equity_curve || 'mock'),
+    panelState('MACD 信号', moduleStatus.macd || sourceStatus.macd_signals?.status || 'mock'),
+    panelState('风控摘要', moduleStatus.risk_summary || 'mock'),
+    panelState('AI 评测', moduleStatus.ai_review || 'mock'),
+    panelState('场景话术', moduleStatus.scenario_notes || 'mock')
+  ].join('');
+  document.getElementById('strategyCards').innerHTML = strategies.slice(0,3).map(([name,pair,profit,dd,sharpe,score,status]) => `<div class="strategy-card"><h3>${esc(name)}</h3><div class="sub">${esc(pair)} · ${esc(status)}</div><div class="score-line"><div class="bar"><i style="width:${esc(score)}%"></i></div><b>${esc(score)}</b></div><div class="rows">${row('收益 / 回撤', `${profit} / ${dd}`, `Sharpe ${sharpe}`)}</div></div>`).join('');
+  document.getElementById('timeline').innerHTML = timelineRows().map(([time,text,status]) => `<div class="event"><time>${esc(time)}</time><div><b>${esc(text)}</b><small>${esc(status)}</small></div></div>`).join('');
+  document.getElementById('paramTable').innerHTML = `<thead><tr><th>参数</th><th>变更</th><th>目的</th><th>状态</th></tr></thead><tbody>${parameterRows().map(x => `<tr>${x.map((v,i) => `<td>${i===3?badge(v, v==='推荐'?'green':v==='观察'?'gold':''):esc(v)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+  document.getElementById('prompts').innerHTML = m.prompts.map(([k,v]) => `<div class="prompt"><b>${esc(k)}</b><span>${esc(v)}</span></div>`).join('');
+  document.getElementById('recommendations').innerHTML = recommendationRows().map(([k,v,t]) => row(k, v, t, t==='P0'?'gold':'purple')).join('');
+}
+
+function activateTab(name){
+  L5State.activeTab = name;
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.tab === name));
+  document.querySelectorAll('.view').forEach(x => x.classList.toggle('active', x.id === `tab-${name}`));
+}
+
+document.querySelectorAll('.tab').forEach(btn => btn.addEventListener('click', () => activateTab(btn.dataset.tab)));
+document.getElementById('periods').addEventListener('click', event => {
+  const button = event.target.closest('[data-timeframe]');
+  if(!button) return;
+  L5State.timeframe = button.dataset.timeframe || '15m';
+  reloadBacktest();
+});
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    activateTab(link.dataset.targetTab || 'backtest');
+    document.querySelectorAll('.nav a').forEach(x => x.classList.toggle('active', x === link));
+    const target = document.querySelector(link.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+loadOnce().catch(() => render());
+</script>
+</body>
+</html>
