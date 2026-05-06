@@ -1,0 +1,361 @@
+diff --git a/source/freqtrade_console/l5_readonly_adapter.py b/source/freqtrade_console/l5_readonly_adapter.py
+index 08097b0..aaf96a3 100644
+--- a/source/freqtrade_console/l5_readonly_adapter.py
++++ b/source/freqtrade_console/l5_readonly_adapter.py
+@@ -14,16 +14,23 @@ from pathlib import Path
+ from typing import Any
+ 
+ BASE_DIR = Path(__file__).resolve().parent
+-L5_LAB_DIR = BASE_DIR / "l5_evolution_lab"
+-BT_CORE_DIR = BASE_DIR / "bt_tools" / "backtest_core"
+-BT_DATA_DIR = BT_CORE_DIR / "data"
+-BT_REPORT_DIRS = (
+-    BT_CORE_DIR / "reports",
+-    BT_CORE_DIR / "results",
+-    BASE_DIR / "backtest_results",
++LEGACY_BASE_DIR = Path("/Users/luxiangnan/freqtrade_console")
++READONLY_ROOTS = tuple(dict.fromkeys((BASE_DIR, LEGACY_BASE_DIR)))
++L5_LAB_DIRS = tuple(root / "l5_evolution_lab" for root in READONLY_ROOTS)
++BT_CORE_DIRS = tuple(root / "bt_tools" / "backtest_core" for root in READONLY_ROOTS)
++BT_DATA_DIRS = tuple(core / "data" for core in BT_CORE_DIRS)
++BT_REPORT_DIRS = tuple(
++    path
++    for root in READONLY_ROOTS
++    for path in (
++        root / "bt_tools" / "backtest_core" / "reports",
++        root / "bt_tools" / "backtest_core" / "results",
++        root / "bt_tools" / "reports",
++        root / "backtest_results",
++    )
+ )
+-DATA_POOL_DB = BASE_DIR / "data_pool.db"
+-EVOLUTION_PROGRESS = BASE_DIR / "evolution_progress.json"
++DATA_POOL_DBS = tuple(root / "data_pool.db" for root in READONLY_ROOTS)
++EVOLUTION_PROGRESS_FILES = tuple(root / "evolution_progress.json" for root in READONLY_ROOTS)
+ 
+ SAFE_TIMEFRAMES = {"1m", "5m", "15m", "1h", "4h", "1d"}
+ 
+@@ -79,6 +86,13 @@ def _source(name: str, status: str, detail: str = "", updated_at: int | None = N
+     }
+ 
+ 
++def _first_existing(paths: tuple[Path, ...]) -> Path | None:
++    for path in paths:
++        if path.exists():
++            return path
++    return None
++
++
+ def _mock_candles(limit: int = 96) -> list[dict[str, Any]]:
+     base = 68400.0
+     candles: list[dict[str, Any]] = []
+@@ -126,13 +140,14 @@ def _mock_equity_curve() -> list[dict[str, Any]]:
+ def _load_data_pool_candles(pair: str, timeframe: str, limit: int) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+     if timeframe not in SAFE_TIMEFRAMES:
+         return [], _source("data_pool_sqlite", "unavailable", "unsupported timeframe")
+-    if not DATA_POOL_DB.exists():
++    db_path = _first_existing(DATA_POOL_DBS)
++    if db_path is None:
+         return [], _source("data_pool_sqlite", "unavailable", "data_pool.db missing")
+ 
+     table = f"candles_avg_{timeframe}"
+     conn: sqlite3.Connection | None = None
+     try:
+-        conn = sqlite3.connect(str(DATA_POOL_DB))
++        conn = sqlite3.connect(str(db_path))
+         conn.row_factory = sqlite3.Row
+         rows = conn.execute(
+             f"""
+@@ -167,14 +182,16 @@ def _load_data_pool_candles(pair: str, timeframe: str, limit: int) -> tuple[list
+     ]
+     status = "real" if candles else "unavailable"
+     detail = f"{len(candles)} candles" if candles else "no rows"
+-    return candles, _source("data_pool_sqlite", status, detail, _file_state(DATA_POOL_DB)["updated_at"])
++    return candles, _source("data_pool_sqlite", status, detail, _file_state(db_path)["updated_at"])
+ 
+ 
+ def _load_parquet_candles(pair: str, timeframe: str, limit: int) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+-    if not BT_DATA_DIR.exists():
+-        return [], _source("bt2_parquet", "unavailable", "BT2 data directory missing")
+     safe_pair = pair.replace("/", "_").replace(":", "_")
+-    candidates = sorted(BT_DATA_DIR.glob(f"*{safe_pair}*{timeframe}*.parquet"), key=lambda p: p.stat().st_mtime, reverse=True)
++    candidates: list[Path] = []
++    for directory in BT_DATA_DIRS:
++        if directory.exists():
++            candidates.extend(directory.glob(f"*{safe_pair}*{timeframe}*.parquet"))
++    candidates = sorted(candidates, key=lambda p: p.stat().st_mtime, reverse=True)
+     if not candidates:
+         return [], _source("bt2_parquet", "unavailable", "no parquet file")
+ 
+@@ -215,7 +232,7 @@ def _ema(values: list[float], period: int) -> list[float]:
+     return out
+ 
+ 
+-def _macd_signals(candles: list[dict[str, Any]]) -> list[dict[str, Any]]:
++def _macd_signals(candles: list[dict[str, Any]], pair: str, timeframe: str, source_updated_at: int | None = None) -> list[dict[str, Any]]:
+     closes = [_as_float(c.get("close")) for c in candles]
+     if len(closes) < 35:
+         return []
+@@ -234,7 +251,10 @@ def _macd_signals(candles: list[dict[str, Any]]) -> list[dict[str, Any]]:
+                 "macd_histogram": round(hist, 5),
+                 "macd_direction": "bullish" if hist > 0 else "bearish" if hist < 0 else "neutral",
+                 "confirmed": abs(hist) > 4,
++                "pair": pair,
++                "timeframe": timeframe,
+                 "source": candle.get("source", "derived"),
++                "source_updated_at": source_updated_at,
+             }
+         )
+     return items
+@@ -295,13 +315,13 @@ def _summary_from_result(result: dict[str, Any] | None, source_status: dict[str,
+     trades = _extract_trades(result)
+     total = _as_int(stats.get("total_trades", stats.get("trade_count", len(trades))), len(trades))
+     wins = sum(1 for t in trades if _as_float(t.get("profit_pct")) >= 0)
+-    win_rate = _round(stats.get("winrate", stats.get("win_rate", (wins / total * 100) if total else 64.37)), 2)
++    win_rate = _round(stats.get("win_rate_pct", stats.get("winrate", stats.get("win_rate", (wins / total * 100) if total else 64.37))), 2)
+     if win_rate <= 1:
+         win_rate *= 100
+     return {
+         "source": source_status["status"],
+-        "profit_total_pct": _round(stats.get("profit_total_pct", stats.get("profit_total", 132.67)), 2),
+-        "max_drawdown_pct": _round(stats.get("max_drawdown_pct", stats.get("max_drawdown", -12.38)), 2),
++        "profit_total_pct": _round(stats.get("total_pnl_pct", stats.get("profit_total_pct", stats.get("profit_total", 132.67))), 2),
++        "max_drawdown_pct": _round(stats.get("max_drawdown_pct", stats.get("max_drawdown", min(0.0, _as_float(stats.get("worst_trade", -12.38))))), 2),
+         "win_rate_pct": round(win_rate, 2),
+         "profit_factor": _round(stats.get("profit_factor", 2.46), 2),
+         "sharpe": _round(stats.get("sharpe", stats.get("sharpe_ratio", 2.18)), 2),
+@@ -322,18 +342,20 @@ def _equity_curve(trades: list[dict[str, Any]]) -> list[dict[str, Any]]:
+ 
+ 
+ def _load_shadow_report() -> tuple[dict[str, Any], dict[str, Any]]:
+-    for name in ("latest_report.json", "latest.json"):
+-        path = L5_LAB_DIR / name
+-        payload = _read_json(path)
+-        if isinstance(payload, dict):
+-            return payload, _source("l5_shadow_report", "real", name, int(path.stat().st_mtime))
++    for directory in L5_LAB_DIRS:
++        for name in ("latest_report.json", "latest.json"):
++            path = directory / name
++            payload = _read_json(path)
++            if isinstance(payload, dict):
++                return payload, _source("l5_shadow_report", "real", name, int(path.stat().st_mtime))
+     return {}, _source("l5_shadow_report", "unavailable", "latest report missing")
+ 
+ 
+ def _load_progress() -> tuple[dict[str, Any], dict[str, Any]]:
+-    payload = _read_json(EVOLUTION_PROGRESS)
+-    if isinstance(payload, dict):
+-        return payload, _source("evolution_progress", "real", EVOLUTION_PROGRESS.name, int(EVOLUTION_PROGRESS.stat().st_mtime))
++    for path in EVOLUTION_PROGRESS_FILES:
++        payload = _read_json(path)
++        if isinstance(payload, dict):
++            return payload, _source("evolution_progress", "real", path.name, int(path.stat().st_mtime))
+     return {}, _source("evolution_progress", "unavailable", "progress file missing")
+ 
+ 
+@@ -386,7 +408,7 @@ def get_l5_backtest_cockpit(pair: str = "BTC/USDT", timeframe: str = "15m", limi
+         fallback_sources.append("trades")
+     summary = _summary_from_result(result, result_status)
+     shadow, shadow_status = _load_shadow_report()
+-    macd_items = _macd_signals(candles)
++    macd_items = _macd_signals(candles, pair, timeframe, candle_status.get("updated_at"))
+     if not macd_items:
+         fallback_sources.append("macd_signals")
+ 
+@@ -396,6 +418,16 @@ def get_l5_backtest_cockpit(pair: str = "BTC/USDT", timeframe: str = "15m", limi
+         "l5_shadow": shadow_status,
+         "macd_signals": _source("derived_macd", "real" if macd_items else "mock", f"{len(macd_items)} signals"),
+     }
++    module_status = {
++        "kline": source_status["candles"]["status"],
++        "macd": source_status["macd_signals"]["status"],
++        "backtest_summary": source_status["backtest_result"]["status"],
++        "equity_curve": "real" if result and trades else "mock",
++        "trades": "real" if result and trades else "mock",
++        "risk_summary": "real" if shadow else "mock",
++        "ai_review": "real" if shadow else "mock",
++        "scenario_notes": "mock",
++    }
+     return {
+         "readonly": True,
+         "market": {"name": "crypto", "source": candle_status["name"], "status": candle_status["status"]},
+@@ -412,6 +444,7 @@ def get_l5_backtest_cockpit(pair: str = "BTC/USDT", timeframe: str = "15m", limi
+             {"name": "缩量垃圾时间", "note": "降低交易频率，等待成交量与资金流同步放大。", "source": "mock"},
+             {"name": "放量突破", "note": "只读展示突破质量，不触发任何交易动作。", "source": "mock"},
+         ],
++        "module_status": module_status,
+         "source_status": source_status,
+         "fallback_sources": fallback_sources,
+     }
+@@ -460,11 +493,12 @@ def get_l5_strategy_evolution() -> dict[str, Any]:
+             {"time": "v2.3.2", "text": "增加手续费/滑点影响评分", "status": "mock", "source": "mock"},
+             {"time": "v2.2.8", "text": "MACD 信号区分假突破与放量突破", "status": "mock", "source": "mock"},
+         ]
++    timeline_status = "real" if any(item.get("source") == "evolution_progress" for item in timeline) else "mock"
+ 
+     fallback_sources = []
+     if shadow_status["status"] != "real":
+         fallback_sources.append("shadow_reviews")
+-    if progress_status["status"] != "real":
++    if progress_status["status"] != "real" or timeline_status != "real":
+         fallback_sources.append("evolution_timeline")
+ 
+     return {
+@@ -480,25 +514,41 @@ def get_l5_strategy_evolution() -> dict[str, Any]:
+         "next_recommendations": [
+             {"title": "下一轮优先", "text": "验证缩量垃圾时间下的 MACD 降噪参数", "priority": "P0"},
+             {"title": "接口预留", "text": "后续接入原生回测任务状态，不接真实交易动作", "priority": "P1"},
+-            {"title": "安全闸门", "text": "P0 guard 合并前不允许 readonly adapter 之外的功能扩展", "priority": "P0"},
++            {"title": "安全闸门", "text": "P0 guard 已作为执行边界；本阶段仍只允许 GET 只读展示", "priority": "P0"},
+         ],
+         "shadow_reviews": _ai_review(shadow),
+         "risk_warnings": [{"level": _risk_summary(shadow)["risk_level"], "text": "display-only risk summary"}],
++        "module_status": {
++            "strategies": "real" if shadow_status["status"] == "real" else "mock",
++            "strategy_scores": "real" if shadow_status["status"] == "real" else "mock",
++            "parameter_runs": "mock",
++            "optimization_history": timeline_status,
++            "evolution_timeline": timeline_status,
++            "next_recommendations": "mock",
++            "shadow_reviews": "real" if shadow_status["status"] == "real" else "mock",
++            "risk_warnings": "real" if shadow_status["status"] == "real" else "mock",
++        },
+         "source_status": {"l5_shadow": shadow_status, "evolution_progress": progress_status},
+         "fallback_sources": fallback_sources,
+     }
+ 
+ 
+ def get_l5_data_sources() -> dict[str, Any]:
+-    parquet_count = len(list(BT_DATA_DIR.glob("*.parquet"))) if BT_DATA_DIR.exists() else 0
++    parquet_files = [path for directory in BT_DATA_DIRS if directory.exists() for path in directory.glob("*.parquet")]
++    parquet_count = len(parquet_files)
+     result_count = 0
++    newest_result_ts = None
+     for directory in BT_REPORT_DIRS:
+         if directory.exists():
+-            result_count += len(list(directory.glob("**/*.json")))
++            result_files = list(directory.glob("**/bt_*.json"))
++            result_count += len(result_files)
++            if result_files:
++                newest_result_ts = max(int(path.stat().st_mtime) for path in result_files + [])
++    data_pool = _first_existing(DATA_POOL_DBS)
+     sources = {
+         "bt2_parquet": _source("bt2_parquet", "real" if parquet_count else "unavailable", f"{parquet_count} files"),
+-        "bt2_results": _source("bt2_results", "real" if result_count else "unavailable", f"{result_count} files"),
+-        "data_pool_sqlite": _source("data_pool_sqlite", "real" if DATA_POOL_DB.exists() else "unavailable", "sqlite candles", _file_state(DATA_POOL_DB)["updated_at"]),
++        "bt2_results": _source("bt2_results", "real" if result_count else "unavailable", f"{result_count} files", newest_result_ts),
++        "data_pool_sqlite": _source("data_pool_sqlite", "real" if data_pool else "unavailable", "sqlite candles", _file_state(data_pool)["updated_at"] if data_pool else None),
+         "l5_shadow_report": _load_shadow_report()[1],
+         "evolution_progress": _load_progress()[1],
+     }
+diff --git a/source/freqtrade_console/static/tabs/l5-evolution.html b/source/freqtrade_console/static/tabs/l5-evolution.html
+index bbfcb79..05ba7f0 100644
+--- a/source/freqtrade_console/static/tabs/l5-evolution.html
++++ b/source/freqtrade_console/static/tabs/l5-evolution.html
+@@ -232,6 +232,8 @@
+ const L5State = {
+   loaded: false,
+   activeTab: 'backtest',
++  pair: 'BTC/USDT',
++  timeframe: '15m',
+   readonly: {},
+   mock: {
+     kpis: [
+@@ -322,6 +324,16 @@ async function loadOnce(){
+   render();
+ }
+ 
++async function reloadBacktest(){
++  const params = new URLSearchParams({pair:L5State.pair, timeframe:L5State.timeframe, limit:'120'});
++  try{
++    L5State.readonly.backtest = await getJson(`/api/l5/backtest-cockpit?${params.toString()}`);
++  } catch(_err) {
++    L5State.readonly.backtest = {readonly:true, pair:L5State.pair, timeframe:L5State.timeframe, source_status:{request:{status:'mock', detail:'request failed'}}, fallback_sources:['/api/l5/backtest-cockpit']};
++  }
++  render();
++}
++
+ function countRealSources(){
+   const sourceGroups = [L5State.readonly.backtest?.source_status, L5State.readonly.evolution?.source_status, L5State.readonly.sources?.sources];
+   return sourceGroups.flatMap(group => Object.values(group || {})).filter(x => x && x.status === 'real').length;
+@@ -399,7 +411,7 @@ function render(){
+   const aiReview = backtest.ai_review || {};
+   document.getElementById('kpis').innerHTML = summaryKpis().map(([label,value,color]) => `<div class="kpi ${esc(color)}"><small>${esc(label)}</small><b>${esc(value)}</b></div>`).join('');
+   document.getElementById('scenarioList').innerHTML = m.scenarios.map(x => `<span class="scenario ${x==='缩量垃圾时间'?'active':(x.includes('风险')?'bad':'')}">${esc(x)}</span>`).join('');
+-  document.getElementById('periods').innerHTML = ['1m','5m','15m','1h','4h','1d'].map(x => `<span class="tool ${x===(backtest.timeframe || '15m')?'active':''}">${esc(x)}</span>`).join('');
++  document.getElementById('periods').innerHTML = ['1m','5m','15m','1h','4h','1d'].map(x => `<button type="button" class="tool ${x===(backtest.timeframe || L5State.timeframe)?'active':''}" data-timeframe="${esc(x)}">${esc(x)}</button>`).join('');
+   document.getElementById('priceLabel').textContent = `${backtest.pair || 'BTC/USDT'} · ${backtest.timeframe || '15m'} · ${backtest.market?.source || 'mock'} · ${backtest.market?.status || 'mock fallback'}`;
+   document.querySelector('.dial div').textContent = esc(aiReview.score || 88);
+   document.querySelector('#ai .panel-head .badge').textContent = esc(aiReview.rating || '中低风险');
+@@ -415,11 +427,16 @@ function render(){
+   const strategies = strategyRows();
+   document.getElementById('strategyTable').innerHTML = `<thead><tr><th>策略</th><th>标的</th><th>收益</th><th>回撤</th><th>Sharpe</th><th>评分</th><th>状态</th></tr></thead><tbody>${strategies.map(x => `<tr>${x.map((v,i) => `<td>${i===6?badge(v, v==='readonly'?'green':v==='通过'?'green':v==='淘汰'?'red':'gold'):esc(v)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+   const sourceStatus = backtest.source_status || {};
++  const moduleStatus = backtest.module_status || {};
+   document.getElementById('coverageRows').innerHTML = [
+-    panelState('K线数据', sourceStatus.candles?.status || 'mock'),
+-    panelState('回测结果', sourceStatus.backtest_result?.status || 'mock'),
+-    panelState('MACD 信号', sourceStatus.macd_signals?.status || 'mock'),
+-    panelState('L5 shadow', sourceStatus.l5_shadow?.status || 'mock')
++    panelState('K线数据', moduleStatus.kline || sourceStatus.candles?.status || 'mock'),
++    panelState('回测指标', moduleStatus.backtest_summary || sourceStatus.backtest_result?.status || 'mock'),
++    panelState('历史交易', moduleStatus.trades || 'mock'),
++    panelState('资金曲线', moduleStatus.equity_curve || 'mock'),
++    panelState('MACD 信号', moduleStatus.macd || sourceStatus.macd_signals?.status || 'mock'),
++    panelState('风控摘要', moduleStatus.risk_summary || 'mock'),
++    panelState('AI 评测', moduleStatus.ai_review || 'mock'),
++    panelState('场景话术', moduleStatus.scenario_notes || 'mock')
+   ].join('');
+   document.getElementById('strategyCards').innerHTML = strategies.slice(0,3).map(([name,pair,profit,dd,sharpe,score,status]) => `<div class="strategy-card"><h3>${esc(name)}</h3><div class="sub">${esc(pair)} · ${esc(status)}</div><div class="score-line"><div class="bar"><i style="width:${esc(score)}%"></i></div><b>${esc(score)}</b></div><div class="rows">${row('收益 / 回撤', `${profit} / ${dd}`, `Sharpe ${sharpe}`)}</div></div>`).join('');
+   document.getElementById('timeline').innerHTML = timelineRows().map(([time,text,status]) => `<div class="event"><time>${esc(time)}</time><div><b>${esc(text)}</b><small>${esc(status)}</small></div></div>`).join('');
+@@ -435,6 +452,12 @@ function activateTab(name){
+ }
+ 
+ document.querySelectorAll('.tab').forEach(btn => btn.addEventListener('click', () => activateTab(btn.dataset.tab)));
++document.getElementById('periods').addEventListener('click', event => {
++  const button = event.target.closest('[data-timeframe]');
++  if(!button) return;
++  L5State.timeframe = button.dataset.timeframe || '15m';
++  reloadBacktest();
++});
+ document.querySelectorAll('.nav a').forEach(link => {
+   link.addEventListener('click', event => {
+     event.preventDefault();
+diff --git a/tests/test_l5_readonly_adapter.py b/tests/test_l5_readonly_adapter.py
+index f849d0f..fd69ab4 100644
+--- a/tests/test_l5_readonly_adapter.py
++++ b/tests/test_l5_readonly_adapter.py
+@@ -23,8 +23,13 @@ class L5ReadonlyAdapterTest(unittest.TestCase):
+         self.assertNotIn("ma" + "ce_signals", payload)
+         self.assertIn("source_status", payload)
+         self.assertIn("fallback_sources", payload)
++        self.assertIn("module_status", payload)
+         self.assertIsInstance(payload["candles"], list)
+         self.assertIsInstance(payload["backtest_summary"], dict)
++        if payload["macd_signals"]:
++            signal = payload["macd_signals"][0]
++            self.assertEqual(signal["pair"], payload["pair"])
++            self.assertEqual(signal["timeframe"], payload["timeframe"])
+ 
+     def test_strategy_evolution_schema_is_fallback_safe(self):
+         payload = adapter.get_l5_strategy_evolution()
+@@ -35,6 +40,7 @@ class L5ReadonlyAdapterTest(unittest.TestCase):
+         self.assertIn("evolution_timeline", payload)
+         self.assertIn("next_recommendations", payload)
+         self.assertIn("source_status", payload)
++        self.assertIn("module_status", payload)
+ 
+     def test_readiness_and_guard_status_are_display_only(self):
+         readiness = adapter.get_l5_readiness()
+diff --git a/tests/test_l5_webui_static.py b/tests/test_l5_webui_static.py
+index 8cc65ff..56f2313 100644
+--- a/tests/test_l5_webui_static.py
++++ b/tests/test_l5_webui_static.py
+@@ -26,6 +26,8 @@ class L5WebUIStaticTest(unittest.TestCase):
+         ):
+             self.assertIn(endpoint, html)
+         self.assertIn("method:'GET'", html)
++        self.assertIn("URLSearchParams", html)
++        self.assertIn("data-timeframe", html)
+         self.assertNotIn("method:'POST'", html)
+         self.assertNotIn('method:"POST"', html)
