@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>天禄 FreqUI CardDuel 全量响应式原型</title>
+<style>
+:root{--bg:#050810;--panel:#08111f;--line:rgba(201,150,61,.5);--gold:#f0cf7a;--muted:#9aa7b7;--green:#40d878;--red:#ff5b5b;--blue:#20a8ff;--violet:#6a3bcc}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 10%,#2d1659 0,#050810 38%,#02050d 100%);font-family:Inter,'Microsoft YaHei',sans-serif;color:#f3e6c1}.shell{display:grid;grid-template-columns:220px 1fr;min-height:100vh}aside{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);padding:18px;background:#07101cdd}main{padding:18px}h1,h2,h3{color:var(--gold)}a{display:block;color:var(--gold);text-decoration:none;padding:10px 12px;border:1px solid transparent;border-radius:12px}a:hover{border-color:var(--line)}.page{margin-bottom:24px}.page-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:0 0 12px}.page-head span{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{position:relative;min-height:96px;border:1px solid var(--line);border-radius:18px;padding:16px;background:linear-gradient(135deg,rgba(15,29,48,.95),rgba(5,10,18,.95));box-shadow:0 14px 30px #0008;overflow:hidden}.card:before{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:rgba(32,168,255,.15)}.card p{color:var(--muted);margin:.4rem 0}.profit{color:var(--green)}.loss{color:var(--red)}.pill{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--gold);font-size:12px}.bottom{display:none}@media(max-width:767px){.shell{display:block}aside{display:none}main{padding:12px 12px 84px}.grid{grid-template-columns:1fr}.page-head{display:block}.card{border-radius:15px}.bottom{position:fixed;display:grid;grid-template-columns:repeat(5,1fr);left:12px;right:12px;bottom:12px;border:1px solid var(--line);border-radius:18px;background:#07101cf2;padding:8px;z-index:99}.bottom a{text-align:center;font-size:12px;padding:8px 4px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside><h2>天禄 UI</h2><nav id="nav"></nav></aside>
+<main><h1>Freqtrade 卡牌对战风格 · 全量响应式页面</h1><p style="color:var(--muted)">缩小浏览器宽度即可看到移动端单列布局和底部导航。该原型只展示 UI 结构，不包含真实交易数据或密钥。</p><div id="pages"></div></main>
+</div>
+<nav class="bottom"><a>首页</a><a>交易</a><a>策略</a><a>订单</a><a>我的</a></nav>
+<script>
+const pages=[
+['登录页','/login','Auth',['登录契约','Bot URL','用户名','密码','记住登录','进入战场']],
+['机器人首页','/','Bot Hub',['Bot 卡牌列表','在线状态','连接编辑','新增 Bot','版本状态']],
+['仪表盘','/dashboard','Dashboard',['总资产','今日收益','未实现盈亏','开仓数量','资产曲线','资产分布','最近交易']],
+['交易对卡牌页','/trade','Trade',['搜索交易对','筛选标签','BTC/USDT 卡牌','ETH/USDT 卡牌','价格','24H 涨跌','详情按钮']],
+['交易对详情图表','/graph','Chart',['K线图','买卖点','订单簿','交易操作','时间周期','指标层']],
+['持仓卡牌','/open_trades','Trade',['持仓卡牌','ROI','Stoploss','持仓时间','平仓技能','风险确认']],
+['历史交易档案','/trade_history','Trade',['历史表格','胜负标签','收益统计','筛选器','分页','导出']],
+['交易对牌组','/pairlist','Pairlist',['白名单','黑名单','动态筛选','交易对状态','刷新']],
+['余额金库','/balance','Balance',['币种余额','可用余额','冻结余额','估值','占比','收益']],
+['策略列表','/strategies','Strategy',['策略卡牌','启用状态','胜率','交易次数','收益','复制/编辑/禁用']],
+['策略编辑基础','/strategy/basic','Strategy Rule',['策略名称','交易模式','时间框架','交易对','初始资金','最大开仓数']],
+['买入规则','/strategy/buy','Strategy Rule',['RSI 条件','MACD 条件','成交量过滤','趋势确认','入场冷却','AND/OR 规则组']],
+['卖出规则','/strategy/sell','Strategy Rule',['ROI 阶梯','反向信号','RSI 超买','移动止盈','时间止盈','规则组']],
+['风控规则','/strategy/risk','Strategy Rule',['最大回撤','止损','单日亏损上限','冷却时间','异常波动保护','强制确认']],
+['高级代码编辑','/strategy/code','Strategy Rule',['Python 代码编辑器','参数表','FreqAI 开关','语法提示','保存草稿','回滚']],
+['订单管理','/orders','Orders',['当前订单','历史订单','状态','取消订单','详情','分页']],
+['回测分析','/backtest','Backtest',['回测配置','收益曲线','胜率','最大回撤','交易列表','开始回测']],
+['下载数据','/download_data','Data',['交易所','交易对','时间周期','日期范围','下载队列','进度']],
+['交易对配置','/pairlist_config','Pairlist Config',['过滤器链','成交量过滤','价格过滤','黑白名单','预览结果','保存配置']],
+['日志中心','/logs','Logs',['INFO','WARNING','ERROR','API 事件','Exchange 事件','搜索/筛选']],
+['系统设置','/settings','Settings',['基础设置','交易所设置','通知设置','安全设置','外观设置','API Keys 占位']],
+['连接契约','/settings/api','Security',['API 地址','用户名','Token 占位','CORS 提示','权限状态','测试连接']]
+];
+const nav=document.getElementById('nav');const root=document.getElementById('pages');
+pages.forEach((p,i)=>{const id='p'+i;nav.insertAdjacentHTML('beforeend',`<a href="#${id}">${p[0]}</a>`);root.insertAdjacentHTML('beforeend',`<section class="page" id="${id}"><div class="page-head"><h2>${p[0]}</h2><span>${p[1]} · ${p[2]}</span></div><div class="grid">${p[3].map((m,j)=>`<article class="card"><span class="pill">${p[2]}</span><h3>${m}</h3><p>卡牌对战风格模块，保留原功能链路。</p><strong class="${j%4===2?'loss':'profit'}">${j%4===2?'-':'+'}${(1+j*0.73).toFixed(2)}%</strong></article>`).join('')}</div></section>`)});
+</script>
+</body>
+</html>
