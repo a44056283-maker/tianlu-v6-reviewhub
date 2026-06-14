@@ -1,50 +1,31 @@
-# tianlu-frequi-cardduel
+# tianlu-frequi-cardduel-full-ui-pack
 
-> 天禄交易系统 · Freqtrade 官方 FreqUI 改造包  
-> 目标：把 Freqtrade 官方 WebUI 改造成原创的“暗黑符文卡牌对战”交易驾驶舱风格。
+天禄交易系统 · Freqtrade 官方 FreqUI 全量 UI 改造交付包。
 
-## 上游来源
+## 本次完成
 
-- 后端交易机器人：`freqtrade/freqtrade`
-- 官方前端 UI：`freqtrade/frequi`
-- 本改造包基于官方 FreqUI 的 Vue / Vite / Nuxt UI 架构进行覆盖式改造。
+- 使用 image2 生成了全套 UI 概念总览图；完整 PNG 已打包在本地交付包 `design/assets/`。
+- 按产品页面类别生成桌面端 SVG：22 个页面。
+- 按移动端自适应生成移动端 SVG：15 个页面。
+- 按策略子规则生成模块 SVG：20 个模块图。
+- 新增响应式 HTML 原型：`design/prototype/responsive_full_pages.html`。
+- 新增页面目录、模块矩阵、移动端规则文档。
+- 新增可复用 Vue 组件与 CSS：`overlay/src/components/cardduel/`、`overlay/src/styles/cardduel-page-system.css`。
 
-## 当前状态
+## 页面范围
 
-已开始落地 P0 级 UI 改造：
+已覆盖：登录、机器人首页、仪表盘、交易对列表、交易对详情/K线、持仓、历史交易、交易对牌组、余额、策略列表、策略编辑基础、买入规则、卖出规则、风控规则、高级代码、订单管理、回测、下载数据、Pairlist Config、日志、系统设置、API 连接契约。
 
-- 全局主题变量与暗黑战场背景。
-- 顶部导航改成卡牌战场 HUD。
-- 主内容区增加符文舞台容器。
-- 移动底栏改成卡牌技能槽。
-- 品牌标识改成原创“天禄决策核心”。
-- 不改交易逻辑、不改 API、不改 Freqtrade 后端。
+## 移动端适配
 
-## 重要许可说明
+- `< 768px`：单列卡牌、顶部菜单收起、底部 5 个核心入口。
+- `768px - 1199px`：平板两列卡牌，保留主导航。
+- `>= 1200px`：桌面左侧导航 + 顶部 HUD + 多列卡牌/表格。
 
-FreqUI 使用 GPL-3.0 license。复制、修改和分发时必须保留原始许可证、版权声明，并且衍生版本也需要遵守 GPL-3.0 的开源义务。
-
-本改造包不使用 Riot、英雄联盟、英雄头像、Logo、技能图标或原始美术素材；视觉方向采用原创的“暗黑符文、金属边框、卡牌战场、战报面板”风格，避免直接侵权。
-
-## 使用方式
-
-在本仓库根目录执行：
+## 应用到 FreqUI
 
 ```bash
 bash freqtrade-cardduel-ui/scripts/import-upstream.sh tianlu-frequi-cardduel
-```
-
-脚本会：
-
-1. 克隆官方 FreqUI 原版源码。
-2. 新建本地项目目录 `tianlu-frequi-cardduel`。
-3. 把官方远端重命名为 `upstream`。
-4. 新建改造分支 `tianlu/cardduel-ui`。
-5. 覆盖 `overlay/` 中的首批改造文件。
-
-然后进入新项目：
-
-```bash
 cd tianlu-frequi-cardduel
 pnpm install
 pnpm run dev
@@ -56,17 +37,8 @@ pnpm run dev
 pnpm run build
 ```
 
-## 改造路线
+## 边界
 
-P0：全局主题、导航、主舞台、移动底栏、品牌标识。  
-P1：Dashboard 卡牌化、Trade 页面战斗面板化、Open Trades 变成“场上卡牌”。  
-P2：Chart 页面符文地图化、Logs 页面战报化、Settings 页面符文书化。  
-P3：Backtest / Download Data / Pairlist Config 全量皮肤统一。  
-P4：E2E、暗色主题稳定性、响应式、无障碍与构建检查。
-
-## 安全边界
-
-- 不改交易逻辑。
-- 不保存 API Key / Secret / Passphrase。
-- 不上传 `.env`、交易数据库、钱包私钥或任何敏感凭据。
-- 强制平仓、停止交易、登录、布局锁定等功能保留原有交互链路，只改视觉呈现。
+- 本包是 UI 视觉与组件改造，不改 Freqtrade 交易逻辑。
+- 不包含 API Key、Secret、交易数据库或钱包信息。
+- 不使用 Riot/英雄联盟受版权保护素材；仅使用原创暗黑符文卡牌风格。
