@@ -1,0 +1,118 @@
+/* Tianlu CardDuel page-level component system */
+.cardduel-page {
+  --duel-card-bg: rgba(8, 16, 28, .88);
+  --duel-gold: #c9963d;
+  --duel-gold-soft: #f0cf7a;
+  --duel-blue: #20a8ff;
+  --duel-violet: #6a3bcc;
+  --duel-border: rgba(201, 150, 61, .55);
+  color: #f3e6c1;
+  padding: 18px;
+}
+.cardduel-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+.cardduel-span-3 { grid-column: span 3; }
+.cardduel-span-4 { grid-column: span 4; }
+.cardduel-span-6 { grid-column: span 6; }
+.cardduel-span-8 { grid-column: span 8; }
+.cardduel-span-12 { grid-column: span 12; }
+.cardduel-card {
+  position: relative;
+  border: 1px solid var(--duel-border);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(15, 29, 48, .92), rgba(5, 10, 18, .94)),
+    radial-gradient(circle at 20% 0%, rgba(32, 168, 255, .16), transparent 34%);
+  box-shadow: 0 16px 32px rgba(0,0,0,.35), inset 0 0 0 1px rgba(240,207,122,.08);
+  overflow: hidden;
+}
+.cardduel-card::before,
+.cardduel-card::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  border-color: var(--duel-gold-soft);
+  opacity: .65;
+}
+.cardduel-card::before {
+  left: 8px;
+  top: 8px;
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+.cardduel-card::after {
+  right: 8px;
+  bottom: 8px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.cardduel-card-title {
+  color: var(--duel-gold-soft);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.cardduel-muted { color: #9aa7b7; }
+.cardduel-button {
+  border: 1px solid rgba(240,207,122,.65);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(64,43,104,.95), rgba(29,19,51,.95));
+  color: #f0cf7a;
+  font-weight: 700;
+}
+.cardduel-button-danger {
+  border-color: rgba(255,91,91,.65);
+  color: #ffb3b3;
+  background: linear-gradient(180deg, #3a1722, #1b0a11);
+}
+.cardduel-pill {
+  border: 1px solid rgba(201,150,61,.5);
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: #f0cf7a;
+  background: rgba(9,17,30,.88);
+}
+.cardduel-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+.cardduel-table th {
+  color: #9aa7b7;
+  font-weight: 500;
+  text-align: left;
+}
+.cardduel-table td {
+  background: rgba(5,10,18,.72);
+  border-top: 1px solid rgba(201,150,61,.18);
+  border-bottom: 1px solid rgba(201,150,61,.18);
+  padding: 10px 12px;
+}
+.cardduel-profit { color: #40d878; }
+.cardduel-loss { color: #ff5b5b; }
+@media (max-width: 767px) {
+  .cardduel-page {
+    padding: 12px;
+    padding-bottom: 82px;
+  }
+  .cardduel-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .cardduel-span-3,
+  .cardduel-span-4,
+  .cardduel-span-6,
+  .cardduel-span-8,
+  .cardduel-span-12 {
+    grid-column: span 1;
+  }
+  .cardduel-card { border-radius: 15px; }
+  .cardduel-desktop-only { display: none !important; }
+}
+@media (min-width: 768px) {
+  .cardduel-mobile-only { display: none !important; }
+}
