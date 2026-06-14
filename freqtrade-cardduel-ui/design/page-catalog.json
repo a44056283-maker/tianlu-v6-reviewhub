@@ -1,0 +1,44 @@
+{
+  "project": "tianlu-frequi-cardduel-full-ui-pack",
+  "upstream": {
+    "backend": "freqtrade/freqtrade",
+    "ui": "freqtrade/frequi"
+  },
+  "generated_at": "2026-06-14 Asia/Singapore",
+  "design_language": "原创暗黑符文卡牌对战风格，不使用 Riot/英雄联盟受版权保护素材",
+  "responsive_breakpoints": {
+    "mobile": "<768px",
+    "tablet": "768px-1199px",
+    "desktop": ">=1200px"
+  },
+  "desktop_pages": 22,
+  "mobile_pages": 15,
+  "strategy_rule_modules": 20,
+  "pages": [
+    {"id":"01_login","route":"/login","name":"登录页","category":"Auth","mobile":true},
+    {"id":"02_bot_hub","route":"/","name":"机器人首页","category":"Bot Hub","mobile":true},
+    {"id":"03_dashboard_war_room","route":"/dashboard","name":"仪表盘","category":"Dashboard","mobile":true},
+    {"id":"04_trade_pairs_grid","route":"/trade","name":"交易对卡牌页","category":"Trade","mobile":true},
+    {"id":"05_pair_detail_rune_map","route":"/graph","name":"交易对详情图表","category":"Chart","mobile":true},
+    {"id":"06_open_trades_cards","route":"/open_trades","name":"持仓卡牌","category":"Trade","mobile":true},
+    {"id":"07_trade_history_archive","route":"/trade_history","name":"历史交易档案","category":"Trade","mobile":false},
+    {"id":"08_pairlist_deck","route":"/pairlist","name":"交易对牌组","category":"Pairlist","mobile":true},
+    {"id":"09_balance_vault","route":"/balance","name":"余额金库","category":"Balance","mobile":true},
+    {"id":"10_strategy_list","route":"/strategies","name":"策略列表","category":"Strategy","mobile":true},
+    {"id":"11_strategy_editor_basic","route":"/strategy/basic","name":"策略编辑基础设置","category":"Strategy Rule","mobile":false},
+    {"id":"12_strategy_editor_buy_rules","route":"/strategy/buy","name":"买入规则模块","category":"Strategy Rule","mobile":false},
+    {"id":"13_strategy_editor_sell_rules","route":"/strategy/sell","name":"卖出规则模块","category":"Strategy Rule","mobile":false},
+    {"id":"14_strategy_editor_risk_rules","route":"/strategy/risk","name":"风控规则模块","category":"Strategy Rule","mobile":true},
+    {"id":"15_strategy_editor_advanced_code","route":"/strategy/code","name":"高级代码编辑","category":"Strategy Rule","mobile":false},
+    {"id":"16_order_management","route":"/orders","name":"订单管理","category":"Orders","mobile":true},
+    {"id":"17_backtest_trial_grounds","route":"/backtest","name":"回测分析","category":"Backtest","mobile":true},
+    {"id":"18_download_data_supply_cache","route":"/download_data","name":"下载数据","category":"Data","mobile":false},
+    {"id":"19_pairlist_config_deck_builder","route":"/pairlist_config","name":"交易对配置","category":"Pairlist Config","mobile":false},
+    {"id":"20_logs_battle_log","route":"/logs","name":"日志中心","category":"Logs","mobile":true},
+    {"id":"21_settings_rune_book","route":"/settings","name":"系统设置","category":"Settings","mobile":true},
+    {"id":"22_api_connection_contract","route":"/settings/api","name":"连接契约","category":"Security","mobile":true}
+  ],
+  "strategy_subrule_modules": [
+    "basic", "buy", "sell", "risk", "stake", "time", "ai", "code", "backtest", "alert"
+  ]
+}
